@@ -9,11 +9,9 @@
 </head>
 
 <body>
-    <hr>
-    <hr>
     <h2>Dzięki tej prostej sztuczce możesz w prosty sposób wyświetlić wszystkie skany danej księgi metrykalnej z AGAD-u na jednej
-        stronie, a następnie zapisując ową stonę, zapisać wszystkie skany na dysku, jedną prostą czynnością.</h2><br />
-    <p>
+        stronie, a następnie zapisując ową stonę, zapisać wszystkie skany na dysku, jedną prostą czynnością.</h2>
+    <div>
         <b>KRÓTKI INSTRUKTAŻ</b>
         <ol>
             <li><b>Wejdź na stronę <a href="http://www.agad.gov.pl/inwentarze/testy.html">http://www.agad.gov.pl/inwentarze/testy.html</a> i otwórz skany interesującej Cię pozycji np.:</b>
@@ -61,11 +59,11 @@
                 <form name="f2">
                     <input name="adresHTML_ostatniego" id="adresHTML_ostatniego" type="text" size="125" /> <br />
                 </form> <br>
-                <button type="button" id="load_us">Zaladuj</button>
+                <button type="button" id="load_us">Zaladuj</button>&nbsp;&nbsp;&nbsp;<button type="button" id="view1">Widok miniatur</button> <button type="button" id="view2">Widok pełny</button>
             </li>
-            <li><b>Jeśli zostały poprawnie wprowadzone powyższe adresy ten tekst zniknie i zostaną wyświetlone Wszystkie Skany, następnie zapisz stronę aby zapisać wszystkie elementy Dziękuję za uwagę,  😊 </b><br></li>
+            <!--<li><b>Jeśli zostały poprawnie wprowadzone powyższe adresy ten tekst zniknie i zostaną wyświetlone Wszystkie Skany, następnie zapisz stronę aby zapisać wszystkie elementy Dziękuję za uwagę,  😊 </b><br></li>-->
         </ol>
-    </p>
+    </div>
     <hr>
     <div id="results_info"></div>
     <div id="results" class="thumbs"></div>
@@ -73,17 +71,19 @@
 
     <style>
     .thumbs .photo{
-      display: inline-block; width: 100px;
+      display: inline-block;
+      width: 100px;
+      margin: 10px;
     }
     .full .photo{
       display: block; width: 100%;
       margin-bottom: 10px;
     }
     .photo.loading{
-      border: 1px solid green;
+      border: 3px solid green;
     }
     .photo.failed{
-      border: 1px solid red;
+      border: 3px solid red;
     }
     </style>
     <script type="text/javascript">
@@ -91,6 +91,14 @@
         const html_img_z = '" style="">';
         const c = ".jpg";
         $(function () {
+
+            $(document).on('click', '#view1', function(){
+                $('#results').addClass('thumbs').removeClass('full');
+            });
+            $(document).on('click', '#view2', function(){
+                $('#results').removeClass('thumbs').addClass('full');
+            });
+
             $(document).on('click', '#load_us', function(){
 
                 var adresHTML_metryczki = $('#adresHTML_metryczki').val();
@@ -119,7 +127,7 @@
                       return;
                     }
 
-                    $('#results').html('loading...');
+                    $('#results_info').html('loading...');
 
                     //document.write("<b><h1>PONIŻEJ ZNAJDUJĄ SIĘ WSZYSTKIE SKANY (</h1></b>" +
                     //    liczba + " elementów JPG)<br/>");
@@ -127,42 +135,61 @@
                     //    html_img_z + "<br>");
                     //document.write(html_img_a + adres_katalogu + "0000-tablica%20poczatkowa" +
                     //    c + html_img_z + "<br>");
-                    var url_start = Number(0);
+
+                    var url_start = Number(1);
                     var arr = new Array();
-                    while (url_start < liczba + 2) {
+                    while (url_start <= liczba) {
                         arr.push(url_start++);
                     }
 
-                    console.log(arr);
-
-                    var i = 1;
-                    for (var v in arr) {
-                        function zera(v) {
-                            var i = 0;
-                            do {
-                                v = Math.floor(v / 10);
-                                i++;
-                            } while (v > 0);
-                            return i;
+                    var load_part = function(){
+                        if(arr.length == 0){
+                          $('#results_info').html('Koniec');
+                          return;
                         }
 
-                        $('#results_info').html('Loading ' + i + '/' + liczba);
-                        i++;
+                        var not_loaded = $('.photo.loading').length;
 
-                        var photo = '';
-                        if (zera(v) < 2) {
-                            photo = html_img_a + adres_katalogu + "000" + v + c + html_img_z;
-                        } else if (zera(v) < 3) {
-                            photo = html_img_a + adres_katalogu + "00" + v + c + html_img_z;
-                        } else if (zera(v) < 4) {
-                            photo = html_img_a + adres_katalogu + "0" + v + c + html_img_z;
-                        } else {
-                            photo = html_img_a + adres_katalogu + v + c + html_img_z;
+                        var i = 0;
+                        for (var v in arr) {
+                            if(i>5-not_loaded) break;
+
+                            v = arr.pop();
+                            i++;
+                            function zera(v) {
+                                var i = 0;
+                                do {
+                                    v = Math.floor(v / 10);
+                                    i++;
+                                } while (v > 0);
+                                return i;
+                            }
+
+                            $('#results_info').html('Pozostało: ' + arr.length);
+
+                            //$('#results_info').html('Loading ' + i + '/' + liczba);
+                            //i++;
+
+                            var photo = '';
+                            if (zera(v) < 2) {
+                                photo = html_img_a + adres_katalogu + "000" + v + c + html_img_z;
+                            } else if (zera(v) < 3) {
+                                photo = html_img_a + adres_katalogu + "00" + v + c + html_img_z;
+                            } else if (zera(v) < 4) {
+                                photo = html_img_a + adres_katalogu + "0" + v + c + html_img_z;
+                            } else {
+                                photo = html_img_a + adres_katalogu + v + c + html_img_z;
+                            }
+
+                            //console.log(photo);
+                            $(photo).appendTo($('#results'));
                         }
 
-                        //console.log(photo);
-                        $(photo).appendTo($('#results'));
-                    }
+                        setTimeout(load_part, 1000);
+                    };
+                    load_part();
+
+
                     //document.write(html_img_a + adres_katalogu + "9999-tablica%20koncowa" + c +
                     //    html_img_z + "<br>");
                     //return false;
