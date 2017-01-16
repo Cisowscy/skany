@@ -5,15 +5,13 @@
     <title>Metryki AGAD</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <hr>
-    <hr>
     <h2>Dzięki tej prostej sztuczce możesz w prosty sposób wyświetlić wszystkie skany danej księgi metrykalnej z AGAD-u na jednej
-        stronie, a następnie zapisując ową stonę, zapisać wszystkie skany na dysku, jedną prostą czynnością.</h2><br />
-    <p>
+        stronie, a następnie zapisując ową stonę, zapisać wszystkie skany na dysku, jedną prostą czynnością.</h2>
+    <div>
         <b>KRÓTKI INSTRUKTAŻ</b>
         <ol>
             <li><b>Wejdź na stronę <a href="http://www.agad.gov.pl/inwentarze/testy.html">http://www.agad.gov.pl/inwentarze/testy.html</a> i otwórz skany interesującej Cię pozycji np.:</b>
@@ -54,26 +52,56 @@
             <li><b>Następnie otwórz pierwszy element (metryczke) i skopiuj adres jego linku <br>np.
                 </b><a href="http://agadd.home.net.pl/metrykalia/301/sygn.%20126/pages/PL_1_301_126_0000-metryczka.htm">http://agadd.home.net.pl/metrykalia/301/sygn.%20126/pages/PL_1_301_126_0000-metryczka.htm</a><b>, i wklej go poniżej</b><br><br>
                 <form name="f1">
-                    <input name="adresHTML_metryczki" class="adresHTML_metryczki" type="text" size="125" /> <br />
+                    <input name="adresHTML_metryczki" id="adresHTML_metryczki" type="text" size="125" /> <br />
                 </form> <br></li>
-            <li><b>Następnie udaj się na sam koniec i otwórz ostatni skan poprzedzający tablicę końcową, i skopiuj adres jego linku <br>np.  
+            <li><b>Następnie udaj się na sam koniec i otwórz ostatni skan poprzedzający tablicę końcową, i skopiuj adres jego linku <br>np.
                 </b><a href="http://agadd.home.net.pl/metrykalia/301/sygn.%20126/pages/PL_1_301_126_0161.htm">http://agadd.home.net.pl/metrykalia/301/sygn.%20126/pages/PL_1_301_126_0161.htm</a><b>, i wklej poniżej</b><br><br>
                 <form name="f2">
-                    <input name="adresHTML_ostatniego" class="adresHTML_ostatniego" type="text" size="125" /> <br />
+                    <input name="adresHTML_ostatniego" id="adresHTML_ostatniego" type="text" size="125" /> <br />
                 </form> <br>
+                <button type="button" id="load_us">Zaladuj</button>&nbsp;&nbsp;&nbsp;<button type="button" id="view1">Widok miniatur</button> <button type="button" id="view2">Widok pełny</button>
             </li>
-            <li><b>Jeśli zostały poprawnie wprowadzone powyższe adresy ten tekst zniknie i zostaną wyświetlone Wszystkie Skany, następnie zapisz stronę aby zapisać wszystkie elementy Dziękuję za uwagę,  😊 </b><br></li>
+            <!--<li><b>Jeśli zostały poprawnie wprowadzone powyższe adresy ten tekst zniknie i zostaną wyświetlone Wszystkie Skany, następnie zapisz stronę aby zapisać wszystkie elementy Dziękuję za uwagę,  😊 </b><br></li>-->
         </ol>
-    </p>
+    </div>
     <hr>
+    <div id="results_info"></div>
+    <div id="results" class="thumbs"></div>
     <hr>
+
+    <style>
+    .thumbs .photo{
+      display: inline-block;
+      width: 100px;
+      margin: 10px;
+    }
+    .full .photo{
+      display: block; width: 100%;
+      margin-bottom: 10px;
+    }
+    .photo.loading{
+      border: 3px solid green;
+    }
+    .photo.failed{
+      border: 3px solid red;
+    }
+    </style>
     <script type="text/javascript">
-        const html_img_a = '<img src="';
-        const html_img_z = '" width="100%">';
+        const html_img_a = '<img class="photo loading thumb" onload="$(this).removeClass(\'loading\')" onerror="$(this).removeClass(\'loading\').addClass(\'failed\');" src="';
+        const html_img_z = '" style="">';
         const c = ".jpg";
         $(function () {
-            $(".adresHTML_metryczki").keyup(function () {
-                var adresHTML_metryczki = $(this).val();
+
+            $(document).on('click', '#view1', function(){
+                $('#results').addClass('thumbs').removeClass('full');
+            });
+            $(document).on('click', '#view2', function(){
+                $('#results').removeClass('thumbs').addClass('full');
+            });
+
+            $(document).on('click', '#load_us', function(){
+
+                var adresHTML_metryczki = $('#adresHTML_metryczki').val();
                 if (adresHTML_metryczki.indexOf('pages') >= 0) {
                     var adresJPG_metryczki = adresHTML_metryczki.replace("pages", "images");
                     if (adresJPG_metryczki.indexOf('0000') >= 0) {
@@ -81,50 +109,91 @@
                             '0000'));
                     }
                 }
+                if(adres_katalogu == undefined){
+                  return false;
+                }
                 var szukaj = adres_katalogu.slice(adres_katalogu.indexOf('images') + 7, adres_katalogu.length);
-                $(".adresHTML_ostatniego").keyup(function () {
-                    var adresHTML_ostatniego = $(this).val();
+
+                //$(document).on('change', '#adresHTML_ostatniego', function(){
+
+                    var adresHTML_ostatniego = $('#adresHTML_ostatniego').val();
+                    console.log(adresHTML_ostatniego);
                     var liczba = Number(adresHTML_ostatniego.slice(adresHTML_ostatniego.indexOf(
                         szukaj) + szukaj.length, adresHTML_ostatniego.indexOf(
                         szukaj) + szukaj.length + 4));
-                    document.write("<b><h1>PONIŻEJ ZNAJDUJĄ SIĘ WSZYSTKIE SKANY (</h1></b>" +
-                        liczba + " elementów JPG)");
-                    document.write(html_img_a + adres_katalogu + "0000-metryczka" + c +
-                        html_img_z + "<br>");
-                    document.write(html_img_a + adres_katalogu + "0000-tablica%20poczatkowa" +
-                        c + html_img_z + "<br>");
-                    var url_start = Number(0);
+
+                    if(liczba == 0){
+                      alert("0 elementów.");
+                      return;
+                    }
+
+                    $('#results_info').html('loading...');
+
+                    //document.write("<b><h1>PONIŻEJ ZNAJDUJĄ SIĘ WSZYSTKIE SKANY (</h1></b>" +
+                    //    liczba + " elementów JPG)<br/>");
+                    //document.write(html_img_a + adres_katalogu + "0000-metryczka" + c +
+                    //    html_img_z + "<br>");
+                    //document.write(html_img_a + adres_katalogu + "0000-tablica%20poczatkowa" +
+                    //    c + html_img_z + "<br>");
+
+                    var url_start = Number(1);
                     var arr = new Array();
-                    while (url_start < liczba + 2) {
+                    while (url_start <= liczba) {
                         arr.push(url_start++);
                     }
-                    for (var v in arr) {
-                        function zera(v) {
-                            var i = 0;
-                            do {
-                                v = Math.floor(v / 10);
-                                i++;
-                            } while (v > 0);
-                            return i;
+
+                    var load_part = function(){
+                        if(arr.length == 0){
+                          $('#results_info').html('Koniec');
+                          return;
                         }
-                        if (zera(v) < 2) {
-                            document.write(html_img_a + adres_katalogu + "000" + v + c +
-                                html_img_z + "<br>");
-                        } else if (zera(v) < 3) {
-                            document.write(html_img_a + adres_katalogu + "00" + v + c +
-                                html_img_z + "<br>");
-                        } else if (zera(v) < 4) {
-                            document.write(html_img_a + adres_katalogu + "0" + v + c +
-                                html_img_z + "<br>");
-                        } else {
-                            document.write(html_img_a + adres_katalogu + v + c + html_img_z +
-                                "<br>");
+
+                        var not_loaded = $('.photo.loading').length;
+
+                        var i = 0;
+                        for (var v in arr) {
+                            if(i>5-not_loaded) break;
+
+                            v = arr.pop();
+                            i++;
+                            function zera(v) {
+                                var i = 0;
+                                do {
+                                    v = Math.floor(v / 10);
+                                    i++;
+                                } while (v > 0);
+                                return i;
+                            }
+
+                            $('#results_info').html('Pozostało: ' + arr.length);
+
+                            //$('#results_info').html('Loading ' + i + '/' + liczba);
+                            //i++;
+
+                            var photo = '';
+                            if (zera(v) < 2) {
+                                photo = html_img_a + adres_katalogu + "000" + v + c + html_img_z;
+                            } else if (zera(v) < 3) {
+                                photo = html_img_a + adres_katalogu + "00" + v + c + html_img_z;
+                            } else if (zera(v) < 4) {
+                                photo = html_img_a + adres_katalogu + "0" + v + c + html_img_z;
+                            } else {
+                                photo = html_img_a + adres_katalogu + v + c + html_img_z;
+                            }
+
+                            //console.log(photo);
+                            $(photo).appendTo($('#results'));
                         }
-                    }
-                    document.write(html_img_a + adres_katalogu + "9999-tablica%20koncowa" + c +
-                        html_img_z + "<br>");
-                    return false;
-                });
+
+                        setTimeout(load_part, 1000);
+                    };
+                    load_part();
+
+
+                    //document.write(html_img_a + adres_katalogu + "9999-tablica%20koncowa" + c +
+                    //    html_img_z + "<br>");
+                    //return false;
+                //});
                 return false;
             });
         });
