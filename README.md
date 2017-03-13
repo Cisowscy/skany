@@ -69,7 +69,7 @@
         "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2014/indeks.htm", ""],
         "UWAGI": "akta przekazane do AGAD z AP - Przemyśl w 1993 r.",
         "MIKROFILM": 73810
-    }, {
+ }, {
         "SYGNATURA": "33",
         "PARAFIA": "Biały Kamień",
         "DEKANAT": "Złoczów",
@@ -82,16 +82,16 @@
         "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2033/indeks.htm", ""],
         "UWAGI": "wpisy bez rubryk; księga prowadzona dwustronnie i tak spaginowana (po obrocie): ks. ur., s. 1-357, ks. śl., s. 358-362; ozdobna bordiura rozpoczynająca każdą serię wpisów; księga przekazana do AGAD z AP - Przemyśl w 1993 r.",
         "MIKROFILM": 73829
-    }, {
-    "SYGNATURA": "1956",
-    "PARAFIA": "Kołomyja",
-     "DEKANAT" : "Kołomyja",
-       "TYP" : "Wojskowa Księga metrykalna",
-    "WSAD": {
-        "ZGONY" : ["od", 1871, "do", 1915]},
-        "JEZYK": ["ger"],
-    "LINK": ["http://agadd2.home.net.pl/metrykalia/301/sygn.%201956/indeks.htm", ""],
-    "UWAGI": "wpisy od s. 2; s. 1 nie zapisana; z 1871 r. - 1 wpis",
+}, {
+         "SYGNATURA": "1956",
+         "PARAFIA": "Kołomyja",
+         "DEKANAT" : "Kołomyja",
+         "TYP" : "Wojskowa Księga metrykalna",
+         "WSAD": {
+             "ZGONY" : ["od", 1871, "do", 1915]},
+         "JEZYK": ["ger"],
+         "LINK": ["http://agadd2.home.net.pl/metrykalia/301/sygn.%201956/indeks.htm", ""],
+         "UWAGI": "wpisy od s. 2; s. 1 nie zapisana; z 1871 r. - 1 wpis",
 }]
 ```
 
