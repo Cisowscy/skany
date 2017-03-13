@@ -14,21 +14,21 @@
 **Wielkimi krokami nadchodzi wersja druga serwisu, niemniej nim to się w pełni stanie potrzebawałbym waszej pomocy i czasu, niebawem pojawią sie dynamiczne ideksy oraz interaktywna mapa dla** 
 - **Księgi metrykalne parafii wyznania rzymskokatolickiego z terenu archidiecezji lwowskiej, 1604-1945.** 
 
-**Pomoc polegała by na utworzeniu 2 plików indeksów dla pozostałych pozycji czyli:**
+> **Pomoc polegała by na utworzeniu 2 plików indeksów dla pozostałych pozycji czyli:**
 
-- Księgi metrykalne parafii obrządku greckokatolickiego z archidiecezji lwowskiej, diecezji przemyskiej i stanisławowskiej, 1728-1943
-- Księgi metrykalne gmin ewangelicko-augsburskiego i helweckiego wyznania, 1764-1939
-- Księgi metrykalne gmin wyznania mojżeszowego z terenów tzw. zabużańskich, 1789-1943
-- Księgi metrykalne i akta parafii prawosławnych z terenów Wołynia i Polesia, 1823-1909, 1929-1939
-- Księgi metrykalne parafii wyznania rzymskokatolickiego z diecezji łuckiej i wileńskiej, 1799-1905
-- Księgi metrykalne parafii wyznania rzymskokatolickiego z diecezji przemyskiej, 1590, 1600-1943
-- Księgi metrykalne gmin wyznania ewangelicko-augsburskiego z zachodnich guberni Cesarstwa Rosyjskiego/(wschodnich woj. II Rzeczypospolitej), 1790-1940
-- Księgi metrykalne i akta parafii i gmin różnych wyznań i obrządków (Ormianie, Autokefaliczna Cerkiew Prawosławna, Baptyści, Mennonici, Ewangeliczni Chrześcijanie) z terenów tzw. zabużańskich, 1685-1942
-
-** Dla każdej z pozycji potrzebuję 2 pliki tekstowe (o formacie JSON) zaraz przybliżę, jako wskazówkę, mój sposób utworzenia takowych njpierw jednak przedstawię strukturę dla obydwojga (czyli co potrzebuję usyskać)**
-
-#### GEO.json INDEKS GEOGRAFICZNY
-```JSON
+> - Księgi metrykalne parafii obrządku greckokatolickiego z archidiecezji lwowskiej, diecezji przemyskiej i stanisławowskiej, 1728-1943
+> - Księgi metrykalne gmin ewangelicko-augsburskiego i helweckiego wyznania, 1764-1939
+> - Księgi metrykalne gmin wyznania mojżeszowego z terenów tzw. zabużańskich, 1789-1943
+> - Księgi metrykalne i akta parafii prawosławnych z terenów Wołynia i Polesia, 1823-1909, 1929-1939
+> - Księgi metrykalne parafii wyznania rzymskokatolickiego z diecezji łuckiej i wileńskiej, 1799-1905
+> - Księgi metrykalne parafii wyznania rzymskokatolickiego z diecezji przemyskiej, 1590, 1600-1943
+> - Księgi metrykalne gmin wyznania ewangelicko-augsburskiego z zachodnich guberni Cesarstwa Rosyjskiego/(wschodnich woj. II Rzeczypospolitej), 1790-1940
+> - Księgi metrykalne i akta parafii i gmin różnych wyznań i obrządków (Ormianie, Autokefaliczna Cerkiew Prawosławna, Baptyści, Mennonici, Ewangeliczni Chrześcijanie) z terenów tzw. zabużańskich, 1685-1942
+> 
+> **Dla każdej z pozycji potrzebuję 2 pliki tekstowe (o formacie JSON) zaraz przybliżę, jako wskazówkę, mój sposób utworzenia takowych njpierw jednak przedstawię strukturę dla obydwojga (czyli co potrzebuję usyskać)**
+> 
+> #### GEO.json INDEKS GEOGRAFICZNY
+> ```JSON
 [{
     "GDZIE": "Bertniki",
     "COTO": "wieś",
@@ -54,9 +54,9 @@
     "COTO": "wieś",
     "SYGNATURY": [730]
 }]
-```
-#### SYG.json INDEKS SYGNATUR
-```JSON
+> ```
+> #### SYG.json INDEKS SYGNATUR
+> ```JSON
 [{
         "SYGNATURA": "14",
         "PARAFIA": "Bełz",
@@ -96,6 +96,6 @@
          "LINK": ["http://agadd2.home.net.pl/metrykalia/301/sygn.%201956/indeks.htm", ""],
          "UWAGI": "wpisy od s. 2; s. 1 nie zapisana; z 1871 r. - 1 wpis",
 }]
-```
-
+> ```
+> 
 ### JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
