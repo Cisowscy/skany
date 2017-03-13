@@ -12,7 +12,8 @@
 # SKANY v.2
 
 **Wielkimi krokami nadchodzi wersja druga serwisu, niemniej nim to się w pełni stanie potrzebawałbym waszej pomocy i czasu, niebawem pojawią sie dynamiczne ideksy oraz interaktywna mapa dla** 
-- `Księgi metrykalne parafii wyznania rzymskokatolickiego z terenu archidiecezji lwowskiej, 1604-1945`. **Pomoc polegała by na utworzeniu 2 plików indeksów dla pozostałych pozycji czyli:**
+- Księgi metrykalne parafii wyznania rzymskokatolickiego z terenu archidiecezji lwowskiej, 1604-1945. 
+**Pomoc polegała by na utworzeniu 2 plików indeksów dla pozostałych pozycji czyli:**
 
 - Księgi metrykalne parafii obrządku greckokatolickiego z archidiecezji lwowskiej, diecezji przemyskiej i stanisławowskiej, 1728-1943
 - Księgi metrykalne gmin ewangelicko-augsburskiego i helweckiego wyznania, 1764-1939
