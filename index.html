@@ -5,10 +5,26 @@
     <title>Metryki AGAD</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <div id='printoutPanel'></div>
+        
+        <div id='myMap'></div>
+        <script type='text/javascript'>
+                var map;
+                function loadMapScenario() {
+                    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                        credentials: 'Ag_DhhI4OhAJ28lJwiqxdE65HfSBWC3PT3MY1fYYlLd3vJpYMifcNlFA1-ZrMi7P'
+                    });
+                }
+                
+            
+        </script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&callback=loadMapScenario' async defer></script>
+    
     <a href="https://github.com/Cisowscy/skany">(INFO  https://github.com/Cisowscy/skany)</a>
     <h2>Dzięki tej prostej sztuczce możesz w prosty sposób wyświetlić wszystkie skany danej księgi metrykalnej z AGAD-u na jednej
         stronie, a następnie zapisując ową stonę, zapisać wszystkie skany na dysku, jedną prostą czynnością.</h2>
@@ -86,6 +102,10 @@
     .photo.failed{
       border: 3px solid red;
     }
+    #myMap {
+        width: 100vw; 
+        height: 200px;
+        }
     </style>
     <script type="text/javascript">
         const html_img_a = '<img class="photo loading thumb" onload="$(this).removeClass(\'loading\')" onerror="$(this).removeClass(\'loading\').addClass(\'failed\');" src="';
