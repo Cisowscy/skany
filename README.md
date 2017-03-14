@@ -141,7 +141,7 @@
 > > {
 > >     "GDZIE": ["
 > >```
-
+> 
 > #### Opreracja 2 (podział na obiekty)
 > > znajdź
 > >```XML
@@ -152,7 +152,7 @@
 > >    ]
 > > }, 
 > >```
-
+> 
 > #### Opreracja 3 (typ miejsa) szereg operacji dla każdego typu a później ręczna poprawka typów indywidualnych na wzór, przykłąd dla przedieścia, 
 > > znajdź
 > >```XML
@@ -165,7 +165,7 @@
 > >     "SYGNATURY": [
 > >     
 > >```
-
+> 
 > #### Opreracja 4 (szukanie zduplikowanych miejsc)
 > > znajdź
 > >```
@@ -183,7 +183,7 @@
 > >         "SYGNATURY": [1888]
 > > },
 > >```
-
+> 
 > #### Opreracja 5 (SYGNATURY) niekiedy sygnatury są podane w przedizale 23 - 30 niestety jeśli ten "-" program potraktuje to jako działanie arytmetyczne..
 > > znajdź
 > >```
@@ -201,14 +201,14 @@
 > >         "SYGNATURY": [1888]
 > > },
 > >```
-
+> 
 > #### Opreracja 6 (KORYGOWANIE) Teraz Trzeba sprawdzić czy plik przypomina wzorcowy i wszystkie inne dane które zostały a nie pasują do wzorca umieścić w UWAGACH np
 > >```JSON
 > > {
 > >     "GDZIE": ["Camp Morton, Manitoba (Kanada)"],
 > >     "UWAGI": "informacja o ślubie",
 > >     "SYGNATURY": [1732]
-},
+> > },
 > >```
 > > albo np. 
 > >```JSON
@@ -220,10 +220,10 @@
 > > },
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
-
+> 
 > **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
 > podobny szpaler operacji trzeba wykonać dla drugiego maertiału wejściowego INDEKSU SYGNATUR
-
+> 
 > ### PLIK SYG.JSON ( jak ja to robiłem [robię wciąż]) tu niestety sporą część trzeba ręcznie poprawić...
 > #### Opreracja 1 (podział na obiekty)
 > > znajdź
@@ -236,7 +236,7 @@
 > > {
 > >     "SYGNATURA": 
 > >```
-
+> 
 > #### Opreracja 2 (podział na obiekty)
 > > znajdź
 > >```XML
@@ -248,8 +248,7 @@
 > > }, 
 > > 
 > >```
-
-
+> 
 > #### Opreracja 3 (LINK DO ZDJĘĆ)
 > > znajdź
 > >```XML
@@ -260,7 +259,7 @@
 > > ],
 > >     "LINK": [
 > >```
-
+> 
 > #### Opreracja 4 (LINK DO ZDJĘĆ i UWAGI)
 > > znajdź
 > >```XML
@@ -272,7 +271,7 @@
 > > , ""],
 > >     "UWAGI": "
 > >```
-
+> 
 > #### Opreracja 5 (UWAGI)
 > > znajdź
 > >```XML
@@ -284,7 +283,7 @@
 > > ",
 > >     
 > >```
-
+> 
 > #### Opreracja 6 (MIKROFILMY)
 > > znajdź
 > >```XML
@@ -294,7 +293,7 @@
 > >```JSON
 > > "MIKROFILM":     
 > >```
-
+> 
 > #### Opreracja 7 (PARAFIA)
 > > znajdź
 > >```XML
@@ -305,7 +304,7 @@
 > > ,
 > >     "PARAFIA": "    
 > >```
-
+> 
 > #### Opreracja 8 (DEKANAT)
 > > znajdź
 > >```XML
@@ -317,7 +316,7 @@
 > > ",
 > >     "DEKANAT": "    
 > >```
-
+> 
 > #### Opreracja 9 (DEKANAT) teraz trzba odszukać każdy dekanat i wykonać dla każdego operację
 > > znajdź
 > >```JSON
@@ -328,7 +327,7 @@
 > > "DEKANAT": "Borszczów",
 > > 
 > >```
-
+> 
 > #### Opreracja 10 (JĘZYK)
 > > znajdź
 > >```XML
@@ -339,8 +338,7 @@
 > > 
 > >     "JEZYK": [
 > >```
-
-
+> 
 > #### Opreracja 11 (JĘZYK)
 > > znajdź
 > >```XML
@@ -351,7 +349,7 @@
 > > ],
 > >    
 > >```
-
+> 
 > #### Opreracja 12 (JĘZYK) tę operację trzeba powtórzyć dla każdego języku
 > > znajdź
 > >```XML
@@ -361,7 +359,7 @@
 > >```JSON
 > > "lat",
 > >```
-
+> 
 > #### Opreracja 13 i 14 (TYP KSIĘGI)
 > > znajdź
 > >```XML
@@ -383,7 +381,7 @@
 > > ",
 > > "TYP" : "Ekstrakty z księgi metrykalnej",
 > >```
-
+> 
 > #### Opreracja 15 (ZAKRES LAT i RODZAJ DANYCH) teraz trzeba przejżeć cały plik usuwając zbędne dane nim jednak, dla kazdego obiektu dodać i uzupełnić 
 > >```JSON
 > > "WSAD": {
@@ -417,9 +415,9 @@
 > >         },
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
-
+> 
 > **Tak sporządzony plik można zapisać jako SYG.json dodając w pierwszej lini znak `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
-
+> 
 > ### Była by to nieodzowna pomoc, jest wiele metod prztworzenia plików może ktoś z Was zna prostszą? czkam na sugestie
 
 ## 3) DALSZE MOJE OPERACJE W CELU TWORZENIA BAZY:
