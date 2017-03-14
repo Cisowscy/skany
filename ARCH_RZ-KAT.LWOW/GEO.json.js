@@ -29,5 +29,5 @@ for (var i = 0; i < BAZA.length; i++) {
                     BAZA2.push(POZYCJA);		
         }
 }
-var NOWY = fs.createWriteStream("BAZA_GEO_WSADOWA.json", {flags: 'w'});
+var NOWY = fs.createWriteStream("GEO_WSADOWY_slim.json", {flags: 'w'});
 NOWY.write(JSON.stringify(BAZA2));
