@@ -211,7 +211,7 @@ Augustendorf, patrz Augustdorf
 > #### Opreracja 6 (KORYGOWANIE) Teraz Trzeba sprawdzić czy plik przypomina wzorcowy i wszystkie inne dane które zostały a nie pasują do wzorca umieścić w UWAGACH np
 > >```JSON
 {
-    "GDZIE": "Camp Morton, Manitoba (Kanada)",
+    "GDZIE": ["Camp Morton, Manitoba (Kanada)"],
     "UWAGI": "informacja o ślubie",
     "SYGNATURY": [1732]
 },
@@ -219,7 +219,7 @@ Augustendorf, patrz Augustdorf
 > > albo np. 
 > >```JSON
 {
-    "GDZIE": "Hostów",
+    "GDZIE": ["Hostów"],
     "COTO": "parafia",
     "UWAGI" : "gr.-kat.",
     "SYGNATURY": [1679]
