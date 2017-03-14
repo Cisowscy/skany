@@ -30,28 +30,20 @@
 > ### GEO.json INDEKS GEOGRAFICZNY
 > ```JSON
 > [{
->     "GDZIE": "Bertniki",
->     "COTO": "wieś",
+>     "GDZIE": ["Bertniki"],
+>     "COTO": ["wieś"],
 >     "SYGNATURY": [940, 949, "od-do", 951, 1676]
 > }, {
->     "GDZIE": "Berymowce",
->     "COTO": "wieś",
+>     "GDZIE": ["Berymowce"],
+>     "COTO": ["wieś"],
 >     "SYGNATURY": [1824]
 > }, {
->     "GDZIE": "Bezbrudy",
->     "COTO": "wieś",
->     "SYGNATURY": [730, 1767, 1858]
-> }, {
->     "GDZIE": "Bezejów",
->     "COTO": "wieś",
->     "SYGNATURY": [1050, "od-do", 1052]
-> }, {
->     "GDZIE": "Biała",
->     "COTO": "wieś",
+>     "GDZIE": ["Biała"],
+>     "COTO": ["wieś"],
 >     "SYGNATURY": [251, 1345, 1348, "od-do", 1349, 1352, "od-do", 1354, 1637, 1680, 1841, 1892, 1893, 1952]
 > }, {
->     "GDZIE": "Biała Mazurska",
->     "COTO": "wieś",
+>     "GDZIE": ["Biała Mazurska"],
+>     "COTO": ["wieś"],
 >     "SYGNATURY": [730]
 > }]
 > ```
@@ -169,7 +161,7 @@
 > > i zastąp na: 
 > >```JSON
 "],
-    "COTO": "przedmieście",
+    "COTO": ["przedmieście"],
     "SYGNATURY": [
     
 > >```
