@@ -424,9 +424,6 @@ Ekstrakty z księgi metrykalnej
             "KOICJE": ["od", 1765, "do", 1775, "od", 1788, "do", 1822, "od", 1822, "do", 1829]
         },
 > >```
-> >```JSON
-"lat",
-> >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
 > **Tak sporządzony plik można zapisać jako SYG.json dodając w pierwszej lini znak `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
@@ -434,5 +431,5 @@ Ekstrakty z księgi metrykalnej
 > ### Była by to nieodzowna pomoc, jest wiele metod prztworzenia plików może ktoś z Was zna prostszą? czkam na sugestie
 
 ## 3) następnie przetwarzam te pliki ostatecznie budując jedne plik dla każdego regionu i dodając lokalizacje GPS miejsc co skutkuje wyświetleniem zbiorów na mapie interaktywnej 
- ### 3.1) GEO.json
+### 3.1) GEO.json
  Na początku pozbywam sie fraz "od-do" napisałem do tego skrypt
