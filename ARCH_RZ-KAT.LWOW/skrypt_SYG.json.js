@@ -36,7 +36,7 @@ var BAZA = [{
 
 var TYPY = Object.getOwnPropertyNames(BAZA[0].WSAD);
 var TYP = TYPY[1];
-console.log(TYPY);  // prawidłowo wyświetla: = KOICJE
+console.log(TYP);  // prawidłowo wyświetla: = KOICJE
 
 var bezwzglednyGET = BAZA[0].WSAD.KOICJE; // to oczywiście działa
 var wzglednyGET = BAZA[0].WSAD.TYP; // a tu dostaję wynik = undefined ?? dlaczego ?? skoro konsola prawidłowo zwraca wartość spod TYP - jak użyć jej jako nazwy Obiektu ? 
