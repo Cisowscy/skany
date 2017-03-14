@@ -136,7 +136,7 @@
 > ### 2) Teraz trzba obrobić pół automatycznie dane do tego przyda się dobry edytor tekstu, polecam darmowe: `https://atom.io/` i `https://code.visualstudio.com/` chyba że ktoś zna lepszy?
 > **Istoną funkcą jest szukanie i zastępowanie, tekstów przedzielonych znakami końca lini (Enter). Następnie na podstawie dołączonej struktury jaką potrzebuję uzyskać trzeba trochę pogłówkować :) wykonując na początek szereg operacji zastępowania tekstu, a następnie korygując to czego automatycznie sie nie dało.** 
 > #### PLIK GEO ( jak ja to robiłem)
-> > #### Opreracja 1 
+> #### Opreracja 1 (podział na obiekty)
 > > znajdź
 > >```XML
 <geogname>
@@ -145,6 +145,79 @@
 > > i zastąp na: 
 > >```JSON
 {
-    "GDZIE": "
+    "GDZIE": ["
 > >```
-
+> #### Opreracja 2 (podział na obiekty)
+> > znajdź
+> >```XML
+</geogname>
+> >```
+> > i zastąp na: 
+> >```JSON
+   ]
+}, 
+> >```
+> #### Opreracja 3 (typ miejsa) szereg operacji dla każdego typu a później ręczna poprawka typów indywidualnych na wzór, przykłąd dla przedieścia, 
+> > znajdź
+> >```XML
+, przedmieście</emph>
+> >```
+> > i zastąp na: 
+> >```JSON
+"],
+    "COTO": "przedmieście",
+    "SYGNATURY": [
+    
+> >```
+> #### Opreracja 4 (szukanie zduplikowanych miejsc)
+> > znajdź
+> >```
+patrz
+> >```
+> > podaje przykłąd o co chodzi 
+> >```
+Augustendorf, patrz Augustdorf
+> >```
+> > Następnie trzeba usunąć całą to pozycję kopiując nazwę wariantową i znaleźć ten `Augustdorf` i dodać wariant nazwy w postaci (oto cały obiekt) 
+> >```JSON
+{
+        "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
+        "COTO": ["wieś"],
+        "SYGNATURY": [1888]
+},
+> >```
+> #### Opreracja 5 (SYGNATURY) niekiedy sygnatury są podane w przedizale 23 - 30 niestety jeśli ten "-" program potraktuje to jako działanie arytmetyczne..
+> > znajdź
+> >```
+ - 
+> >```
+> > i zastąp na
+> >```JSON
+, "od-do", 
+> >```
+> > Następnie trzeba usunąć całą to pozycję kopiując nazwę wariantową i znaleźć ten `Augustdorf` i dodać wariant nazwy w postaci (oto cały obiekt) 
+> >```JSON
+{
+        "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
+        "COTO": ["wieś"],
+        "SYGNATURY": [1888]
+},
+> >```
+> #### Opreracja 6 (KORYGOWANIE) Teraz Trzeba sprawdzić czy plik przypomina wzorcowy i wszystkie inne dane które zostały a nie pasują do wzorca umieścić w UWAGACH np
+> >```JSON
+{
+    "GDZIE": "Camp Morton, Manitoba (Kanada)",
+    "UWAGI": "informacja o ślubie",
+    "SYGNATURY": [1732]
+},
+> >```
+> > albo np. 
+> >```JSON
+{
+    "GDZIE": "Hostów",
+    "COTO": "parafia",
+    "UWAGI" : "gr.-kat.",
+    "SYGNATURY": [1679]
+},
+> > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
+> **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.**
