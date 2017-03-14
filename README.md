@@ -229,20 +229,210 @@ Augustendorf, patrz Augustdorf
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
-> **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak "[" i w ostatniej "]" można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
+> **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
 > podobny szpaler operacji trzeba wykonać dla drugiego maertiału wejściowego INDEKSU SYGNATUR
 
 > ### PLIK SYG.JSON ( jak ja to robiłem [robię wciąż]) tu niestety sporą część trzeba ręcznie poprawić...
 > #### Opreracja 1 (podział na obiekty)
 > > znajdź
 > >```XML
-<geogname>
-<emph render="italic">
+<c02 level="file"><did>
+<unitid label="Sygn">
 > >```
 > > i zastąp na: 
 > >```JSON
 {
-    "GDZIE": ["
+    "SYGNATURA": 
+> >```
+
+> #### Opreracja 2 (podział na obiekty)
+> > znajdź
+> >```XML
+</p></altformavail>
+</c02>
+> >```
+> > i zastąp na: 
+> >```JSON
+}, 
+
 > >```
 
 
+> #### Opreracja 3 (LINK DO ZDJĘĆ)
+> > znajdź
+> >```XML
+<daogrp linktype="extended"><daodesc><p>galeria ze skanami:  </p></daodesc><daoloc linktype="locator" href=
+> >```
+> > i zastąp na: 
+> >```JSON
+],
+    "LINK": [
+> >```
+
+> #### Opreracja 4 (LINK DO ZDJĘĆ i UWAGI)
+> > znajdź
+> >```XML
+ /></daogrp></did>
+<note><p>
+> >```
+> > i zastąp na: 
+> >```JSON
+, ""],
+    "UWAGI": "
+> >```
+
+> #### Opreracja 5 (UWAGI)
+> > znajdź
+> >```XML
+ </p></note>
+<altformavail><p>Mikrofilm: 
+> >```
+> > i zastąp na: 
+> >```JSON
+",
+    
+> >```
+
+> #### Opreracja 6 (MIKROFILMY)
+> > znajdź
+> >```XML
+<altformavail><p>Mikrofilm: 
+> >```
+> > i zastąp na: 
+> >```JSON
+"MIKROFILM":     
+> >```
+
+> #### Opreracja 7 (PARAFIA)
+> > znajdź
+> >```XML
+<unittitle>Par. 
+> >```
+> > i zastąp na: 
+> >```JSON
+,
+    "PARAFIA": "    
+> >```
+
+> #### Opreracja 8 (DEKANAT)
+> > znajdź
+> >```XML
+,
+ dek. 
+> >```
+> > i zastąp na: 
+> >```JSON
+",
+    "DEKANAT": "    
+> >```
+
+> #### Opreracja 9 (DEKANAT) teraz trzba odszukać każdy dekanat i wykonać dla każdego operację
+> > znajdź
+> >```JSON
+"DEKANAT": "Borszczów;
+> >```
+> > i zastąp na: 
+> >```JSON
+"DEKANAT": "Borszczów",
+
+> >```
+
+> #### Opreracja 10 (JĘZYK)
+> > znajdź
+> >```XML
+<langmaterial>
+> >```
+> > i zastąp na: 
+> >```JSON
+
+    "JEZYK": [
+> >```
+
+
+> #### Opreracja 11 (JĘZYK)
+> > znajdź
+> >```XML
+</langmaterial>
+> >```
+> > i zastąp na: 
+> >```JSON
+],
+   
+> >```
+
+> #### Opreracja 12 (JĘZYK) tę operację trzeba powtórzyć dla każdego języku
+> > znajdź
+> >```XML
+<language langcode="lat">łac.</language>
+> >```
+> > i zastąp na: 
+> >```JSON
+"lat",
+> >```
+
+> #### Opreracja 13 i 14 (TYP KSIĘGI)
+> > znajdź
+> >```XML
+",
+Księga metrykalna
+> >```
+> > i zastąp na: 
+> >```JSON
+",
+"TYP" : "Księga metrykalna",
+> >```
+> > i znajdź
+> >```XML
+",
+Ekstrakty z księgi metrykalnej
+> >```
+> > i zastąp na: 
+> >```JSON
+",
+"TYP" : "Ekstrakty z księgi metrykalnej",
+> >```
+
+> #### Opreracja 15 (ZAKRES LAT i RODZAJ DANYCH) teraz trzeba przejżeć cały plik usuwając zbędne dane nim jednak, dla kazdego obiektu dodać i uzupełnić 
+> >```JSON
+"WSAD": {
+            "POSWIADCZENIE":  ,
+            "FILIACJE": ["od",  , "do",  ],
+            "KOICJE": ["od",  , "do",  ],
+            "ZGONY":["od",  , "do",  ]
+        },
+> >```
+> > na przykład
+> >```JSON
+"WSAD": {
+            "POSWIADCZENIE": 1833,
+            "FILIACJE": [1826, 1828, 1832, 1833],
+            "KOICJE": [1826, 1828, 1832, 1833],
+            "ZGONY": [1826, 1828, 1832, 1833]
+        },
+> >```
+> > kolejny przykład
+> >```JSON
+"WSAD": {
+            "FILIACJE": ["od", 1784, "do", 1860],
+            "KOICJE": ["od", 1784, "do", 1892],
+            "ZGONY": ["od", 1784, "do", 1882]
+        },
+> >```
+> > kolejny przykład
+> >```JSON
+"WSAD": {
+            "KOICJE": ["od", 1765, "do", 1775, "od", 1788, "do", 1822, "od", 1822, "do", 1829]
+        },
+> >```
+> >```JSON
+"lat",
+> >```
+> > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
+
+> **Tak sporządzony plik można zapisać jako SYG.json dodając w pierwszej lini znak `[` i w ostatniej `]` można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
+
+> ### Była by to nieodzowna pomoc, jest wiele metod prztworzenia plików może ktoś z Was zna prostszą? czkam na sugestie
+
+## 3) następnie przetwarzam te pliki ostatecznie budując jedne plik dla każdego regionu i dodając lokalizacje GPS miejsc co skutkuje wyświetleniem zbiorów na mapie interaktywnej 
+ ### 3.1) GEO.json
+ Na początku pozbywam sie fraz "od-do" napisałem do tego skrypt
