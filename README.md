@@ -224,6 +224,7 @@ Augustendorf, patrz Augustdorf
     "UWAGI" : "gr.-kat.",
     "SYGNATURY": [1679]
 },
+> >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
 > **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak "[" i w ostatniej "]" można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.**
