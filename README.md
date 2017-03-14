@@ -100,29 +100,29 @@
 > ** Następnie tworzymy sobie 2 puste pliki tekstowe `GEO` i `SYG` do których wklejamy odpowiednie treści, tj.**
 > #### dla GEO odszukujemy 
 >```XML
-<controlaccess>
-      <head>Hasła geograficzne</head>
-<controlaccess>
+> <controlaccess>
+>       <head>Hasła geograficzne</head>
+> <controlaccess>
 >```
 > **i kopiujemy to co  po nim następuje aż do**
 >```XML
-</controlaccess>
-		  </controlaccess>
+> </controlaccess>
+> 		  </controlaccess>
 >```
 > **i wklejamy do pliku GEO, zapisując rzecz jasna ;)**
 > #### podobnie dla pliku SYG odszukujemy 
 >```XML
-<head>INWENTARZ </head>
+> <head>INWENTARZ </head>
 >```
 > **i kopiujemy to co następuje od**
 >```XML
-<!-- good down -->
+>  <!-- good down -->
 >```
 > **do (praktycznie samego końca)**
 >```XML
-</dsc>
-</archdesc>
-</ead>
+> </dsc>
+> </archdesc>
+> </ead>
 >```
 > **i wklejamy do pliku SYG, zapisując**
 > ### 2) Teraz trzba obrobić pół automatycznie dane do tego przyda się dobry edytor tekstu, polecam darmowe: `https://atom.io/` i `https://code.visualstudio.com/` chyba że ktoś zna lepszy?
@@ -133,91 +133,91 @@
 > #### Opreracja 1 (podział na obiekty)
 > > znajdź
 > >```XML
-<geogname>
-<emph render="italic">
+> > <geogname>
+> > <emph render="italic">
 > >```
 > > i zastąp na: 
 > >```JSON
-{
-    "GDZIE": ["
+> > {
+> >     "GDZIE": ["
 > >```
 
 > #### Opreracja 2 (podział na obiekty)
 > > znajdź
 > >```XML
-</geogname>
+> > </geogname>
 > >```
 > > i zastąp na: 
 > >```JSON
-   ]
-}, 
+> >    ]
+> > }, 
 > >```
 
 > #### Opreracja 3 (typ miejsa) szereg operacji dla każdego typu a później ręczna poprawka typów indywidualnych na wzór, przykłąd dla przedieścia, 
 > > znajdź
 > >```XML
-, przedmieście</emph>
+> > , przedmieście</emph>
 > >```
 > > i zastąp na: 
 > >```JSON
-"],
-    "COTO": ["przedmieście"],
-    "SYGNATURY": [
-    
+> > "],
+> >     "COTO": ["przedmieście"],
+> >     "SYGNATURY": [
+> >     
 > >```
 
 > #### Opreracja 4 (szukanie zduplikowanych miejsc)
 > > znajdź
 > >```
-patrz
+> > patrz
 > >```
-> > podaje przykłąd o co chodzi 
+> > podaje przykład o co chodzi 
 > >```
-Augustendorf, patrz Augustdorf
+> > Augustendorf, patrz Augustdorf
 > >```
-> > Następnie trzeba usunąć całą to pozycję kopiując nazwę wariantową i znaleźć ten `Augustdorf` i dodać wariant nazwy w postaci (oto cały obiekt) 
+> > Następnie trzeba usunąć całą to pozycję kopiując nazwę wariantową i znaleźć ten `Augustdorf` i dodać wariant nazwy w postaci (oto  cały obiekt) 
 > >```JSON
-{
-        "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
-        "COTO": ["wieś"],
-        "SYGNATURY": [1888]
-},
+> > {
+> >         "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
+> >         "COTO": ["wieś"],
+> >         "SYGNATURY": [1888]
+> > },
 > >```
 
 > #### Opreracja 5 (SYGNATURY) niekiedy sygnatury są podane w przedizale 23 - 30 niestety jeśli ten "-" program potraktuje to jako działanie arytmetyczne..
 > > znajdź
 > >```
- - 
+> >  - 
 > >```
 > > i zastąp na
 > >```JSON
-, "od-do", 
+> > , "od-do", 
 > >```
 > > Następnie trzeba usunąć całą to pozycję kopiując nazwę wariantową i znaleźć ten `Augustdorf` i dodać wariant nazwy w postaci (oto cały obiekt) 
 > >```JSON
-{
-        "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
-        "COTO": ["wieś"],
-        "SYGNATURY": [1888]
-},
+> > {
+> >         "GDZIE": ["Augustdorf", "Augustendorf", "Augustendorf"],
+> >         "COTO": ["wieś"],
+> >         "SYGNATURY": [1888]
+> > },
 > >```
 
 > #### Opreracja 6 (KORYGOWANIE) Teraz Trzeba sprawdzić czy plik przypomina wzorcowy i wszystkie inne dane które zostały a nie pasują do wzorca umieścić w UWAGACH np
 > >```JSON
-{
-    "GDZIE": ["Camp Morton, Manitoba (Kanada)"],
-    "UWAGI": "informacja o ślubie",
-    "SYGNATURY": [1732]
+> > {
+> >     "GDZIE": ["Camp Morton, Manitoba (Kanada)"],
+> >     "UWAGI": "informacja o ślubie",
+> >     "SYGNATURY": [1732]
 },
 > >```
 > > albo np. 
 > >```JSON
-{
-    "GDZIE": ["Hostów"],
-    "COTO": "parafia",
-    "UWAGI" : "gr.-kat.",
-    "SYGNATURY": [1679]
-},
+> > {
+> >     "GDZIE": ["Hostów"],
+> >     "COTO": "parafia",
+> >     "UWAGI" : "gr.-kat.",
+> >     "SYGNATURY": [1679]
+> > },
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
@@ -228,193 +228,193 @@ Augustendorf, patrz Augustdorf
 > #### Opreracja 1 (podział na obiekty)
 > > znajdź
 > >```XML
-<c02 level="file"><did>
-<unitid label="Sygn">
+> > <c02 level="file"><did>
+> > <unitid label="Sygn">
 > >```
 > > i zastąp na: 
 > >```JSON
-{
-    "SYGNATURA": 
+> > {
+> >     "SYGNATURA": 
 > >```
 
 > #### Opreracja 2 (podział na obiekty)
 > > znajdź
 > >```XML
-</p></altformavail>
-</c02>
+> > </p></altformavail>
+> > </c02>
 > >```
 > > i zastąp na: 
 > >```JSON
-}, 
-
+> > }, 
+> > 
 > >```
 
 
 > #### Opreracja 3 (LINK DO ZDJĘĆ)
 > > znajdź
 > >```XML
-<daogrp linktype="extended"><daodesc><p>galeria ze skanami:  </p></daodesc><daoloc linktype="locator" href=
+> > <daogrp linktype="extended"><daodesc><p>galeria ze skanami:  </p></daodesc><daoloc linktype="locator" href=
 > >```
 > > i zastąp na: 
 > >```JSON
-],
-    "LINK": [
+> > ],
+> >     "LINK": [
 > >```
 
 > #### Opreracja 4 (LINK DO ZDJĘĆ i UWAGI)
 > > znajdź
 > >```XML
- /></daogrp></did>
-<note><p>
+> >  /></daogrp></did>
+> > <note><p>
 > >```
 > > i zastąp na: 
 > >```JSON
-, ""],
-    "UWAGI": "
+> > , ""],
+> >     "UWAGI": "
 > >```
 
 > #### Opreracja 5 (UWAGI)
 > > znajdź
 > >```XML
- </p></note>
-<altformavail><p>Mikrofilm: 
+> >  </p></note>
+> > <altformavail><p>Mikrofilm: 
 > >```
 > > i zastąp na: 
 > >```JSON
-",
-    
+> > ",
+> >     
 > >```
 
 > #### Opreracja 6 (MIKROFILMY)
 > > znajdź
 > >```XML
-<altformavail><p>Mikrofilm: 
+> > <altformavail><p>Mikrofilm: 
 > >```
 > > i zastąp na: 
 > >```JSON
-"MIKROFILM":     
+> > "MIKROFILM":     
 > >```
 
 > #### Opreracja 7 (PARAFIA)
 > > znajdź
 > >```XML
-<unittitle>Par. 
+> > <unittitle>Par. 
 > >```
 > > i zastąp na: 
 > >```JSON
-,
-    "PARAFIA": "    
+> > ,
+> >     "PARAFIA": "    
 > >```
 
 > #### Opreracja 8 (DEKANAT)
 > > znajdź
 > >```XML
-,
- dek. 
+> > ,
+> >  dek. 
 > >```
 > > i zastąp na: 
 > >```JSON
-",
-    "DEKANAT": "    
+> > ",
+> >     "DEKANAT": "    
 > >```
 
 > #### Opreracja 9 (DEKANAT) teraz trzba odszukać każdy dekanat i wykonać dla każdego operację
 > > znajdź
 > >```JSON
-"DEKANAT": "Borszczów;
+> > "DEKANAT": "Borszczów;
 > >```
 > > i zastąp na: 
 > >```JSON
-"DEKANAT": "Borszczów",
-
+> > "DEKANAT": "Borszczów",
+> > 
 > >```
 
 > #### Opreracja 10 (JĘZYK)
 > > znajdź
 > >```XML
-<langmaterial>
+> > <langmaterial>
 > >```
 > > i zastąp na: 
 > >```JSON
-
-    "JEZYK": [
+> > 
+> >     "JEZYK": [
 > >```
 
 
 > #### Opreracja 11 (JĘZYK)
 > > znajdź
 > >```XML
-</langmaterial>
+> > </langmaterial>
 > >```
 > > i zastąp na: 
 > >```JSON
-],
-   
+> > ],
+> >    
 > >```
 
 > #### Opreracja 12 (JĘZYK) tę operację trzeba powtórzyć dla każdego języku
 > > znajdź
 > >```XML
-<language langcode="lat">łac.</language>
+> > <language langcode="lat">łac.</language>
 > >```
 > > i zastąp na: 
 > >```JSON
-"lat",
+> > "lat",
 > >```
 
 > #### Opreracja 13 i 14 (TYP KSIĘGI)
 > > znajdź
 > >```XML
-",
-Księga metrykalna
+> > ",
+> > Księga metrykalna
 > >```
 > > i zastąp na: 
 > >```JSON
-",
-"TYP" : "Księga metrykalna",
+> > ",
+> > "TYP" : "Księga metrykalna",
 > >```
 > > i znajdź
 > >```XML
-",
-Ekstrakty z księgi metrykalnej
+> > ",
+> > Ekstrakty z księgi metrykalnej
 > >```
 > > i zastąp na: 
 > >```JSON
-",
-"TYP" : "Ekstrakty z księgi metrykalnej",
+> > ",
+> > "TYP" : "Ekstrakty z księgi metrykalnej",
 > >```
 
 > #### Opreracja 15 (ZAKRES LAT i RODZAJ DANYCH) teraz trzeba przejżeć cały plik usuwając zbędne dane nim jednak, dla kazdego obiektu dodać i uzupełnić 
 > >```JSON
-"WSAD": {
-            "POSWIADCZENIE":[  ],
-            "FILIACJE": ["od",  , "do",  ],
-            "KOICJE": ["od",  , "do",  ],
-            "ZGONY":["od",  , "do",  ]
-        },
+> > "WSAD": {
+> >             "POSWIADCZENIE":[  ],
+> >             "FILIACJE": ["od",  , "do",  ],
+> >             "KOICJE": ["od",  , "do",  ],
+> >             "ZGONY":["od",  , "do",  ]
+> >         },
 > >```
 > > na przykład
 > >```JSON
-"WSAD": {
-            "POSWIADCZENIE": [1833],
-            "FILIACJE": [1826, 1828, 1832, 1833],
-            "KOICJE": [1826, 1828, 1832, 1833],
-            "ZGONY": [1826, 1828, 1832, 1833]
-        },
+> > "WSAD": {
+> >             "POSWIADCZENIE": [1833],
+> >             "FILIACJE": [1826, 1828, 1832, 1833],
+> >             "KOICJE": [1826, 1828, 1832, 1833],
+> >             "ZGONY": [1826, 1828, 1832, 1833]
+> >         },
 > >```
 > > kolejny przykład
 > >```JSON
-"WSAD": {
-            "FILIACJE": ["od", 1784, "do", 1860],
-            "KOICJE": ["od", 1784, "do", 1892],
-            "ZGONY": ["od", 1784, "do", 1882]
-        },
+> > "WSAD": {
+> >             "FILIACJE": ["od", 1784, "do", 1860],
+> >             "KOICJE": ["od", 1784, "do", 1892],
+> >             "ZGONY": ["od", 1784, "do", 1882]
+> >         },
 > >```
 > > kolejny przykład
 > >```JSON
-"WSAD": {
-            "KOICJE": ["od", 1765, "do", 1775, "od", 1788, "do", 1822, "od", 1822, "do", 1829]
-        },
+> > "WSAD": {
+> >             "KOICJE": ["od", 1765, "do", 1775, "od", 1788, "do", 1822, "od", 1822, "do", 1829]
+> >         },
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
