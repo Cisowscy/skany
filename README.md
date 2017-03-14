@@ -429,7 +429,8 @@
 **3.2)** Następnie łączę GEO_WSADOWY.json i SYG_WSADOWY.json w GEOSYG_WSADOWY.json za pomocą skryptu
 - https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/GEOSYG.json.js
 
-**3.3)** Następnie tworzę PLIK adresów GPS danych miejscowości GPS_WSADOWY.geojson dla miejsc z GEOSYG_WSADOWY.json
+**3.3)** Następnie tworzę PLIK adresów GPS danych miejscowości GPS_WSADOWY.geojson dla miejsc z GEOSYG_WSADOWY.json za pomocą strony 
+- http://geojson.io
 
 **3.4)** Następnie tworzę ostateczny plik BAZA.geojson łączc GEOSYG_WSADOWY.json z GPS_WSADOWY.geojson za pomocą skryptu
 -  https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/BAZA.geojson.js
