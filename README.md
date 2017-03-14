@@ -134,4 +134,17 @@
 >```
 > **i wklejamy do pliku SYG, zapisując**
 > ### 2) Teraz trzba obrobić pół automatycznie dane do tego przyda się dobry edytor tekstu, polecam darmowe: `https://atom.io/` i `https://code.visualstudio.com/` chyba że ktoś zna lepszy?
-> **Istoną funkcą jest szukanie i zastępowanie, tekstó przedzielonych znakami końca lini (Enter). Następnie na podstawie dołączonej struktury jaką potrzebuję uzyskać trzeba trochę pogłówkować :) wykonując na początek szereg operacji zastępowania tekstu, a następnie korygując to czego automatycznie sie nie dało.** 
+> **Istoną funkcą jest szukanie i zastępowanie, tekstów przedzielonych znakami końca lini (Enter). Następnie na podstawie dołączonej struktury jaką potrzebuję uzyskać trzeba trochę pogłówkować :) wykonując na początek szereg operacji zastępowania tekstu, a następnie korygując to czego automatycznie sie nie dało.** 
+> #### PLIK GEO ( jak ja to robiłem)
+> > #### Opreracja 1 
+> > znajdź
+> >```XML
+<geogname>
+<emph render="italic">
+> >```
+> > i zastąp na: 
+> >```JSON
+{
+    "GDZIE": "
+> >```
+
