@@ -1,6 +1,5 @@
 var fs = require("fs");
-var BAZA = JSON.parse(fs.readFileSync('SYG2.json', 'utf8'));
-var BAZA2 = new Array();
+var BAZA = JSON.parse(fs.readFileSync('SYGtmp.json', 'utf8'));
 var p_od = 0;
 var p_do = 0;
 var wod = 0;
@@ -33,5 +32,5 @@ for (var i = 0; i < BAZA.length; i++) {
                 }
         }
 }
-var NOWY = fs.createWriteStream("BAZA_SYG_WSADOWA.json", {flags: 'w'});
+var NOWY = fs.createWriteStream("SYGtmp_WSADOWY_slim.json", {flags: 'w'});
 NOWY.write(JSON.stringify(BAZA));
