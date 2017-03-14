@@ -1,14 +1,11 @@
 var fs = require("fs");
-
 var BAZA = JSON.parse(fs.readFileSync('GEO.json', 'utf8'));
 var b = 0;
 var a = 0;
 var x = 0;
 for (var i = 0; i < BAZA.length; i++) {
         for (var j = 0; j < BAZA[i].SYGNATURY.length; j++) {
-
                 if (BAZA[i].SYGNATURY.indexOf("od-do", j) > 0) {
-
                         b = BAZA[i].SYGNATURY.indexOf("od-do", j);
                         a = b - 1;
                         BAZA[i].SYGNATURY.splice(b, 1);
@@ -21,10 +18,6 @@ for (var i = 0; i < BAZA.length; i++) {
                 }
         }
 }
-/*var stream = fs.createWriteStream("BAZA_GEO.json", {
-        flags: 'w'
-});
-stream.write(JSON.stringify(BAZA)); */
 var BAZA2 = new Array();
 for (var i = 0; i < BAZA.length; i++) {
         for (var j = 0; j < BAZA[i].SYGNATURY.length; j++) {
@@ -36,7 +29,5 @@ for (var i = 0; i < BAZA.length; i++) {
                     BAZA2.push(POZYCJA);		
         }
 }
-var stream = fs.createWriteStream("BAZA_GEO_WSADOWA.json", {
-        flags: 'w'
-});
-stream.write(JSON.stringify(BAZA2));
+var NOWY = fs.createWriteStream("BAZA_GEO_WSADOWA.json", {flags: 'w'});
+NOWY.write(JSON.stringify(BAZA2));
