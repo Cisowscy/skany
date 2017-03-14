@@ -27,7 +27,7 @@
 > 
 > **Dla każdej z pozycji potrzebuję 2 pliki tekstowe (o formacie JSON) zaraz przybliżę, jako wskazówkę, mój sposób utworzenia takowych njpierw jednak przedstawię strukturę dla obydwojga (czyli co potrzebuję usyskać)**
 > 
-> #### GEO.json INDEKS GEOGRAFICZNY
+> ### GEO.json INDEKS GEOGRAFICZNY
 > ```JSON
 [{
     "GDZIE": "Bertniki",
@@ -55,7 +55,7 @@
     "SYGNATURY": [730]
 }]
 > ```
-> #### SYG.json INDEKS SYGNATUR
+> ### SYG.json INDEKS SYGNATUR
 > ```JSON
 [{
         "SYGNATURA": "14",
@@ -98,4 +98,10 @@
 }]
 > ```
 > 
-### JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
+## JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
+
+### Najpierw trzeba pobrać materiał wejściowy
+
+![Tekst alt](/MATERIAL_WEJSCIOWY.jpg "Konwertowanie indeksów")
+
+
