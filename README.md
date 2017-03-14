@@ -29,73 +29,73 @@
 > 
 > ### GEO.json INDEKS GEOGRAFICZNY
 > ```JSON
-[{
-    "GDZIE": "Bertniki",
-    "COTO": "wieś",
-    "SYGNATURY": [940, 949, "od-do", 951, 1676]
-}, {
-    "GDZIE": "Berymowce",
-    "COTO": "wieś",
-    "SYGNATURY": [1824]
-}, {
-    "GDZIE": "Bezbrudy",
-    "COTO": "wieś",
-    "SYGNATURY": [730, 1767, 1858]
-}, {
-    "GDZIE": "Bezejów",
-    "COTO": "wieś",
-    "SYGNATURY": [1050, "od-do", 1052]
-}, {
-    "GDZIE": "Biała",
-    "COTO": "wieś",
-    "SYGNATURY": [251, 1345, 1348, "od-do", 1349, 1352, "od-do", 1354, 1637, 1680, 1841, 1892, 1893, 1952]
-}, {
-    "GDZIE": "Biała Mazurska",
-    "COTO": "wieś",
-    "SYGNATURY": [730]
-}]
+> [{
+>     "GDZIE": "Bertniki",
+>     "COTO": "wieś",
+>     "SYGNATURY": [940, 949, "od-do", 951, 1676]
+> }, {
+>     "GDZIE": "Berymowce",
+>     "COTO": "wieś",
+>     "SYGNATURY": [1824]
+> }, {
+>     "GDZIE": "Bezbrudy",
+>     "COTO": "wieś",
+>     "SYGNATURY": [730, 1767, 1858]
+> }, {
+>     "GDZIE": "Bezejów",
+>     "COTO": "wieś",
+>     "SYGNATURY": [1050, "od-do", 1052]
+> }, {
+>     "GDZIE": "Biała",
+>     "COTO": "wieś",
+>     "SYGNATURY": [251, 1345, 1348, "od-do", 1349, 1352, "od-do", 1354, 1637, 1680, 1841, 1892, 1893, 1952]
+> }, {
+>     "GDZIE": "Biała Mazurska",
+>     "COTO": "wieś",
+>     "SYGNATURY": [730]
+> }]
 > ```
 > ### SYG.json INDEKS SYGNATUR
 > ```JSON
-[{
-        "SYGNATURA": "14",
-        "PARAFIA": "Bełz",
-        "DEKANAT": "Bełz",
-        "TYP": "Ekstrakty z księgi metrykalnej",
-        "WSAD": {
-            "POSWIADCZENIE": 1850,
-            "FILIACJE": [1849, 1850],
-            "KOICJE": [1849, 1850],
-            "ZGONY": [1849, 1850]
-        },
-        "JEZYK": ["lat"],
-        "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2014/indeks.htm", ""],
-        "UWAGI": "akta przekazane do AGAD z AP - Przemyśl w 1993 r.",
-        "MIKROFILM": 73810
- }, {
-        "SYGNATURA": "33",
-        "PARAFIA": "Biały Kamień",
-        "DEKANAT": "Złoczów",
-        "TYP": "Księga metrykalna",
-        "WSAD": {
-            "FILIACJE": ["od", 1748, "do", 1778],
-            "KOICJE": ["od", 1748, "do", 1750]
-        },
-        "JEZYK": ["lat"],
-        "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2033/indeks.htm", ""],
-        "UWAGI": "wpisy bez rubryk; księga prowadzona dwustronnie i tak spaginowana (po obrocie): ks. ur., s. 1-357, ks. śl., s. 358-362; ozdobna bordiura rozpoczynająca każdą serię wpisów; księga przekazana do AGAD z AP - Przemyśl w 1993 r.",
-        "MIKROFILM": 73829
-}, {
-         "SYGNATURA": "1956",
-         "PARAFIA": "Kołomyja",
-         "DEKANAT" : "Kołomyja",
-         "TYP" : "Wojskowa Księga metrykalna",
-         "WSAD": {
-             "ZGONY" : ["od", 1871, "do", 1915]},
-         "JEZYK": ["ger"],
-         "LINK": ["http://agadd2.home.net.pl/metrykalia/301/sygn.%201956/indeks.htm", ""],
-         "UWAGI": "wpisy od s. 2; s. 1 nie zapisana; z 1871 r. - 1 wpis",
-}]
+> [{
+>         "SYGNATURA": 14,
+>         "PARAFIA": "Bełz",
+>         "DEKANAT": "Bełz",
+>         "TYP": "Ekstrakty z księgi metrykalnej",
+>         "WSAD": {
+>             "POSWIADCZENIE": [1850],
+>             "FILIACJE": [1849, 1850],
+>             "KOICJE": [1849, 1850],
+>             "ZGONY": [1849, 1850]
+>         },
+>         "JEZYK": ["lat"],
+>         "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2014/indeks.htm", ""],
+>         "UWAGI": "akta przekazane do AGAD z AP - Przemyśl w 1993 r.",
+>         "MIKROFILM": 73810
+>  }, {
+>         "SYGNATURA": 33,
+>         "PARAFIA": "Biały Kamień",
+>         "DEKANAT": "Złoczów",
+>         "TYP": "Księga metrykalna",
+>         "WSAD": {
+>             "FILIACJE": ["od", 1748, "do", 1778],
+>             "KOICJE": ["od", 1748, "do", 1750]
+>         },
+>         "JEZYK": ["lat"],
+>         "LINK": ["http://agadd.home.net.pl/metrykalia/301/sygn.%2033/indeks.htm", ""],
+>         "UWAGI": "wpisy bez rubryk; księga prowadzona dwustronnie i tak spaginowana (po obrocie): ks. ur., s. 1-357, ks. śl., s. 358-362; ozdobna bordiura rozpoczynająca każdą serię wpisów; księga przekazana do AGAD z AP - Przemyśl w 1993 r.",
+>         "MIKROFILM": 73829
+> }, {
+>          "SYGNATURA": 1956,
+>          "PARAFIA": "Kołomyja",
+>          "DEKANAT" : "Kołomyja",
+>          "TYP" : "Wojskowa Księga metrykalna",
+>          "WSAD": {
+>              "ZGONY" : ["od", 1871, "do", 1915]},
+>          "JEZYK": ["ger"],
+>          "LINK": ["http://agadd2.home.net.pl/metrykalia/301/sygn.%201956/indeks.htm", ""],
+>          "UWAGI": "wpisy od s. 2; s. 1 nie zapisana; z 1871 r. - 1 wpis",
+> }]
 > ```
 > 
 > ## JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
@@ -395,7 +395,7 @@ Ekstrakty z księgi metrykalnej
 > #### Opreracja 15 (ZAKRES LAT i RODZAJ DANYCH) teraz trzeba przejżeć cały plik usuwając zbędne dane nim jednak, dla kazdego obiektu dodać i uzupełnić 
 > >```JSON
 "WSAD": {
-            "POSWIADCZENIE":  ,
+            "POSWIADCZENIE":[  ],
             "FILIACJE": ["od",  , "do",  ],
             "KOICJE": ["od",  , "do",  ],
             "ZGONY":["od",  , "do",  ]
@@ -404,7 +404,7 @@ Ekstrakty z księgi metrykalnej
 > > na przykład
 > >```JSON
 "WSAD": {
-            "POSWIADCZENIE": 1833,
+            "POSWIADCZENIE": [1833],
             "FILIACJE": [1826, 1828, 1832, 1833],
             "KOICJE": [1826, 1828, 1832, 1833],
             "ZGONY": [1826, 1828, 1832, 1833]
