@@ -431,11 +431,14 @@ Ekstrakty z księgi metrykalnej
 > ### Była by to nieodzowna pomoc, jest wiele metod prztworzenia plików może ktoś z Was zna prostszą? czkam na sugestie
 
 ## 3) DALSZE MOJE OPERACJE W CELU TWORZENIA BAZY:
+
 **3.1)** Następnie za pomocą skryptów
 - https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/GEO.json.js
 - https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/SYG.json.js
+
 **3.2)** Następnie tworzę PLIK adresów GPS danych miejscowości GPS.geojson
 przetwarzam pliki GEO.json i SYG.json otrzymując odpowiednio GEO_WSADOWY.json i SYG_WSADOWY.json
+
 **3.3)** Następnie łączę wszystkie 3 pliki: GEO_WSADOWY.json i SYG_WSADOWY.json  oraz GPS.geojson; usuwając zbędne tymczasowe wartości operacyjne za pomocą skryptu:
 - https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/BAZA.geo-json.js 
 tworząc ostateczny plik w 2 wariantach BAZA.geojson i BAZA.json który już wykorzystuję jako element bazodanowy na stronie do wyświetlania zawartości mapy i indeksów
