@@ -98,10 +98,26 @@
 }]
 > ```
 > 
-## JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
+> ## JAK UTWORZYĆ POWYŻSZE PLIKI ? METOD JEST WIELE  (OTO MOJA)
 
-### Najpierw trzeba pobrać materiał wejściowy
+> ### Najpierw trzeba pobrać materiał wejściowy
 
-![Tekst alt](/MATERIAL_WEJSCIOWY.jpg "Konwertowanie indeksów")
+> ![Tekst alt](/MATERIAL_WEJSCIOWY.jpg "Konwertowanie indeksów")
 
+> ### 1) Ja kożystałem z źródła strony w chrome można je wyświetlić poprzez `[LCtrl] + [U]`
+> ** Następnie tworzymy sobie 2 puste pliki tekstowe `GEO` i `SYG` do których wklejamy odpowiednie treści, tj.:**
+> #### dla GEO odszukujemy 
+>```XML
+<controlaccess>
+      <head>Hasła geograficzne</head>
+<controlaccess>
+>```
+> **i to co  po nim następuje aż do**
+>```XML
+</controlaccess>
+		  </controlaccess>
+>```
+> **kopiujemy i wklejamy do pliku GEO, zapisująć rzecz jasna ;)**
+> #### podobnie dla pliku SYG
+` 
 
