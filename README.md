@@ -105,19 +105,33 @@
 > ![Tekst alt](/MATERIAL_WEJSCIOWY.jpg "Konwertowanie indeksów")
 
 > ### 1) Ja kożystałem z źródła strony w chrome można je wyświetlić poprzez `[LCtrl] + [U]`
-> ** Następnie tworzymy sobie 2 puste pliki tekstowe `GEO` i `SYG` do których wklejamy odpowiednie treści, tj.:**
+> ** Następnie tworzymy sobie 2 puste pliki tekstowe `GEO` i `SYG` do których wklejamy odpowiednie treści, tj.**
 > #### dla GEO odszukujemy 
 >```XML
 <controlaccess>
       <head>Hasła geograficzne</head>
 <controlaccess>
 >```
-> **i to co  po nim następuje aż do**
+> **i kopiujemy to co  po nim następuje aż do**
 >```XML
 </controlaccess>
 		  </controlaccess>
 >```
-> **kopiujemy i wklejamy do pliku GEO, zapisująć rzecz jasna ;)**
-> #### podobnie dla pliku SYG
-` 
+> **i wklejamy do pliku GEO, zapisując rzecz jasna ;)**
+> #### podobnie dla pliku SYG odszukujemy 
+>```XML
+<head>INWENTARZ </head>
+>```
+> **i kopiujemy to co następuje od**
+>```XML
+<!-- good down -->
+>```
+> **do (praktycznie samego końca)**
+>```XML
+</dsc>
+</archdesc>
+</ead>
+>```
+> **i wklejamy do pliku GEO, zapisując**
+
 
