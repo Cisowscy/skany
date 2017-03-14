@@ -135,7 +135,9 @@
 > **i wklejamy do pliku SYG, zapisując**
 > ### 2) Teraz trzba obrobić pół automatycznie dane do tego przyda się dobry edytor tekstu, polecam darmowe: `https://atom.io/` i `https://code.visualstudio.com/` chyba że ktoś zna lepszy?
 > **Istoną funkcą jest szukanie i zastępowanie, tekstów przedzielonych znakami końca lini (Enter). Następnie na podstawie dołączonej struktury jaką potrzebuję uzyskać trzeba trochę pogłówkować :) wykonując na początek szereg operacji zastępowania tekstu, a następnie korygując to czego automatycznie sie nie dało.** 
-> #### PLIK GEO ( jak ja to robiłem)
+>
+> na wstępie podam kilka którkich zasad interpunkcyjnych panujących w plikach JSON, zasada jest taka pli rozpoczyna się od znaku `[` i kończy się znakiem `]` jest to poprostu tablica czyli zbiór rekordów/obiektów kązdy obiekt rozpoczyna się od znaku `{` i kończy się znakiem `}`rónica pomiędzy tablicą a obiektem jest takaż że, tablica posiada zbiór elementów/obiektów/wartości/nazw, a w obiekcie/rekordzie, każda wartość/nazwa jest definiowana jej typem. Obiekty tekstowe zarówno definiujące jak i ich warości umieszczamy w podwójnym cudzysłowiu " ". Pomiędzy Definicją a wartością musi być znak dwukropkam, okiety jak i warości odzielamy przecinkami, jeśli dana definicja posiada kilka wartości, siłą rzeczy trzba utworzyć tablicę tych wartości, I najważniejsz pozycja poprzedzająca znaki zamykające "}" lub "]" nie posiada przecinka na końcu! można to zobaczyć na sprytnych iklustracjach `http://www.json.org/json-pl.html`  
+> ### PLIK GEO.JSON ( jak ja to robiłem)
 > #### Opreracja 1 (podział na obiekty)
 > > znajdź
 > >```XML
@@ -227,4 +229,20 @@ Augustendorf, patrz Augustdorf
 > >```
 > > na koniec można jeszcze sprawdzić czy w dokumencie nie ma znaków `</` , `<` i `>` jeżeli są trzeba odpoiednio poprawić otaczające ich miejsce.
 
-> **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak "[" i w ostatniej "]" można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.**
+> **Tak sporządzony plik można zapisać jako GEO.json dodając w pierwszej lini znak "[" i w ostatniej "]" można też na samym początku utworzyć rozszerzenie JSON, wówczas program pokoloruje składnie, co może ułatwić wykrycie błędów.** 
+> podobny szpaler operacji trzeba wykonać dla drugiego maertiału wejściowego INDEKSU SYGNATUR
+
+> ### PLIK SYG.JSON ( jak ja to robiłem [robię wciąż]) tu niestety sporą część trzeba ręcznie poprawić...
+> #### Opreracja 1 (podział na obiekty)
+> > znajdź
+> >```XML
+<geogname>
+<emph render="italic">
+> >```
+> > i zastąp na: 
+> >```JSON
+{
+    "GDZIE": ["
+> >```
+
+
