@@ -21,7 +21,22 @@ for (var i = 0; i < BAZA.length; i++) {
                 }
         }
 }
-var stream = fs.createWriteStream("BAZA_GEO.json", {
+/*var stream = fs.createWriteStream("BAZA_GEO.json", {
         flags: 'w'
 });
-stream.write(JSON.stringify(BAZA));
+stream.write(JSON.stringify(BAZA)); */
+var BAZA2 = new Array();
+for (var i = 0; i < BAZA.length; i++) {
+        for (var j = 0; j < BAZA[i].SYGNATURY.length; j++) {
+                var POZYCJA = new Object();
+		    POZYCJA.GDZIE = BAZA[i].GDZIE;
+                    POZYCJA.COTO = BAZA[i].COTO;
+                    POZYCJA.UWAGI = BAZA[i].UWAGI;
+                    POZYCJA.SYGNATURA = BAZA[i].SYGNATURY[j];	
+                    BAZA2.push(POZYCJA);		
+        }
+}
+var stream = fs.createWriteStream("BAZA_GEO_WSADOWA.json", {
+        flags: 'w'
+});
+stream.write(JSON.stringify(BAZA2));
