@@ -132,6 +132,6 @@
 </archdesc>
 </ead>
 >```
-> **i wklejamy do pliku GEO, zapisując**
-
-
+> **i wklejamy do pliku SYG, zapisując**
+> ### 2) Teraz trzba obrobić pół automatycznie dane do tego przyda się dobry edytor tekstu, polecam darmowe: `https://atom.io/` i `https://code.visualstudio.com/` chyba że ktoś zna lepszy?
+> **Istoną funkcą jest szukanie i zastępowanie, tekstó przedzielonych znakami końca lini (Enter). Następnie na podstawie dołączonej struktury jaką potrzebuję uzyskać trzeba trochę pogłówkować :) wykonując na początek szereg operacji zastępowania tekstu, a następnie korygując to czego automatycznie sie nie dało.** 
