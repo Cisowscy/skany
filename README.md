@@ -432,4 +432,4 @@ Ekstrakty z księgi metrykalnej
 
 ## 3) następnie przetwarzam te pliki ostatecznie budując jedne plik dla każdego regionu i dodając lokalizacje GPS miejsc co skutkuje wyświetleniem zbiorów na mapie interaktywnej 
 ### 3.1) GEO.json
- Na początku pozbywam sie fraz "od-do" napisałem do tego skrypt
+ KROK1: `https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/skrypt_GEO.json.js`
