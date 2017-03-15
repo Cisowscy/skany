@@ -4,4 +4,4 @@
 ### ZDJĘCIE PROBLEMU
 ![Tekst alt](PROBLEM.png "problem")
 ### ZDJĘCIE SKRYPTU
-![Tekst alt](SKRTPT.png "skrypt")
+![Tekst alt](SKRYPT.png "skrypt")
