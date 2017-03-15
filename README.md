@@ -420,18 +420,5 @@
 > 
 > ### Była by to nieodzowna pomoc, jest wiele metod prztworzenia plików może ktoś z Was zna prostszą? czkam na sugestie
 
-## 3) DALSZE MOJE OPERACJE W CELU TWORZENIA BAZY:
-
-**3.1)** Następnie za pomocą skryptów
-- https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/GEO.json.js
-- https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/SYG.json.js
-
-**3.2)** Następnie łączę GEO_WSADOWY.json i SYG_WSADOWY.json w GEOSYG_WSADOWY.json za pomocą skryptu
-- https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/GEOSYG.json.js
-
-**3.3)** Następnie tworzę PLIK adresów GPS danych miejscowości GPS_WSADOWY.geojson dla miejsc z GEOSYG_WSADOWY.json za pomocą strony 
-- http://geojson.io
-
-**3.4)** Następnie tworzę ostateczny plik BAZA.geojson łączc GEOSYG_WSADOWY.json z GPS_WSADOWY.geojson za pomocą skryptu
--  https://github.com/Cisowscy/skany/blob/master/ARCH_RZ-KAT.LWOW/BAZA.geojson.js
-usuwając przy tym zbędne i tymczasowe wartości operacyjne wymagane do potrzenych operacji, plik ten wykorzystuję jako element bazodanowy na stronie do wyświetlania zawartości mapy i indeksów
+## 3) DALSZE MOJE OPERACJE W CELU TWORZENIA BAZY opisane są tu:
+- https://github.com/Cisowscy/skany/tree/master/ARCH_RZ-KAT.LWOW
