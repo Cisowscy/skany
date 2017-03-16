@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "large",
+        "marker-symbol": "religious-christian",
+        "MIEJSCE_ID": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.01748657226562,
+          49.84241077880924
+        ]
+      }
+    }
+  ]
+}
