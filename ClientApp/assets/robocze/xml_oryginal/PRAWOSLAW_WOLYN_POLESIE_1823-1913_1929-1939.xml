@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)/EN" "ead.dtd">
+
+<?xml-stylesheet type="text/xsl" href="AC1.xsl"?>
+
+<!-- poprawiany 2015.09.02  -->
+<ead>
+ <eadheader audience="internal" relatedencoding="DC" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2" repositoryencoding="iso15511" scriptencoding="iso15924" id="a0">
+  <eadid url="http://agad.gov.pl/pomoce/Kpr302.xml" countrycode="pl" mainagencycode="PL_1-AGAD" encodinganalog="Identifier">PL_1_302 </eadid>
+<filedesc>
+    <titlestmt>
+      <titleproper encodinganalog="Title">Księgi metrykalne i akta  parafii prawosławnych z terenów Wołynia i Polesia</titleproper>
+			<subtitle>Inwentarz zespołu PL, 302</subtitle>
+      <author encodinganalog="Contributor">Opracował S. Postek</author>
+    </titlestmt>
+    <publicationstmt>
+      <date normal="2010" encodinganalog="Date">2010</date>
+    <publisher encodinganalog="Publisher">Archiwum Główne Akt Dawnych w Warszawie</publisher>
+  </publicationstmt>
+</filedesc>
+  <profiledesc>
+    <creation>Machine-readable finding aid derived from MS Word. Date of source:
+    <date normal="2010">2010</date></creation>
+  <langusage>Opis w języku<language encodinganalog="Language" langcode="pol" scriptcode="Latn">
+     polskim</language>
+    </langusage>
+  </profiledesc>
+</eadheader>
+<archdesc level="fonds" relatedencoding="ISAD(G)v2" type="inventory">
+  <did id="a1">
+    <head>Streszczenie</head>
+    <unittitle encodinganalog="3.1.2" label="Tytuł:">Księgi metrykalne i akta  parafii prawosławnych z terenów Wołynia i Polesia</unittitle>
+    <unitdate encodinganalog="3.1.3" label="Daty:" type="inclusive" normal=" 1823/1913, 1929/1939"> 1823–1913, 1929–1939 </unitdate>
+    <unitid encodinganalog="3.1.1" label="Numer Zespołu:" countrycode="pl" repositorycode="1">Zespół nr 302 </unitid>
+    <origination encodinganalog="3.2.1" label="Aktotwórca:"><corpname>Kancelarie parafialne</corpname></origination>
+    <physdesc label="Rozmiary i Stan zachowania:">
+   <extent encodinganalog="3.1.5"> 0,64 mb. (23 j. a.) </extent>  	Stan zachowania akt jest zły lub bardzo zły (zniszczone okładki, podarte i zbutwiałe karty, akta poprute).</physdesc>
+	<langmaterial><language langcode="rus">ros.</language>, <language langcode="pol">pol.</language>, <language langcode="ukr">ukr.</language></langmaterial>
+    <repository label="Archiwum:">
+   <corpname>Archiwum Główne Akt Dawnych w Warszawie</corpname>
+  <address>
+   <addressline> PL 00-263 WARSZAWA, ul. Długa 7</addressline>
+  </address>
+ </repository>
+    <abstract label="Abstract">Zespół ksiąg metrykalnych jest zespołem otwartym; ma charakter szczątkowy. W jego skład wchodzą księgi (16 j.a., sygn. 1-12, 18, 19, 22, 23) i akta (7 j.a., sygn. 13-17, 20, 21) z parafii prawosławnych leżących na terenie Wołynia (przedwojenne województwo i diecezja wołyńska) i Polesia (parafia Osowce w przedwojennym województwie i diecezji poleskiej. Do zespołu dołączono także księgi z parafii Biała w diecezji litewskiej (później grodzieńskiej). Na niektórych księgach znajdują się pieczęcie Wołyńskiego Archiwum Obwodowego w Łucku, co pozwala stwierdzić, że archiwalia te przez jakiś czas były tam przechowywane.</abstract>
+   </did>
+	 <bioghist encodinganalog="3.2.2" id="a2">
+      <head>Dzieje aktotwórcy (Historia urzędu)</head>
+      <p><emph render="bold"></emph></p>
+<p>W okresie przedrozbiorowym Kościół prawosławny w Rzeczypospolitej liczył kilkaset tysięcy wyznawców. Zamieszkiwali oni wschodnie obszary kraju, głównie województwa: mścisławskie, witebskie, nowogrodzkie, wołyńskie, brzeskie, okolice Słucka i Pińska oraz Ukrainę południowo – wschodnią (województwo kijowskie i bracławskie). W kraju istniała jedna diecezja prawosławna – białoruska, z siedzibą w Mohylowie. Miejscowości nie objęte władzą tej diecezji zależały do ośrodków położonych poza granicami Rzeczypospolitej: prawosławnej metropolii kijowskiej i biskupstwa perejesławskiego. Kiedy po pierwszym rozbiorze Rosja zajęła tereny, na których znajdował się Mohylów i około 130 parafii prawosławnych, prawosławie w Polsce pozostało bez biskupa, a jego główny ośrodek przesunął się na Podlasie i Polesie (okolice Słucka i Pińska).</p><p>
+Ludność prawosławna była upośledzona pod względem prawnym i wyznaniowym. Sytuację prawosławia na ziemiach polskich zmienić miała ustawa reorganizacyjna Sejmu Czteroletniego (2 IV 1792 r.), czyli tzw. „Urządzenie o stałej hierarchii cerkiewnej obrządku greko - orientalnego nie unickiego w państwach Rzeczypospolitej Polskiej”, która zakładała utworzenie archidiecezji, trzech diecezji prawosławnych oraz synodu narodowego i konsystorzy. Reformatorskie dzieło sejmu przekreśliły rozbiory. Zdecydowana większość ludności prawosławnej, zamieszkałej na terytorium Polski, znalazła się w granicach cesarstwa rosyjskiego, a parafie podporządkowane zostały rosyjskiej hierarchii cerkiewnej.</p><p>
+Na terenach tzw. „ziem zabranych” nasiliły się dążenia do likwidacji kościoła greckokatolickiego. Założone w 1828 r. Kolegium Duchowne greckounickie już w 1837 r. zostało wyłączone spod kompetencji ministra spraw wewnętrznych i uzależnione od oberprokuratora Synodu prawosławnego. W lutym 1838 r. na synodzie w Połocku biskupi greckokatoliccy – zwolennicy zjednoczenia oraz inni przedstawiciele duchowieństwa podjęli decyzję o przystąpieniu do prawosławia. W marcu 1839 r. cesarz Mikołaj I po porozumieniu się z władzami Cerkwi prawosławnej wyraził na to zgodę. W następnych tygodniach przystąpiono do stopniowej likwidacji parafii greckokatolickich; wszelkie przejawy oporu tłumiono siłą. Po akcie zjednoczenia dotychczasowe diecezje unickie otrzymały nowe granice, a Kolegium Duchowne przemianowano na Prawosławne Kolegium Białoruskie. </p><p>
+Po zakończeniu I wojny światowej i ustaleniu wschodnich granic odrodzonego państwa polskiego (traktat ryski z 18 III 1921 r. i przyłączenie Wileńszczyzny w lutym 1923 r.), na terytorium Rzeczypospolitej znalazły się ponad 3 miliony ludności prawosławnej, rozmieszczonej w województwach: białostockim, poleskim, lubelskim, wołyńskim, nowogródzkim i wileńskim. Świeccy wyznawcy prawosławia byli w ogromnej większości Białorusinami i Ukraińcami; wśród duchowieństwa znaczną liczbę stanowili natomiast Rosjanie (Rosjanami byli wszyscy biskupi prawosławni). </p><p>
+Rząd polski w myśl prowadzonej polityki wyznaniowej stanął na stanowisku dostosowania do obecnych granic państwowych terytorialnej organizacji Cerkwi, która była nadal częścią państwowej cerkwi rosyjskiej związanej z rosyjskim systemem polityczno – prawnym. Zaproponowana  hierarchii prawosławnej przez rząd polski sprawa autokefalii i łącząca się z tym reorganizacja prawosławnych diecezji w państwie polskim, spotkała się z zaciętym oporem niektórych biskupów i przeciwdziałaniem moskiewskiego patriarchy Tichona.</p><p>
+30 I 1922 r. minister wyznań religijnych i oświecenia publicznego ogłosił „Tymczasowe rozporządzenie o stosunku Rządu do Kościoła Prawosławnego w Polsce”, oparte na wyznaniowych artykułach konstytucji z 1921 r. Na ziemiach polskich zorganizowano pięć diecezji: warszawsko – chełmską, grodzieńską, poleską, wileńską i wołyńską, z określoną, w każdej z nich, liczbą parafii i podzielonych terytorialnie na dekanaty. Na czele Kościoła prawosławnego stał metropolita, który przewodził soborowi biskupów polskich diecezji prawosławnych. </p><p>
+14 VI 1922 r. sobór biskupów prawosławnych uchwalił autokefalię, czyli niezawisłość polskiej Cerkwi, wbrew zakazowi dotychczasowego formalnego jej zwierzchnika, patriarchy Nikona oraz jego zastępcy Sergiusza. Pierwszy uznał polską autokefalię patriarcha rumuński. Ważnym wydarzeniem było uznanie (thomos) autokefalii – 13 XI 1924 r. - przez patriarchę ekumenicznego w Konstantynopolu Grzegorza VII (cieszył się on ogromną powagą w całym prawosławiu) oraz synod patriarszy. 17 IX 1925 r. ogłoszono oficjalnie autokefalię w soborze św. Marii Magdaleny (metropolitalnym) w Warszawie. Cerkiew prawosławna w Polsce przyjęła nazwę: Polski Autokefaliczny Święty Kościół Prawosławny (statut uchwalono 13 IV, 5 VI i 1 XII 1925 r.).</p><p>
+Naczelną władzą w Cerkwi był sobór biskupów z metropolitą warszawskim na czele.  </p><p>
+W 1929 r. wschodnie eparchie polskie liczyły:</p><p>
+a.	poleska: 26 dekanatów i 320 parafii</p><p>
+b.	wileńska: 17 dekanatów i 163 parafie</p><p>
+c.	wołyńska: 56 dekanatów i 680 parafii</p><p>
+Taka organizacja kościoła prawosławnego utrzymała się aż do wybuchu II wojny światowej. W wyniku agresji wojsk sowieckich na wschodnie tereny Rzeczypospolitej, zajęte zostały także istniejące w ich obrębie diecezje prawosławne. Po wybuchu wojny niemiecko-sowieckiej – 22 VI 1941 r. tereny te przeszły pod okupację niemiecką. Jednocześnie nasilił się ruch nacjonalistyczny. 30 VI 1941 r. w porozumieniu z metropolitą lwowskim obrządku unickiego Andrzejem Romanem Szeptyckim proklamowana została „niepodległość” Ukrainy. Wprowadzono niezależną od patriarchatu moskiewskiego Autokefaliczną Ukraińską Cerkiew Prawosławną, której metropolitą został arcybiskup łucki Polikarp Sikorski. Utworzono wówczas eparchię krakowsko-łemkowską, podzieloną na dekanaty. W 1944 r. Ukraina została zajęta przez wojska sowieckie. </p>
+    </bioghist>
+
+		<custodhist encodinganalog="3.2.3" id="a16">
+	<head>Dzieje przechowywania (Historia zespołu)</head>
+<p>Księgi metrykalne i akta parafii prawosławnych z terenu Wołynia i Polesia, trafiły do Archiwum Głównego Akt Dawnych z Urzędu Stanu Cywilnego, mieszczącego się wówczas w Warszawie, na ulicy Jezuickiej 1/3, wraz z księgami i aktami parafii innych wyznań. Przejęcie ksiąg nastąpiło najprawdopodobniej w latach 70, jednak brak informacji na ten temat w księgach nabytków AGAD oraz protokołach zdawczo-odbiorczych przechowywanych w Archiwum Zakładowym. W materiałach własnych Oddziału II AGAD zachowały się jedynie nie datowane protokoły z lat 80. XX w., dotyczące przekazania ksiąg metrykalnych z parafii Pawłowicze (z lat 1858-1885 i 1890-1894). Początkowo zespół ten składał się z 55 jednostek archiwalnych; księgi i akta pochodziły z kancelarii 16 parafii (Błudów, Bucyń, Głuchy, Górka Połonna, Hołowno, Kamień Koszyrski, Karasin, Korszów, Kulczyn, Myszyn, Osowce, Owadno, Ozdeniż, Pawłowicze, Radziechów i Rzeczyca). Zespół posiadał kartę „B”.</p><p>
+W trakcie wstępnej inwentaryzacji ksiąg okazało się, że błędnie ustalona została przynależność terytorialna parafii Pawłowicze (jako przedwojenny powiat Horochów, woj. wołyńskie). Na podstawie pieczęci zachowanych w księgach oraz znaków własnościowych stwierdzono, iż jest to prawosławna (do r. 1874 – greckokatolicka) parafia Pawłowice w przedwojennym woj. lubelskim, powiecie hrubieszowskim. W 1997 r. 37 ksiąg z tej parafii przekazano do Archiwum Państwowego w Lublinie (17 ksiąg wyznania greckokatolickiego z lat 1858-1874) oraz do Archiwum Państwowego w Zamościu (20 ksiąg wyznania prawosławnego z alt 1875-1894). W zespole pozostało wówczas 18 ksiąg. Stwierdzono również, że zachowany fragment księgi metrykalnej dla wsi Myszyn pochodzi z parafii, która w okresie międzywojennym leżała w województwie stanisławowskim, powiecie kołomyjskim, nie jest więc związana terytorialnie z omawianym zespołem. Ponadto księga ta zawiera wpisy z 1942 r.; wówczas na terenie Ukrainy funkcjonowała Autokefaliczna Ukraińska Cerkiew Prawosławna (Myszyn leżał w obrębie eparchii krakowsko-łemkowskiej, w dekanacie galicyjskim). Komisja Metodyczna AGAD przyjmująca obecny inwentarz, biorąc pod uwagę brak powiązania terytorialnego i organizacyjnego tej parafii z pozostałymi wymienionymi w inwentarzu, podjęła decyzję o wyłączeniu księgi z parafii Myszyn z zespołu.</p><p>
+W 2004 r. USC przekazało do AGAD księgę metrykalną urodzeń, ślubów i zgonów z prawosławnej parafii Biała (diec. grodzieńska) z lat 1899, 1901, 1903 (sygn. 18); a w 2006 r. kolejną księgę z tej parafii z lat 1904-1905. W 2010 r. do zespołu dołączono dwie kolejne jednostki utworzone z akt wyodrębnionych z dissolutów oddziału II AGAD (sygn. 20, 21); w 2011 i 2014 r. zespół wzbogacił się o dwie księgi metrykalne (sygn. 22 i 23) z wyżej wymienionej parafii Biała.
+</p>
+</custodhist>
+   <scopecontent encodinganalog="3.3.1" id="a3">
+      <head>Zawartość</head>
+       <p>W skład zespołu wchodzą księgi metrykalne zawierające wpisy dotyczące urodzeń, ślubów i pogrzebów/zgonów oraz akta wytworzone przez kancelarie parafialne, związane z działalnością urzędów parafialnych. Są to wykazy dochodów i rozchodów cerkwi i bractw działających przy parafiach (parafia Głuchy), a także protokoły zeznań, badań przedślubnych, korespondencja z Wołyńskim Konsystorzem Prawosławnym (parafie: Górka Połonna, Kamień Koszyrski, Kulczyn, Radziechów).</p>
+    </scopecontent>
+
+
+		<controlaccess id="a12">
+      <head>Hasła geograficzne</head>
+  <controlaccess>
+<geogname><emph render="italic">Bereźnica, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Biała, parafia</emph>
+ 18, 19, 22, 23</geogname>
+<geogname><emph render="italic">Błudów, parafia</emph>
+ 1</geogname>
+<geogname><emph render="italic">Bucyń, parafia</emph>
+ 2</geogname>
+<geogname><emph render="italic">Głuchy, parafia</emph>
+ 13</geogname>
+<geogname><emph render="italic">Górka Połonna, parafia</emph>
+ 14</geogname>
+<geogname><emph render="italic">Gródek, wieś</emph>
+ 6</geogname>
+<geogname><emph render="italic">Hołowno, parafia</emph>
+ 3, 4</geogname>
+<geogname><emph render="italic">Huszcza, gm., pow. lubomelski</emph>
+ 21</geogname>
+<geogname><emph render="italic">Kamień Koszyrski, parafia św. Eliasza proroka</emph>
+ 15</geogname>
+<geogname><emph render="italic">Karasin, parafia</emph>
+ 5</geogname>
+<geogname><emph render="italic">Korszów, parafia</emph>
+ 6</geogname>
+<geogname><emph render="italic">Krzemieniec, m. pow., Wołyński Konsystorz Duchowny</emph>
+ 21</geogname>
+<geogname><emph render="italic">Krzemieniec, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Kulczyn, parafia</emph>
+ 7, 16</geogname>
+<geogname><emph render="italic">Lubaszka Mała, wś, pow. kostopolski, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Ławrów, wś, pow. łucki, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Mańkowicze, folwark, pow. postawski, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Maszów, wieś</emph>
+ 17</geogname>
+<geogname><emph render="italic">Milcza Mała, wś, pow. dubieński, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Niemowicze, wś, pow. sarneński, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Nowosiółki, wś, pow. włodzimierski, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Okorsk Duży, wś, gm. Torczyn, pow. łucki</emph>
+ 21</geogname>
+<geogname><emph render="italic">Osowce, parafia</emph>
+ 8</geogname>
+<geogname><emph render="italic">Owadno, parafia</emph>
+ 9</geogname>
+<geogname><emph render="italic">Ozdeniż, parafia</emph>
+ 10, 11</geogname>
+<geogname><emph render="italic">Ozdów, wieś</emph>
+ 14</geogname>
+<geogname><emph render="italic">Radwanicze, wś, pow. brzeski (Brześć), parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Radziechów, parafia</emph>
+ 17</geogname>
+<geogname><emph render="italic">Ruda, wś. pow. włodzimierski, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Rzeczyca, parafia</emph>
+ 12</geogname>
+<geogname><emph render="italic">Sarny, m. pow., parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Sekoń, patrz Siekuń</emph></geogname>
+<geogname><emph render="italic">Siekoń, patrz Siekuń</emph></geogname>
+<geogname><emph render="italic">Siekuń, wś, pow. kowelski</emph>
+ 21</geogname>
+<geogname><emph render="italic">Szymkowce, wś, pow. krzemieniecki, parafia</emph>
+ 21</geogname>
+<geogname><emph render="italic">Turzysk, pow. kowelski, woj. wołyńskie</emph>
+ 20</geogname>
+   	  </controlaccess>
+		  </controlaccess>
+	 <descgrp id="a13">
+	 <head>Informacje dla Użytkownika</head>
+   <accessrestrict encodinganalog="3.4.1" id="a14">
+       <p>Zespół jest zmikrofilmowany; akta posiadają także skany dostępne przy elektronicznej wersji inwentarza. </p>
+	 <p>Księgi metrykalne udostępniane są w postaci mikrofilmów lub skanów. </p>
+   <p>Nie udostępnia się w żadnej postaci do osobistego wglądu ksiąg urodzeń od których zamknięcia nie upłynęło jeszcze 100 lat oraz księg ślubów i zgonów od których zamknięcia nie minęło 80 lat [Ustawa z 28 listopada 2014 r. - "Prawo o aktach stanu cywilnego". Dz. U., poz. 1741]. </p>
+	  </accessrestrict>
+    <userestrict encodinganalog="3.4.2" id="a15">
+    <head>Reprodukowanie</head>
+      <p>Prawa własności należą do Skarbu Państwa. Reprodukowanie jest możliwe po uzyskaniu zgody Archiwum Głównego Akt Dawnych. W tych sprawach należy kontaktować się z Kierownikiem oddziału informacji i udostępniania AGAD. </p>
+    </userestrict>
+
+    <prefercite id="a18">
+      <head>Jak cytować?</head>
+      <p>AGAD, Ks. Metr. Praw. </p>
+    </prefercite>
+     <processinfo encodinganalog="3.7.1" id="a20">
+      <head>Opracowanie</head>
+      <p>W wyniku podjętej inwentaryzacji księgi metrykalne zostały rozdzielone od akt parafialnych. Powstały dwie grupy akt: księgi metrykalne – sygnatury 1-12, 18, 19, 22, 23; akta parafialne – sygn.: 13-17. W obrębie każdej grupy akta ułożono alfabetycznie według nazw poszczególnych parafii. Księgi i akta wytworzone przez daną parafię  ułożono chronologicznie według poszczególnych serii wpisów: urodzenia, śluby, pogrzeby/zgony. </p><p>
+   Księgi pochodzą z parafii: Biała, Błudów, Bucyń, Hołowno, Karasin, Korszów, Kulczyn, Osowce, Owadno, Ozdeniż, Rzeczyca, natomiast akta z parafii: Głuchy, Górka Połonna, Kamień Koszyrski, Kulczyn, Radziechów i Turzysk. Archiwaliom nadano sygnaturę ciągłą. </p><p>Pod sygn. 18, 19, 22 i 23 wpisano nowe dopływy - księgi z parafii Biała; a pod sygn. 20 i 21 dopływy do serii akt z dissolutów oddziału II. W wersji elektronicznej inwentarza dopływy te umieszczono na końcu właściwej serii. </p><p>Ze względu na szczątkowy charakter zespołu, niemożność ustalenia przynależności administracyjnej i kościelnej parafii (powiat – występowanie na omawianym terenie kilku miejscowości o tej samej nazwie leżących w różnych powiatach, dekanat), oraz brak jakichkolwiek wskazówek w księgach i aktach wskazujących na położenie parafii, pominięto ten element w zapisie inwentarzowym.</p>
+    </processinfo>
+
+	  <accruals id="a22">
+    <head>Przewidywane dopływy</head>
+		    <p>Urząd Stanu Cywilnego m. st. Warszawy. Wydział III Rejestracji Stanu Cywilnego i Ksiąg Zabużańskich przekazuje do AGAD sukcesywnie księgi zgodnie z wymienioną wyżej ustawą.</p>
+	  </accruals>
+
+
+	  <relatedmaterial encodinganalog="3.5.3" id="a6">
+	<head>Materiały Pokrewne</head>
+ <p>1. Urząd Stanu Cywilnego m. st. Warszawy. Wydział III Rejestracji Stanu Cywilnego i Ksiąg Zabużańskich, ul. ks. I. Kłopotowskiego 1/3, 03-718 WARSZAWA</p>
+ <p>Księgi metrykalne wyznania prawosławnego. </p>
+	</relatedmaterial>
+
+
+	<bibliography encodinganalog="3.5.4" id="a10">
+ <head>Bibliografia</head>
+ <p><bibref><emph render="italic">Dziennik Ustaw</emph>: 2014 r., poz. 1741</bibref></p>
+ <p><bibref><title render="italic">Archiwum Główne Akt Dawnych w Warszawie. Informator o zasobie archiwalnym</title>, opr. zb. pod red. D. Lewandowskiej, Warszawa 2008.</bibref></p>
+<p><bibref><emph render="italic">Historia Kościoła w Polsce</emph>, t. 1-2, Poznań-Warszawa 1974-1979 </bibref></p>
+<p><bibref>K. Chodynicki, <emph render="italic">Kościół prawosławny a Rzeczpospolita Polska, zarys historyczny 1370–1662</emph>, Warszawa 1934</bibref></p>
+<p><bibref>D. Lewandowska, <emph render="italic">Księgi metrykalne parafii wyznania prawosławnego</emph>, w: <emph render="italic">Przewodnik po zasobie</emph>, tom II, <emph render="italic">epoka porozbiorowa</emph>, pod red. F. Ramotowskiej, Warszawa 1998, s. 613–614</bibref></p>
+<p><bibref>M. Papierzyńska-Turek, <emph render="italic">Między tradycją a rzeczywistością. Państwo wobec prawosławia 1918-1939</emph>, Warszawa 1989</bibref></p>
+<p><bibref>J. Sawicki, <emph render="italic">Studia nad położeniem prawnym mniejszości religijnych w państwie polskim</emph>, Warszawa 1937</bibref></p>
+</bibliography>
+
+    </descgrp>
+   <dsc type="analyticover" id="a23">
+    <head>INWENTARZ </head>
+
+<c01 level="series" id="s1">
+<did>
+<unitid>302.1</unitid>
+<unittitle>Księgi metrykalne</unittitle>
+<physdesc>16 j. a. (sygn. 1-12; 18, 19, 22, 23) </physdesc>
+</did>
+<c02 level="file"><did>
+<unitid label="Sygn">1</unitid>
+<unittitle>Par. Błudów; księga metrykalna urodzeń, ślubów i zgonów. </unittitle>
+<unitdate type="inclusive" normal="1840/1847">1840-1847</unitdate>
+<physdesc>księga oprawna, s. 148</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">407; 1 Ur, Śl, Zg</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%201/indeks.htm" />
+</daogrp>
+</did>
+<note><p>wpisy urodzeń z lat: 1840-1847, ślubów: 1840–1845, zgonów: 1844–1847</p></note>
+<altformavail><p>Mikrofilm: 83 490</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">2</unitid>
+<unittitle>Par. Bucyń; księga metrykalna ślubów. </unittitle>
+<unitdate type="inclusive" normal="1880/1883">1880–1883</unitdate>
+<physdesc>księga oprawna, s. 30</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">579</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%202/indeks.htm" />
+</daogrp>
+</did>
+<note><p>zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 491</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">3</unitid>
+<unittitle>Par. Hołowno; księga metrykalna ślubów. </unittitle>
+<unitdate type="inclusive" normal="1845/1865">1845–1865</unitdate>
+<physdesc>księga oprawna, s. 205</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">575 (na wewnętrznej stronie obwoluty)</unitid><daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%203/indeks.htm" />
+</daogrp></did>
+<altformavail><p>Mikrofilm: 83 492</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">4</unitid>
+<unittitle>Par. Hołowno; księga metrykalna zgonów. </unittitle>
+<unitdate type="inclusive" normal="1838/1850">1838–1850</unitdate>
+<physdesc>księga oprawna, s. 229</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">571; 1 Zg.</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%204/indeks.htm" />
+</daogrp></did>
+<note><p>część III, zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 493</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">5</unitid>
+<unittitle>Par. Karasin; księga metrykalna urodzeń. </unittitle>
+<unitdate type="inclusive" normal="1853/1871">1853–1871</unitdate>
+<physdesc>księga oprawna, s. 178</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">665; 29 Ur.</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%205/indeks.htm" />
+</daogrp></did>
+<note><p>część I, kopia, zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 494</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">6</unitid>
+<unittitle>Par. Korszów; księga metrykalna urodzeń, ślubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1832/1846">1832–1846</unitdate>
+<physdesc>księga oprawna, s. 110</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">665</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%206/indeks.htm" />
+</daogrp></did>
+<note><p>wpisy bez rubryk, głównie dla wsi Gródek</p></note>
+<altformavail><p>Mikrofilm: 83 495</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">7</unitid>
+<unittitle>Par. Kulczyn; księga metrykalna urodzeń, ślubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1837/1852">1837–1852</unitdate>
+<physdesc>księga oprawna, s. 206</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">645</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%207/indeks.htm" />
+</daogrp></did>
+<note><p>zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 496</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">8</unitid>
+<unittitle>Par. Osowce; metryki pogrzebowe cerkwi parafialnej osowieckiej.</unittitle>
+<unitdate type="inclusive" normal="1823/1826">1823-1826</unitdate>
+<physdesc>księga oprawna, s. 9</physdesc>
+<langmaterial><language langcode="pol">pol.</language>, <language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">1 Zg.; nr wykazu 12</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%208/indeks.htm" />
+</daogrp>
+</did>
+<note><p>parafia wyznania greckokatolickiego (do r. 1828 greckokatolicka diecezja brzeska, w l. 1828-1839 – litewska), ze względu na brak ksiąg tego wyznania, pochodzących z omawianego terenu w zbiorach AGAD, jednostka została włączona do niniejszego zespołu; od roku 1839 – parafia prawosławna (w okresie międzywojennym prawosławna diecezja poleska); wpisy bez rubryk, zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 497</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">9</unitid>
+<unittitle>Par. Owadno; księga metrykalna urodzeń, śłubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1837/1845">1837–1845</unitdate>
+<physdesc>księga oprawna, s. 151</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">662; 1 Ur., Śl., Zg.</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%209/indeks.htm" />
+</daogrp></did>
+<note><p>wpisy urodzeń z lat: 1837–1845; ślubów: 1837–1845; zgonów: 1837–1844; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 498</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">10</unitid>
+<unittitle>Par. Ozdeniż; księga metrykalna urodzeń, ślubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1835/1841">1835-1841</unitdate>
+<physdesc>księga oprawna, s. 30</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">2; 638</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2010/indeks.htm" />
+</daogrp>
+</did>
+<note><p>wpisy urodzeń i zgonów z lat: 1835–1841; ślubów z lat: 1837, 1841; wpisy przemieszane: ur. – s. 5–20, śl. – s. 2–4, zg. – s. 21–30; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 499</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">11</unitid>
+<unittitle>Par. Ozdeniż; księga metrykalna urodzeń, ślubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1852/1866">1852-1866</unitdate>
+<physdesc>księga oprawna, s. 308</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">639, 1 Ur., Śl., Zg.</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2011/indeks.htm" />
+</daogrp></did>
+<note><p>wpisy rodzeń i zgonów z lat: 1852–1866, ślubów z lat: 1852–1865; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 500</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">12</unitid>
+<unittitle>par. Rzeczyca; księga metrykalna urodzeń, ślubów, zgonów. </unittitle>
+<unitdate type="inclusive" normal="1834/1846">1834-1846</unitdate>
+<physdesc>księga oprawna, s. 156</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">658</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2012/indeks.htm" />
+</daogrp></did>
+<note><p>wpisy urodzeń z lat: 1834–1845, ślubów: 1834- 1846, zgonów: 1835–1846; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 501</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">18</unitid>
+<unittitle>Par. Biała; księga metrykalna urodzeń, ślubów i zgonów dla całej parafii. </unittitle>
+<unitdate type="inclusive" normal="1899, 1901, 1903">1899, 1901, 1903</unitdate>
+<physdesc>księga oprawna, s. 132 k.</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">446</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2018/indeks.htm" />
+</daogrp>
+</did>
+<note><p>księga pochodzi z prawosławnej diecezji litewskiej (później grodzieńskiej)</p></note>
+<altformavail><p>Mikrofilm: 90482</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">19</unitid>
+<unittitle>Par. Biała; księga metrykalna urodzeń, ślubów i zgonów dla całej parafii. </unittitle>
+<unitdate type="inclusive" normal="1904/1905">1904-1905</unitdate>
+<physdesc>księga oprawna, s. 104</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">P446-1</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2019/indeks.htm" />
+</daogrp>
+</did>
+<note><p>księga pochodzi z prawosławnej diecezji litewskiej (później grodzieńskiej)</p></note>
+<altformavail><p>Mikrofilm: brak</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">22</unitid>
+<unittitle>Par. Biała; księga metrykalna urodzeń, ślubów i zgonów dla całej parafii. </unittitle>
+<unitdate type="inclusive" normal="1906/1909">1906-1909</unitdate>
+<physdesc>księga oprawna, s. 268</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">P446-2</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2022/indeks.htm" />
+</daogrp>
+</did>
+<note><p>księga pochodzi z prawosławnej diecezji litewskiej (później grodzieńskiej)</p></note>
+<altformavail><p>Mikrofilm: 105333</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">23</unitid>
+<unittitle>Par. Biała; księga metrykalna urodzeń, ślubów i zgonów dla całej parafii. </unittitle>
+<unitdate type="inclusive" normal="1910/1913">1910-1913</unitdate>
+<physdesc>księga oprawna, s. 612</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">P446-3</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2023/indeks.htm" />
+</daogrp>
+</did>
+<note><p>księga pochodzi z prawosławnej diecezji grodzieńskiej</p></note>
+<altformavail><p>Mikrofilm: 105333</p></altformavail>
+</c02>
+</c01>
+<c01 level="series" id="s2">
+<did>
+<unitid>302.2</unitid>
+<unittitle>Akta parafialne</unittitle>
+<physdesc>7 j. a. (sygn. 13-17, 20, 21) </physdesc>
+</did>
+<c02 level="file"><did>
+<unitid label="Sygn">13</unitid>
+<unittitle>Par. Głuchy; dochody i rozchody cerkwi.</unittitle>
+<unitdate type="inclusive" normal="1894/1902">1894-1902</unitdate>
+<physdesc>księga oprawna, s. 26</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">brak</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2013/indeks.htm" />
+</daogrp>
+</did>
+<note><p>w księdze także dochody i rozchody bractwa młodzieży działającego przy cerkwi; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 502</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">14</unitid>
+<unittitle>Par. Górka Połonna; księga zeznań przedślubnych. </unittitle>
+<unitdate type="inclusive" normal="1826/1852">1826–1852</unitdate>
+<physdesc>księga oprawna, s. 62</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">640</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2014/indeks.htm" />
+</daogrp></did>
+<note><p>księga dla wsi Ozdów</p></note>
+<altformavail><p>Mikrofilm: 83 503</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">15</unitid>
+<unittitle>Par. Kamień Koszyrski, św. Eliasza proroka; księga zeznań przedślubnych. </unittitle>
+<unitdate type="inclusive" normal="1827/1834">1827–1834</unitdate>
+<physdesc>księga oprawna, s. 18</physdesc>
+<langmaterial>pol.</langmaterial>
+<langmaterial><language langcode="pol">pol.</language></langmaterial>
+<unitid type="former">brak</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2015/indeks.htm" />
+</daogrp>
+</did>
+<note><p>parafia wyznania greckokatolickiego (do r. 1828 greckokatolicka diecezja łucka, w l. 1828-1839 – połocka); ze względu na brak ksiąg tego wyznania, pochodzących z omawianego terenu w zbiorach AGAD, została ona włączona do niniejszego zespołu; od roku 1839 – parafia prawosławna (w okresie międzywojennym prawosławna diecezja wołyńska); zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 504</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">16</unitid>
+<unittitle>Par. Kulczyn; księga badań przedślubnych. </unittitle>
+<unitdate type="inclusive" normal="1929/1939">1929–1939</unitdate>
+<physdesc>księga oprawna, s. 218</physdesc>
+<langmaterial><language langcode="pol">pol.</language>, <language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">644</unitid>
+<!--
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2016/indeks.htm" />
+</daogrp>  -->
+</did>
+<note><p>zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 505</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">17</unitid>
+<unittitle>Par. Radziechów; księga protokołów przedślubnych. </unittitle>
+<unitdate type="inclusive" normal="1838/1849">1838–1849</unitdate>
+<physdesc>księga oprawna, s. 132</physdesc>
+<langmaterial><language langcode="rus">ros.</language></langmaterial>
+<unitid type="former">654</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd.home.net.pl/metrykalia/302/sygn.%2017/indeks.htm" />
+</daogrp></did>
+<note><p>księga dla wsi Maszów; zły stan zachowania</p></note>
+<altformavail><p>Mikrofilm: 83 506</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">20</unitid>
+<unittitle>Par. Turzysk. Wykazy kleru diecezji wołyńskiej cerkwi Św. Mikołajewskiej m. Turzysk. </unittitle>
+<unitdate type="inclusive" normal="1923, 1927">1923, 1927</unitdate>
+<physdesc>składki, s. 32</physdesc>
+<langmaterial><language langcode="pol">pol.</language>, <language langcode="ukr">ukr.</language></langmaterial>
+<unitid type="former">brak</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2020/indeks.htm" />
+</daogrp>
+</did>
+<note><p>akta wyłączone z dissolutów oddziału II w 2009 roku.</p></note>
+<altformavail><p>Mikrofilm: brak</p></altformavail>
+</c02>
+<c02 level="file"><did>
+<unitid label="Sygn">21</unitid>
+<unittitle>Wypisy z akt metrykalnych różnych parafii prawosławnych oraz zaświadczenia z innych urzędów z Wołynia i Polesia. </unittitle>
+<unitdate type="inclusive" normal="1911, 1923/1924, 1929, 1932/1933, 1935/1938">1911, 1923-1924, 1929, 1932-1933, 1935-1938</unitdate>
+<physdesc>akta luźne, s. 22</physdesc>
+<langmaterial><language langcode="pol">pol.</language>, <language langcode="ukr">ukr.</language></langmaterial>
+<unitid type="former">brak</unitid>
+<daogrp linktype="extended">
+<daodesc><p>galeria ze skanami:  </p></daodesc>
+<daoloc linktype="locator" href="http://agadd2.home.net.pl/metrykalia/302/sygn.%2021/indeks.htm" />
+</daogrp>
+</did>
+<note><p>zły stan zachowania; nie udostępnia się; akta wyłączone z dissolutów oddziału II w 2009 roku.</p></note>
+<scopecontent><p>1. Wypis z aktu urodzenia parafii w Bereźnicy, pow. sarneński, 1937, s. 1; </p><p>
+2. Karta zgonu wystawiona przez urząd gminy Huszcza, pow. lubomelski, 1935, s. 2-3; </p><p>3. Zaświadczenie wystawione przez Wołyński Konsystorz Duchowny w Krzemieńcu, 1924, s. 4;</p><p> 4. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza cerkwi Św. Mikołaja w Krzemieńcu, 1938, s. 5;</p><p> 5. Wyciąg z ksiąg metrykalnych parafii w Lubaszce, pow. kostopolski, 1923, s. 6;</p><p> 6. Zaświadczenia o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Pokrowskiej we wsi Ławrów, pow. łucki, 1923, s. 7-8; </p><p>7. Zaświadczenie o wyciągu z księgi metrykalnej, wystawione przez proboszcza cerkwi w Mańkowiczach, pow. postawski, 1936, s. 9-10;</p><p> 8. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Narodzenia Marii Panny w Milczy Małej, pow. dubieński, 1933, s. 11; </p><p> 9. Wypis z aktu urodzenia z parafii Niemowicze, pow. sarneński, 1937, s. 12;</p><p> 10. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Św. Piotra i Pawła w Nowosiółce, pow. włodzimierski, 1937, s. 13; </p><p>11. Karta zgonu wystawiona przez sołtysa wsi Okorsk Duży, pow. łucki, 1936, s. 14;</p><p> 12. Świadectwo metrykalne (przetłumaczone z jęz. rosyjskiego) wystawione przez proboszcza parafii prawosławnej Radwaniczach, pow. brzeski, 1923, s. 15-16;</p><p> 13. Zaświadczenie o wyciągu z zeznań świadków wystawione przez proboszcza Cerkwi Narodzenia Bogarodzicy we wsi Ruda, pow. włodzimierski 1928, s. 17;</p><p> 14. Wypis z księgi metrykalnej urodzeń parafii w Sarnach, 1911, s. 18-19;</p><p> 15. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Najświętszej Marii Panny Poczajowskiej w Sarnach, 1936, s. 20;</p><p> 16. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Św. Mikołaja we wsi Siekoń, pow. kowelski, 1932, s. 21;</p><p> 17. Zaświadczenie o wyciągu z księgi metrykalnej wystawione przez proboszcza Cerkwi Św. Paraskiewy we wsi Szymkowce pow. krzemieniecki, 1929, s. 22.</p></scopecontent>
+<altformavail><p>Mikrofilm: brak</p></altformavail>
+</c02>
+</c01>
+</dsc>
+</archdesc>
+</ead>

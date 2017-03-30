@@ -1,0 +1,2300 @@
+{
+	"stylesheet": {
+		"strip-space": {
+			"_elements": "*",
+			"__prefix": "xsl"
+		},
+		"output": {
+			"_method": "html",
+			"_encoding": "ISO-8859-1",
+			"_doctype-public": "-//W3C//DTD HTML 4.0 Transitional//EN",
+			"__prefix": "xsl"
+		},
+		"template": [
+			{
+				"html": {
+					"head": {
+						"style": {
+							"_type": "text/css",
+							"__text": "\n\t\t\t\th1, h2, h3, h4 {font-family: Verdane; font-size: 12pt}\n\t\t\t\ttd {vertical-align: top}\n\t\t\t\t"
+						},
+						"title": {
+							"value-of": [
+								{
+									"_select": "eadheader/filedesc/titlestmt/titleproper",
+									"__prefix": "xsl"
+								},
+								{
+									"_select": "eadheader/filedesc/titlestmt/subtitle",
+									"__prefix": "xsl"
+								},
+								{
+									"_select": "eadheader/filedesc/titlestmt/titleproper/author",
+									"__prefix": "xsl"
+								}
+							],
+							"text": {
+								"__prefix": "xsl"
+							}
+						},
+						"call-template": {
+							"_name": "metadata",
+							"__prefix": "xsl"
+						}
+					},
+					"body": {
+						"table": {
+							"tr": {
+								"td": [
+									{
+										"call-template": {
+											"_name": "toc",
+											"__prefix": "xsl"
+										},
+										"_valign": "top",
+										"_bgcolor": "#E0E0E0",
+										"_width": "20%"
+									},
+									{
+										"center": {
+											"img": {
+												"_src": "Orzel.gif",
+												"_WIDTH": "90",
+												"_HEIGHT": "60",
+												"_BORDER": "0"
+											}
+										},
+										"apply-templates": [
+											{
+												"_select": "eadheader",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/did",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/bioghist",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/scopecontent",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/arrangement",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/controlaccess",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/odd",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/originalsloc",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/phystech",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/otherfindaid | archdesc/*/otherfindaid",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/fileplan | archdesc/*/fileplan",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/bibliography | archdesc/*/bibliography",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/index | archdesc/*/index",
+												"__prefix": "xsl"
+											},
+											{
+												"_select": "archdesc/dsc",
+												"__prefix": "xsl"
+											}
+										],
+										"hr": {
+											"_color": "green"
+										},
+										"call-template": [
+											{
+												"_name": "archdesc-restrict",
+												"__prefix": "xsl"
+											},
+											{
+												"_name": "archdesc-relatedmaterial",
+												"__prefix": "xsl"
+											},
+											{
+												"_name": "archdesc-admininfo",
+												"__prefix": "xsl"
+											}
+										],
+										"_valign": "top",
+										"_bgcolor": "#FAFDD5",
+										"_width": "80%"
+									}
+								]
+							}
+						}
+					}
+				},
+				"_match": "/ead",
+				"__prefix": "xsl"
+			},
+			{
+				"meta": [
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.title",
+						"_content": "{eadheader/filedesc/titlestmt/titleproper  }{eadheader/filedesc/titlestmt/subtitle}"
+					},
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.author",
+						"_content": "{archdesc/did/origination}"
+					},
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.title",
+						"_content": "{archdesc/did/unittitle}"
+					},
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.type",
+						"_content": "text"
+					},
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.format",
+						"_content": "manuscripts"
+					},
+					{
+						"_http-equiv": "Content-Type",
+						"_name": "dc.format",
+						"_content": "finding aids"
+					}
+				],
+				"for-each": [
+					{
+						"choose": {
+							"when": [
+								{
+									"meta": {
+										"_http-equiv": "Content-Type",
+										"_name": "dc.subject",
+										"_content": "{.}"
+									},
+									"_test": "@encodinganalog='600'",
+									"__prefix": "xsl"
+								},
+								{
+									"meta": {
+										"_http-equiv": "Content-Type",
+										"_name": "dc.subject",
+										"_content": "{.}"
+									},
+									"_test": "//@encodinganalog='610'",
+									"__prefix": "xsl"
+								},
+								{
+									"meta": {
+										"_http-equiv": "Content-Type",
+										"_name": "dc.subject",
+										"_content": "{.}"
+									},
+									"_test": "//@encodinganalog='611'",
+									"__prefix": "xsl"
+								},
+								{
+									"meta": {
+										"_http-equiv": "Content-Type",
+										"_name": "dc.contributor",
+										"_content": "{.}"
+									},
+									"_test": "//@encodinganalog='700'",
+									"__prefix": "xsl"
+								},
+								{
+									"meta": {
+										"_http-equiv": "Content-Type",
+										"_name": "dc.contributor",
+										"_content": "{.}"
+									},
+									"_test": "//@encodinganalog='710'",
+									"__prefix": "xsl"
+								}
+							],
+							"otherwise": {
+								"meta": {
+									"_http-equiv": "Content-Type",
+									"_name": "dc.contributor",
+									"_content": "{.}"
+								},
+								"__prefix": "xsl"
+							},
+							"__prefix": "xsl"
+						},
+						"_select": "//controlaccess/persname | //controlaccess/corpname",
+						"__prefix": "xsl"
+					},
+					{
+						"meta": {
+							"_http-equiv": "Content-Type",
+							"_name": "dc.subject",
+							"_content": "{.}"
+						},
+						"_select": "//controlaccess/subject",
+						"__prefix": "xsl"
+					},
+					{
+						"meta": {
+							"_http-equiv": "Content-Type",
+							"_name": "dc.subject",
+							"_content": "{.}"
+						},
+						"_select": "//controlaccess/geogname",
+						"__prefix": "xsl"
+					}
+				],
+				"_name": "metadata",
+				"__prefix": "xsl"
+			},
+			{
+				"h3": "SPIS TREŚCI",
+				"br": "",
+				"if": [
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/did/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/did/head)}"
+								}
+							}
+						},
+						"_test": "string(archdesc/did/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/bioghist/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/bioghist/head)}"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/bioghist/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/scopecontent/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/scopecontent/head)}"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/scopecontent/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/arrangement/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/arrangement/head)}"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/arrangement/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"text": {
+										"__prefix": "xsl",
+										"__text": "Udostępnianie"
+									},
+									"_href": "#restrictlink"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/userestrict/head)   or string(archdesc/accessrestrict/head)   or string(archdesc/*/userestrict/head)   or string(archdesc/*/accessrestrict/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/controlaccess/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/controlaccess/head)}"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/controlaccess/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"text": {
+										"__prefix": "xsl",
+										"__text": "Materiały Pokrewne"
+									},
+									"_href": "#relatedmatlink"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/relatedmaterial)   or string(archdesc/separatedmaterial)   or string(archdesc/*/relatedmaterial)   or string(archdesc/*/separatedmaterial)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"text": {
+										"__prefix": "xsl",
+										"__text": "Pozostałe Informacje "
+									},
+									"_href": "#adminlink"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/acqinfo/*)   or string(archdesc/processinfo/*)   or string(archdesc/prefercite/*)   or string(archdesc/custodialhist/*)   or string(archdesc/processinfo/*)   or string(archdesc/appraisal/*)   or string(archdesc/accruals/*)   or string(archdesc/*/acqinfo/*)   or string(archdesc/*/processinfo/*)   or string(archdesc/*/prefercite/*)   or string(archdesc/*/custodialhist/*)   or string(archdesc/*/processinfo/*)   or string(archdesc/*/appraisal/*)   or string(archdesc/*/accruals/*)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"choose": {
+									"when": [
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/otherfindaid/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/otherfindaid/head)}"
+											},
+											"_test": "archdesc/otherfindaid/head",
+											"__prefix": "xsl"
+										},
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/*/otherfindaid/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/*/otherfindaid/head)}"
+											},
+											"_test": "archdesc/*/otherfindaid/head",
+											"__prefix": "xsl"
+										}
+									],
+									"__prefix": "xsl"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/otherfindaid/head)    or string(archdesc/*/otherfindaid/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"for-each": {
+							"p": {
+								"b": {
+									"a": {
+										"value-of": {
+											"_select": "head",
+											"__prefix": "xsl"
+										},
+										"_href": "#{generate-id(head)}"
+									}
+								},
+								"_style": "margin-top:-5pt"
+							},
+							"_select": "archdesc/odd",
+							"__prefix": "xsl"
+						},
+						"_test": "string(archdesc/odd/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"choose": {
+									"when": [
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/bibliography/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/bibliography/head)}"
+											},
+											"_test": "archdesc/bibliography/head",
+											"__prefix": "xsl"
+										},
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/*/bibliography/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/*/bibliography/head)}"
+											},
+											"_test": "archdesc/*/bibliography/head",
+											"__prefix": "xsl"
+										}
+									],
+									"__prefix": "xsl"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/bibliography/head)    or string(archdesc/*/bibliography/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"choose": {
+									"when": [
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/index/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/index/head)}"
+											},
+											"_test": "archdesc/index/head",
+											"__prefix": "xsl"
+										},
+										{
+											"a": {
+												"value-of": {
+													"_select": "archdesc/*/index/head",
+													"__prefix": "xsl"
+												},
+												"_href": "#{generate-id(archdesc/*/index/head)}"
+											},
+											"_test": "archdesc/*/index/head",
+											"__prefix": "xsl"
+										}
+									],
+									"__prefix": "xsl"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"_test": "string(archdesc/index/head)    or string(archdesc/*/index/head)",
+						"__prefix": "xsl"
+					},
+					{
+						"p": {
+							"b": {
+								"a": {
+									"value-of": {
+										"_select": "archdesc/dsc/head",
+										"__prefix": "xsl"
+									},
+									"_href": "#{generate-id(archdesc/dsc/head)}"
+								}
+							},
+							"_style": "margin-top:-5pt"
+						},
+						"for-each": {
+							"p": {
+								"b": {
+									"a": {
+										"attribute": {
+											"text": {
+												"__prefix": "xsl",
+												"__text": "#series"
+											},
+											"number": {
+												"_count": "c01",
+												"_from": "dsc",
+												"__prefix": "xsl"
+											},
+											"_name": "href",
+											"__prefix": "xsl"
+										},
+										"choose": {
+											"when": {
+												"for-each": {
+													"value-of": {
+														"_select": "text()",
+														"__prefix": "xsl"
+													},
+													"text": {
+														"__prefix": "xsl"
+													},
+													"apply-templates": {
+														"_select": "./unitdate",
+														"__prefix": "xsl"
+													},
+													"_select": "did/unittitle",
+													"__prefix": "xsl"
+												},
+												"_test": "did/unittitle/unitdate",
+												"__prefix": "xsl"
+											},
+											"otherwise": {
+												"apply-templates": [
+													{
+														"_select": "did/unittitle",
+														"__prefix": "xsl"
+													},
+													{
+														"_select": "did/unitdate",
+														"__prefix": "xsl"
+													}
+												],
+												"text": {
+													"__prefix": "xsl"
+												},
+												"__prefix": "xsl"
+											},
+											"__prefix": "xsl"
+										}
+									}
+								},
+								"_style": "margin-top:-5pt; margin-left:15pt; font-size:10pt"
+							},
+							"_select": "archdesc/dsc/c01[@level='series' or @level='subseries'    or @level='subgrp' or @level='subcollection']",
+							"__prefix": "xsl"
+						},
+						"_test": "string(archdesc/dsc/head)",
+						"__prefix": "xsl"
+					}
+				],
+				"_name": "toc",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='bold']",
+				"__prefix": "xsl"
+			},
+			{
+				"i": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='italic']",
+				"__prefix": "xsl"
+			},
+			{
+				"u": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='underline']",
+				"__prefix": "xsl"
+			},
+			{
+				"sub": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='sub']",
+				"__prefix": "xsl"
+			},
+			{
+				"super": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='super']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "emph[@render='quoted']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "emph[@render='doublequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "'"
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "'"
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "emph[@render='singlequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"text": [
+						{
+							"__prefix": "xsl",
+							"__text": "\""
+						},
+						{
+							"__prefix": "xsl",
+							"__text": "\""
+						}
+					],
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='bolddoublequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"text": [
+						{
+							"__prefix": "xsl",
+							"__text": "'"
+						},
+						{
+							"__prefix": "xsl",
+							"__text": "'"
+						}
+					],
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "emph[@render='boldsinglequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"u": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					}
+				},
+				"_match": "emph[@render='boldunderline']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"i": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					}
+				},
+				"_match": "emph[@render='bolditalic']",
+				"__prefix": "xsl"
+			},
+			{
+				"font": {
+					"b": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					},
+					"_style": "font-variant: small-caps"
+				},
+				"_match": "emph[@render='boldsmcaps']",
+				"__prefix": "xsl"
+			},
+			{
+				"font": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "font-variant: small-caps"
+				},
+				"_match": "emph[@render='smcaps']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='bold']",
+				"__prefix": "xsl"
+			},
+			{
+				"i": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='italic']",
+				"__prefix": "xsl"
+			},
+			{
+				"u": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='underline']",
+				"__prefix": "xsl"
+			},
+			{
+				"sub": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='sub']",
+				"__prefix": "xsl"
+			},
+			{
+				"super": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='super']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "title[@render='quoted']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "\""
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "title[@render='doublequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"text": [
+					{
+						"__prefix": "xsl",
+						"__text": "'"
+					},
+					{
+						"__prefix": "xsl",
+						"__text": "'"
+					}
+				],
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"_match": "title[@render='singlequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"text": [
+						{
+							"__prefix": "xsl",
+							"__text": "\""
+						},
+						{
+							"__prefix": "xsl",
+							"__text": "\""
+						}
+					],
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='bolddoublequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"text": [
+						{
+							"__prefix": "xsl",
+							"__text": "'"
+						},
+						{
+							"__prefix": "xsl",
+							"__text": "'"
+						}
+					],
+					"apply-templates": {
+						"__prefix": "xsl"
+					}
+				},
+				"_match": "title[@render='boldsinglequote']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"u": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					}
+				},
+				"_match": "title[@render='boldunderline']",
+				"__prefix": "xsl"
+			},
+			{
+				"b": {
+					"i": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					}
+				},
+				"_match": "title[@render='bolditalic']",
+				"__prefix": "xsl"
+			},
+			{
+				"font": {
+					"b": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					},
+					"_style": "font-variant: small-caps"
+				},
+				"_match": "title[@render='boldsmcaps']",
+				"__prefix": "xsl"
+			},
+			{
+				"font": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "font-variant: small-caps"
+				},
+				"_match": "title[@render='smcaps']",
+				"__prefix": "xsl"
+			},
+			{
+				"a": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_href": "#{@target}"
+				},
+				"_match": "ref",
+				"__prefix": "xsl"
+			},
+			{
+				"variable": {
+					"value-of": {
+						"_select": "@target1",
+						"__prefix": "xsl"
+					},
+					"_name": "target1",
+					"__prefix": "xsl"
+				},
+				"a": {
+					"value-of": {
+						"_select": ".",
+						"__prefix": "xsl"
+					},
+					"_href": "{@href}",
+					"_target1": "_self"
+				},
+				"_match": "extref",
+				"__prefix": "xsl"
+			},
+			{
+				"div": {
+					"b": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					},
+					"_style": "margin-left: 25pt"
+				},
+				"_match": "list[parent::*[not(self::arrangement)]]/head",
+				"__prefix": "xsl"
+			},
+			{
+				"div": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left: 40pt"
+				},
+				"_match": "list[parent::*[not(self::arrangement)]]/item",
+				"__prefix": "xsl"
+			},
+			{
+				"table": {
+					"tr": {
+						"td": {
+							"h4": {
+								"apply-templates": {
+									"_select": "head",
+									"__prefix": "xsl"
+								}
+							},
+							"_colspan": "3"
+						}
+					},
+					"for-each": {
+						"tr": {
+							"for-each": {
+								"td": {
+									"_width": "{@colwidth}"
+								},
+								"_select": "colspec",
+								"__prefix": "xsl"
+							}
+						},
+						"for-each": [
+							{
+								"for-each": {
+									"tr": {
+										"for-each": {
+											"td": {
+												"b": {
+													"apply-templates": {
+														"__prefix": "xsl"
+													}
+												},
+												"_valign": "top"
+											},
+											"_select": "entry",
+											"__prefix": "xsl"
+										}
+									},
+									"_select": "row",
+									"__prefix": "xsl"
+								},
+								"_select": "thead",
+								"__prefix": "xsl"
+							},
+							{
+								"for-each": {
+									"tr": {
+										"for-each": {
+											"td": {
+												"apply-templates": {
+													"__prefix": "xsl"
+												},
+												"_valign": "top"
+											},
+											"_select": "entry",
+											"__prefix": "xsl"
+										}
+									},
+									"_select": "row",
+									"__prefix": "xsl"
+								},
+								"_select": "tbody",
+								"__prefix": "xsl"
+							}
+						],
+						"_select": "tgroup",
+						"__prefix": "xsl"
+					},
+					"_width": "75%",
+					"_style": "margin-left: 25pt"
+				},
+				"_match": "table",
+				"__prefix": "xsl"
+			},
+			{
+				"table": {
+					"tr": {
+						"td": [
+							{
+								"_width": "5%"
+							},
+							{
+								"_width": "15%"
+							},
+							{
+								"_width": "80%"
+							}
+						]
+					},
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_width": "100%",
+					"_style": "margin-left:25pt"
+				},
+				"_match": "chronlist",
+				"__prefix": "xsl"
+			},
+			{
+				"tr": {
+					"td": {
+						"h4": {
+							"apply-templates": {
+								"__prefix": "xsl"
+							}
+						},
+						"_colspan": "3"
+					}
+				},
+				"_match": "chronlist/head",
+				"__prefix": "xsl"
+			},
+			{
+				"tr": {
+					"td": [
+						" ",
+						{
+							"b": {
+								"apply-templates": {
+									"_select": "head01",
+									"__prefix": "xsl"
+								}
+							}
+						},
+						{
+							"b": {
+								"apply-templates": {
+									"_select": "head02",
+									"__prefix": "xsl"
+								}
+							}
+						}
+					]
+				},
+				"_match": "chronlist/listhead",
+				"__prefix": "xsl"
+			},
+			{
+				"choose": {
+					"when": {
+						"tr": {
+							"td": [
+								" ",
+								{
+									"apply-templates": {
+										"_select": "date",
+										"__prefix": "xsl"
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"_select": "eventgrp/event[position()=1]",
+										"__prefix": "xsl"
+									},
+									"_valign": "top"
+								}
+							]
+						},
+						"for-each": {
+							"tr": {
+								"td": [
+									" ",
+									" ",
+									{
+										"apply-templates": {
+											"_select": ".",
+											"__prefix": "xsl"
+										},
+										"_valign": "top"
+									}
+								]
+							},
+							"_select": "eventgrp/event[not(position()=1)]",
+							"__prefix": "xsl"
+						},
+						"_test": "eventgrp",
+						"__prefix": "xsl"
+					},
+					"otherwise": {
+						"tr": {
+							"td": [
+								" ",
+								{
+									"apply-templates": {
+										"_select": "date",
+										"__prefix": "xsl"
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"_select": "event",
+										"__prefix": "xsl"
+									},
+									"_valign": "top"
+								}
+							]
+						},
+						"__prefix": "xsl"
+					},
+					"__prefix": "xsl"
+				},
+				"_match": "chronitem",
+				"__prefix": "xsl"
+			},
+			{
+				"h2": {
+					"a": {
+						"value-of": {
+							"_select": "filedesc/titlestmt/titleproper",
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id(titlestmt/titleproper)}"
+					},
+					"_style": "text-align:center"
+				},
+				"h3": [
+					{
+						"value-of": {
+							"_select": "filedesc/titlestmt/subtitle",
+							"__prefix": "xsl"
+						},
+						"_style": "text-align:center"
+					},
+					{
+						"value-of": {
+							"_select": "filedesc/titlestmt/author",
+							"__prefix": "xsl"
+						},
+						"_style": "text-align:center"
+					}
+				],
+				"br": "",
+				"_match": "eadheader",
+				"__prefix": "xsl"
+			},
+			{
+				"table": {
+					"tr": [
+						{
+							"td": [
+								{
+									"_width": "25%"
+								},
+								{
+									"_width": "75%"
+								}
+							]
+						},
+						{
+							"td": {
+								"h3": {
+									"a": {
+										"apply-templates": {
+											"_select": "head",
+											"__prefix": "xsl"
+										},
+										"_name": "{generate-id(head)}"
+									}
+								},
+								"_colspan": "2"
+							}
+						}
+					],
+					"apply-templates": [
+						{
+							"_select": "repository",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "unitid",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "origination",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "unittitle",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "unitdate",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "physdesc",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "abstract",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "physloc",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "langmaterial",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "materialspec",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "note",
+							"__prefix": "xsl"
+						}
+					],
+					"_width": "100%"
+				},
+				"hr": "",
+				"_match": "archdesc/did",
+				"__prefix": "xsl"
+			},
+			{
+				"choose": {
+					"when": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"value-of": {
+											"_select": "@label",
+											"__prefix": "xsl"
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"_test": "@label",
+						"__prefix": "xsl"
+					},
+					"otherwise": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"choose": {
+											"when": [
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Repository: "
+													},
+													"_test": "self::repository",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Identification: "
+													},
+													"_test": "self::unitid",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Creator: "
+													},
+													"_test": "self::origination",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Quantity: "
+													},
+													"_test": "self::physdesc",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Location: "
+													},
+													"_test": "self::physloc",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Abstract:"
+													},
+													"_test": "self::abstract",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Język: "
+													},
+													"_test": "self::langmaterial",
+													"__prefix": "xsl"
+												},
+												{
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Technical: "
+													},
+													"_test": "self::materialspec",
+													"__prefix": "xsl"
+												}
+											],
+											"__prefix": "xsl"
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"__prefix": "xsl"
+					},
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/did/repository  | archdesc/did/origination  | archdesc/did/physdesc  | archdesc/did/unitid  | archdesc/did/physloc  | archdesc/did/abstract  | archdesc/did/langmaterial  | archdesc/did/materialspec",
+				"__prefix": "xsl"
+			},
+			{
+				"choose": {
+					"when": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"value-of": {
+											"_select": "@label",
+											"__prefix": "xsl"
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"_select": "text() |* [not(self::unitdate)]",
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"_test": "@label",
+						"__prefix": "xsl"
+					},
+					"otherwise": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"text": {
+											"__prefix": "xsl",
+											"__text": "Title: "
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"_select": "text() |* [not(self::unitdate)]",
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"__prefix": "xsl"
+					},
+					"__prefix": "xsl"
+				},
+				"if": {
+					"choose": {
+						"when": {
+							"tr": {
+								"td": [
+									{
+										"b": {
+											"value-of": {
+												"_select": "unitdate/@label",
+												"__prefix": "xsl"
+											}
+										},
+										"_valign": "top"
+									},
+									{
+										"apply-templates": {
+											"_select": "unitdate",
+											"__prefix": "xsl"
+										}
+									}
+								]
+							},
+							"_test": "unitdate/@label",
+							"__prefix": "xsl"
+						},
+						"otherwise": {
+							"tr": {
+								"td": [
+									{
+										"b": {
+											"text": {
+												"__prefix": "xsl",
+												"__text": "Dates: "
+											}
+										},
+										"_valign": "top"
+									},
+									{
+										"apply-templates": {
+											"_select": "unitdate",
+											"__prefix": "xsl"
+										}
+									}
+								]
+							},
+							"__prefix": "xsl"
+						},
+						"__prefix": "xsl"
+					},
+					"_test": "child::unitdate",
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/did/unittitle",
+				"__prefix": "xsl"
+			},
+			{
+				"choose": {
+					"when": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"value-of": {
+											"_select": "@label",
+											"__prefix": "xsl"
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"_test": "@label",
+						"__prefix": "xsl"
+					},
+					"otherwise": {
+						"tr": {
+							"td": [
+								{
+									"b": {
+										"text": {
+											"__prefix": "xsl",
+											"__text": "Dates: "
+										}
+									},
+									"_valign": "top"
+								},
+								{
+									"apply-templates": {
+										"__prefix": "xsl"
+									}
+								}
+							]
+						},
+						"__prefix": "xsl"
+					},
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/did/unitdate",
+				"__prefix": "xsl"
+			},
+			{
+				"for-each": {
+					"choose": {
+						"when": {
+							"choose": {
+								"when": {
+									"tr": {
+										"td": [
+											{
+												"b": {
+													"value-of": {
+														"_select": "@label",
+														"__prefix": "xsl"
+													}
+												},
+												"_valign": "top"
+											},
+											{
+												"apply-templates": {
+													"__prefix": "xsl"
+												},
+												"_valign": "top"
+											}
+										]
+									},
+									"_test": "position()=1",
+									"__prefix": "xsl"
+								},
+								"otherwise": {
+									"tr": {
+										"td": [
+											{
+												"_valign": "top"
+											},
+											{
+												"apply-templates": {
+													"__prefix": "xsl"
+												},
+												"_valign": "top"
+											}
+										]
+									},
+									"__prefix": "xsl"
+								},
+								"__prefix": "xsl"
+							},
+							"_test": "parent::note[@label]",
+							"__prefix": "xsl"
+						},
+						"otherwise": {
+							"choose": {
+								"when": {
+									"tr": {
+										"td": [
+											{
+												"b": {
+													"text": {
+														"__prefix": "xsl",
+														"__text": "Note: "
+													}
+												},
+												"_valign": "top"
+											},
+											{
+												"apply-templates": {
+													"__prefix": "xsl"
+												}
+											}
+										]
+									},
+									"_test": "position()=1",
+									"__prefix": "xsl"
+								},
+								"otherwise": {
+									"tr": {
+										"td": [
+											{
+												"_valign": "top"
+											},
+											{
+												"apply-templates": {
+													"__prefix": "xsl"
+												}
+											}
+										]
+									},
+									"__prefix": "xsl"
+								},
+								"__prefix": "xsl"
+							},
+							"__prefix": "xsl"
+						},
+						"__prefix": "xsl"
+					},
+					"_select": "p",
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/did/note",
+				"__prefix": "xsl"
+			},
+			{
+				"if": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"p": {
+						"a": {
+							"_href": "#",
+							"__text": "Do Spisu Treści"
+						}
+					},
+					"hr": "",
+					"_test": "string(child::*)",
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/bioghist |    archdesc/scopecontent |    archdesc/phystech |    archdesc/odd   |    archdesc/arrangement",
+				"__prefix": "xsl"
+			},
+			{
+				"h3": {
+					"a": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id()}"
+					}
+				},
+				"_match": "archdesc/bioghist/head  |    archdesc/scopecontent/head |    archdesc/arrangement/head |    archdesc/phystech/head |    archdesc/controlaccess/head |    archdesc/odd/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/bioghist/p |    archdesc/scopecontent/p |    archdesc/arrangement/p |    archdesc/phystech/p |    archdesc/controlaccess/p |    archdesc/odd/p |    archdesc/bioghist/note/p |    archdesc/scopecontent/note/p |    archdesc/arrangement/note/p |    archdesc/phystech/note/p |    archdesc/controlaccess/note/p |    archdesc/odd/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"h3": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/bioghist/bioghist/head |   archdesc/scopecontent/scopecontent/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left: 50pt"
+				},
+				"_match": "archdesc/bioghist/bioghist/p |   archdesc/scopecontent/scopecontent/p |   archdesc/bioghist/bioghist/note/p |   archdesc/scopecontent/scopecontent/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"h4": {
+					"a": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id(head)}"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/scopecontent/arrangement/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:50pt"
+				},
+				"_match": "archdesc/scopecontent/arrangement/p  | archdesc/scopecontent/arrangement/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"div": {
+					"a": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id(head)}"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/scopecontent/arrangement/list/head",
+				"__prefix": "xsl"
+			},
+			{
+				"div": {
+					"a": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id()}"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/arrangement/list/head",
+				"__prefix": "xsl"
+			},
+			{
+				"div": {
+					"a": {
+						"attribute": {
+							"number": {
+								"__prefix": "xsl"
+							},
+							"_name": "href",
+							"__prefix": "xsl",
+							"__text": "#series\n\n\t\t\t\t"
+						},
+						"apply-templates": {
+							"__prefix": "xsl"
+						}
+					},
+					"_style": "margin-left:50pt"
+				},
+				"_match": "archdesc/scopecontent/arrangement/list/item  | archdesc/arrangement/list/item",
+				"__prefix": "xsl"
+			},
+			{
+				"if": {
+					"h3": {
+						"a": {
+							"b": {
+								"text": {
+									"__prefix": "xsl",
+									"__text": "Inne Materiały Pokrewne\n"
+								}
+							},
+							"_name": "relatedmatlink"
+						}
+					},
+					"apply-templates": [
+						{
+							"_select": "archdesc/relatedmaterial/p     | archdesc/*/relatedmaterial/p     | archdesc/relatedmaterial/note/p     | archdesc/*/relatedmaterial/note/p",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/separatedmaterial/p     | archdesc/*/separatedmaterial/p     | archdesc/separatedmaterial/note/p     | archdesc/*/separatedmaterial/note/p",
+							"__prefix": "xsl"
+						}
+					],
+					"p": {
+						"a": {
+							"_href": "#",
+							"__text": "Do Spisu Treści"
+						}
+					},
+					"hr": "",
+					"_test": "string(archdesc/relatedmaterial) or   string(archdesc/*/relatedmaterial) or   string(archdesc/separatedmaterial) or   string(archdesc/*/separatedmaterial)",
+					"__prefix": "xsl"
+				},
+				"_name": "archdesc-relatedmaterial",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left: 25pt"
+				},
+				"_match": "archdesc/relatedmaterial/p   | archdesc/*/relatedmaterial/p   | archdesc/separatedmaterial/p   | archdesc/*/separatedmaterial/p   | archdesc/relatedmaterial/note/p   | archdesc/*/relatedmaterial/note/p   | archdesc/separatedmaterial/note/p   | archdesc/*/separatedmaterial/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"if": {
+					"a": {
+						"apply-templates": {
+							"_select": "head",
+							"__prefix": "xsl"
+						},
+						"_name": "{generate-id(head)}"
+					},
+					"p": {
+						"apply-templates": {
+							"_select": "p | note/p",
+							"__prefix": "xsl"
+						},
+						"_style": "text-indent:25pt"
+					},
+					"choose": {
+						"when": {
+							"apply-templates": {
+								"_mode": "recursive",
+								"_select": ".",
+								"__prefix": "xsl"
+							},
+							"_test": "controlaccess",
+							"__prefix": "xsl"
+						},
+						"otherwise": {
+							"apply-templates": {
+								"_mode": "direct",
+								"_select": ".",
+								"__prefix": "xsl"
+							},
+							"__prefix": "xsl"
+						},
+						"__prefix": "xsl"
+					},
+					"_test": "string(child::*)",
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/controlaccess",
+				"__prefix": "xsl"
+			},
+			{
+				"for-each": {
+					"sort": {
+						"_select": ".",
+						"_data-type": "text",
+						"_order": "ascending",
+						"__prefix": "xsl"
+					},
+					"div": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_style": "margin-left:50pt"
+					},
+					"_select": "subject |corpname | famname | persname | genreform | title | geogname | occupation",
+					"__prefix": "xsl"
+				},
+				"p": {
+					"a": {
+						"_href": "#",
+						"__text": "\n\t\t\t\tDo Spisu Treści\n\t\t\t"
+					}
+				},
+				"hr": " ",
+				"_mode": "direct",
+				"_match": "archdesc/controlaccess",
+				"__prefix": "xsl"
+			},
+			{
+				"apply-templates": {
+					"_select": "controlaccess",
+					"__prefix": "xsl"
+				},
+				"p": {
+					"a": {
+						"_href": "#",
+						"__text": "\n\t\t\tDo Spisu Treści\n\t\t"
+					}
+				},
+				"hr": " ",
+				"_mode": "recursive",
+				"_match": "archdesc/controlaccess",
+				"__prefix": "xsl"
+			},
+			{
+				"h4": {
+					"apply-templates": {
+						"_select": "head",
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"for-each": {
+					"sort": {
+						"_select": ".",
+						"_data-type": "text",
+						"_order": "ascending",
+						"__prefix": "xsl"
+					},
+					"div": {
+						"apply-templates": {
+							"__prefix": "xsl"
+						},
+						"_style": "margin-left:50pt"
+					},
+					"_select": "subject |corpname | famname | persname | genreform | title | geogname | occupation",
+					"__prefix": "xsl"
+				},
+				"_match": "archdesc/controlaccess/controlaccess",
+				"__prefix": "xsl"
+			},
+			{
+				"if": {
+					"h3": {
+						"a": {
+							"b": {
+								"text": {
+									"__prefix": "xsl",
+									"__text": "Udostępnianie - Ograniczenia"
+								}
+							},
+							"_name": "restrictlink"
+						}
+					},
+					"apply-templates": [
+						{
+							"_select": "archdesc/accessrestrict     | archdesc/*/accessrestrict",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/userestrict     | archdesc/*/userestrict",
+							"__prefix": "xsl"
+						}
+					],
+					"p": {
+						"a": {
+							"_href": "#",
+							"__text": "Do Spisu Treści"
+						}
+					},
+					"hr": "",
+					"_test": "string(archdesc/userestrict/*)   or string(archdesc/accessrestrict/*)   or string(archdesc/*/userestrict/*)   or string(archdesc/*/accessrestrict/*)",
+					"__prefix": "xsl"
+				},
+				"_name": "archdesc-restrict",
+				"__prefix": "xsl"
+			},
+			{
+				"h4": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left: 25pt"
+				},
+				"_match": "archdesc/accessrestrict/head  | archdesc/userestrict/head  | archdesc/*/accessrestrict/head  | archdesc/*/userestrict/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:50pt"
+				},
+				"_match": "archdesc/accessrestrict/p  | archdesc/userestrict/p  | archdesc/*/accessrestrict/p  | archdesc/*/userestrict/p  | archdesc/accessrestrict/note/p  | archdesc/userestrict/note/p  | archdesc/*/accessrestrict/note/p  | archdesc/*/userestrict/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"if": {
+					"h3": {
+						"a": {
+							"text": {
+								"__prefix": "xsl",
+								"__text": "Informacje dodatkowe"
+							},
+							"_name": "adminlink"
+						}
+					},
+					"apply-templates": [
+						{
+							"_select": "archdesc/custodhist     | archdesc/*/custodhist",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/altformavail     | archdesc/*/altformavail",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/prefercite     | archdesc/*/prefercite",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/acqinfo     | archdesc/*/acqinfo",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/processinfo     | archdesc/*/processinfo",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/admininfo/appraisal     | archdesc/*/appraisal",
+							"__prefix": "xsl"
+						},
+						{
+							"_select": "archdesc/admininfo/accruals     | archdesc/*/accruals",
+							"__prefix": "xsl"
+						}
+					],
+					"p": {
+						"a": {
+							"_href": "#",
+							"__text": "Do Spisu Treści"
+						}
+					},
+					"hr": "",
+					"_test": "string(archdesc/admininfo/custodhist/*)   or string(archdesc/altformavail/*)   or string(archdesc/prefercite/*)   or string(archdesc/acqinfo/*)   or string(archdesc/processinfo/*)   or string(archdesc/appraisal/*)   or string(archdesc/accruals/*)   or string(archdesc/*/custodhist/*)   or string(archdesc/*/altformavail/*)   or string(archdesc/*/prefercite/*)   or string(archdesc/*/acqinfo/*)   or string(archdesc/*/processinfo/*)   or string(archdesc/*/appraisal/*)   or string(archdesc/*/accruals/*)",
+					"__prefix": "xsl"
+				},
+				"_name": "archdesc-admininfo",
+				"__prefix": "xsl"
+			},
+			{
+				"h4": {
+					"a": {
+						"b": {
+							"apply-templates": {
+								"__prefix": "xsl"
+							}
+						},
+						"_name": "{generate-id()}"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "custodhist/head   | archdesc/altformavail/head   | archdesc/prefercite/head   | archdesc/acqinfo/head   | archdesc/processinfo/head   | archdesc/appraisal/head   | archdesc/accruals/head   | archdesc/*/custodhist/head   | archdesc/*/altformavail/head   | archdesc/*/prefercite/head   | archdesc/*/acqinfo/head   | archdesc/*/processinfo/head   | archdesc/*/appraisal/head   | archdesc/*/accruals/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:50pt"
+				},
+				"_match": "custodhist/p   | archdesc/altformavail/p   | archdesc/prefercite/p   | archdesc/acqinfo/p   | archdesc/processinfo/p   | archdesc/appraisal/p   | archdesc/accruals/p   | archdesc/*/custodhist/p   | archdesc/*/altformavail/p   | archdesc/*/prefercite/p   | archdesc/*/acqinfo/p   | archdesc/*/processinfo/p   | archdesc/*/appraisal/p   | archdesc/*/accruals/p   | archdesc/custodhist/note/p   | archdesc/altformavail/note/p   | archdesc/prefercite/note/p   | archdesc/acqinfo/note/p   | archdesc/processinfo/note/p   | archdesc/appraisal/note/p   | archdesc/accruals/note/p   | archdesc/*/custodhist/note/p   | archdesc/*/altformavail/note/p   | archdesc/*/prefercite/note/p   | archdesc/*/acqinfo/note/p   | archdesc/*/processinfo/note/p   | archdesc/*/appraisal/note/p   | archdesc/*/accruals/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"apply-templates": {
+					"__prefix": "xsl"
+				},
+				"p": {
+					"a": {
+						"_href": "#",
+						"__text": "Do Spisu Treści"
+					}
+				},
+				"hr": "",
+				"_match": "archdesc/otherfindaid   | archdesc/*/otherfindaid   | archdesc/bibliography   | archdesc/*/bibliography   | archdesc/originalsloc   | archdesc/phystech",
+				"__prefix": "xsl"
+			},
+			{
+				"h3": {
+					"a": {
+						"b": {
+							"apply-templates": {
+								"__prefix": "xsl"
+							}
+						},
+						"_name": "{generate-id()}"
+					}
+				},
+				"_match": "archdesc/otherfindaid/head   | archdesc/*/otherfindaid/head   | archdesc/bibliography/head   | archdesc/*/bibliography/head   | archdesc/fileplan/head   | archdesc/*/fileplan/head   | archdesc/phystech/head   | archdesc/originalsloc/head",
+				"__prefix": "xsl"
+			},
+			{
+				"p": {
+					"apply-templates": {
+						"__prefix": "xsl"
+					},
+					"_style": "margin-left:25pt"
+				},
+				"_match": "archdesc/otherfindaid/p   | archdesc/*/otherfindaid/p   | archdesc/bibliography/p   | archdesc/*/bibliography/p   | archdesc/otherfindaid/note/p   | archdesc/*/otherfindaid/note/p   | archdesc/bibliography/note/p   | archdesc/*/bibliography/note/p   | archdesc/fileplan/p   | archdesc/*/fileplan/p   | archdesc/fileplan/note/p   | archdesc/*/fileplan/note/p   | archdesc/phystech/p   | archdesc/phystechc/note/p   | archdesc/originalsloc/p   | archdesc/originalsloc/note/p",
+				"__prefix": "xsl"
+			},
+			{
+				"table": {
+					"tr": [
+						{
+							"td": [
+								{
+									"_width": "5%"
+								},
+								{
+									"_width": "45%"
+								},
+								{
+									"_width": "50%"
+								}
+							]
+						},
+						{
+							"td": {
+								"h3": {
+									"a": {
+										"b": {
+											"apply-templates": {
+												"_select": "head",
+												"__prefix": "xsl"
+											}
+										},
+										"_name": "{generate-id(head)}"
+									}
+								},
+								"_colspan": "3"
+							}
+						}
+					],
+					"for-each": [
+						{
+							"tr": {
+								"td": [
+									"",
+									{
+										"apply-templates": {
+											"__prefix": "xsl"
+										},
+										"_colspan": "2"
+									}
+								]
+							},
+							"_select": "p | note/p",
+							"__prefix": "xsl"
+						},
+						{
+							"sort": {
+								"_select": "corpname | famname | function | genreform | geogname | name | occupation | persname | subject",
+								"__prefix": "xsl"
+							},
+							"tr": {
+								"td": [
+									"",
+									{
+										"apply-templates": {
+											"_select": "corpname | famname | function | genreform | geogname | name | occupation | persname | subject",
+											"__prefix": "xsl"
+										}
+									}
+								],
+								"choose": {
+									"when": {
+										"td": {
+											"for-each": {
+												"for-each": {
+													"apply-templates": {
+														"__prefix": "xsl"
+													},
+													"if": {
+														"text": {
+															"__prefix": "xsl",
+															"__text": ", "
+														},
+														"_test": "preceding-sibling::ref or preceding-sibling::ptr",
+														"__prefix": "xsl"
+													},
+													"_select": "ref | ptr",
+													"__prefix": "xsl"
+												},
+												"_select": "ptrgrp",
+												"__prefix": "xsl"
+											}
+										},
+										"_test": "ptrgrp",
+										"__prefix": "xsl"
+									},
+									"otherwise": {
+										"td": {
+											"for-each": {
+												"apply-templates": {
+													"__prefix": "xsl"
+												},
+												"_select": "ref | ptr",
+												"__prefix": "xsl"
+											}
+										},
+										"__prefix": "xsl"
+									},
+									"__prefix": "xsl"
+								}
+							},
+							"_select": "indexentry",
+							"__prefix": "xsl"
+						}
+					],
+					"_width": "100%"
+				},
+				"p": {
+					"a": {
+						"_href": "#",
+						"__text": "Do Spisu Treści"
+					}
+				},
+				"hr": "",
+				"_match": "archdesc/index   | archdesc/*/index",
+				"__prefix": "xsl"
+			}
+		],
+		"include": {
+			"_href": "dsc14.xsl",
+			"__prefix": "xsl"
+		},
+		"_xmlns:xsl": "http://www.w3.org/1999/XSL/Transform",
+		"_version": "1.0",
+		"__prefix": "xsl"
+	}
+}
