@@ -1,0 +1,2 @@
+# ignoruj wszystkie pliki znajdujace sie w katalogu node_modules/
+node_modules/
