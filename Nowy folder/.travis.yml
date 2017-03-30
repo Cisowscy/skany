@@ -9,8 +9,10 @@ branches:
     - master
 
 before_script:
-  - npm install -g firebase-tools
-  - npm install -g @angular/cli
+  - npm install -g firebase-tools@latest
+  - npm install -g @angular/cli@latest
+  - npm install -g angular-cli-ghpages@latest
+  - npm install --save-dev @angular/cli@latest
 
 script:
   - ng build --prod
