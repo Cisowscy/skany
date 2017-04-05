@@ -1,0 +1,244 @@
+
+<!--<div class="problemy-z-dialogami">
+  <app-stara-wersja></app-stara-wersja><br>
+  <hr /><br></div>-->
+ 
+  <md-card>
+    <md-card-title> <h2>POSTANOWIENIA LICENCYJNE</h2></md-card-title>
+    <md-card-content>
+      <p>Całokształ stanowi autorska mozolna kilkumiesieczna praca, metodą prob i błedw, dlatego też osoby chcące użyć kod do aplikacj bardzo proszę o wcześniejszy kontakt!! Niemniej licząc na rozwoj, udostępniam ją na uogolnionych postanowieniach licencyjnych zgodnych z licencją  <button md-raised-button color="primary" (click)="LICENCJA()">AGPL-3.0</button>  dodatkowo każda technologia i element środowiska zarwno z wymienionych poniżej jak i pominiętych rządzi sie swoimi postanowieniami licencyjnymi ktrych należy przestrzegać.</p><br>
+      <p><strong>
+        Osobne postanowieni tyczą się bazy danych <br><br> materiał tj. SKANY, jako takie nie stanowią rzadnego podzespołu niniejsz aplikacji, a jedynie owa aplikacja za pośrednictwem bazy linkow do tychże skanow daje mozliwość wygodnego wglądu do nichże, jak i analizowania dostępnego zasobu na stronach   <button md-raised-button color="primary" (click)="AGAD()">AGAD-u</button>
+        <br><br> BAZA LINKOW, stanowi jako tako wolną strukturę, każdy może ją w dowolny sposb utworzyć wchodząc na stronę materiału i kopiując link, niemniej tych linkw jest ponad 200 tysięcy i wiele czasu ponad miesiąc zejeło mi jej utworzenie. Zostały skorygowane błedy ze strony AGAD, niektre materiały bowiem posiadają link a nie posiadają skanow. 
+        <br><br> SKANY jak jż wsponiałem nie stanowią części aplikacji, ani bazy, jednakże pragnę poinformować iż nie nalżey przedrukowywać, ani na dużą skalę kopiować zasobu pierwotnego AGAD-u, 
+        <br><br> BAZA MIEJSCOWOSCI i DATACJI ZASOBU AGAD, dotego zastrzegam sobie prawo autorskie, gdyż faktycznie pobrałem wstępne nazwy z ewidencji haseł geograficznych. Aczkolwiek posłużyło mi to jako spis treści, są tam ogromne błedy rzedu 6% zasobu w nazewnictwie a w opisach ksiąg w obszarze wytępujących haseł wewnątrz księgi, jak i roczniki występpujące wewnątrz są traktowane zgrubnie zdarza sie że danego rocznika dla danego przysiłka w księdze brak, a nie ma takowej informacji, także bazę utworzyłem od nowa, część zasobu posiada przypis weryfikacji, są to te obiekty dla ktrych szczegłowo sprawdziłem lokalizacje jak i datację zasoby, pozostała część niebawem zostanie zweryfikowana.        </strong>
+        <br><br> KOREKTA GRAFICZNA, skrypt korekty rzadzi się swoim prawem licencyjnym
+         <br><br> INDEKSY, jest to porzyszła autorska funkcjonalność, będzie polegała w pierwszej kolejności na wyświetlaniu tabeliki zawartości danej strony skanu, w następnej kolejności złożoną aplikację umożliwiającą indeksację, w kolejnej  kolejności, zbudowanie wyszukiwarki że po wpisaniu nazwiska, zostaną wyświetlone wszystkie skany posiadające dane nazwisko i inne określone parametry , lecz w formie wycięty fragmentw, skanu, do ktrych będzie można pobrać link lub zapisać na dysk.. bezpośrednio ze strony agadu z obrubką graficzną w locie.
+      
+      </p><button md-raised-button color="accent" (click)="KONTAKT()">Jan Roman J.S. Cisowski Sas</button> 
+      <button md-raised-button color="primary" (click)="GIT_HUB()">GitHub</button> <button md-raised-button color="primary" (click)="GIT_MTS()">TeamServices</button> 
+      <button md-raised-button color="primary" (click)="GIT_GFB()">FireBase</button>
+    </md-card-content>
+  </md-card>
+  <hr />
+  <h2>TECHNOLOGIA WYKORZYSTANA W APLIKACJI</h2>  
+<div class="pustostan-plynny ">
+  <md-card class="karta czerwo400 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis01}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik01()"><md-card-title>{{tytul01}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+<md-card class="karta fiolet400 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis02}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik02()"><md-card-title>{{tytul02}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta fiolet400  mat-card-flat">    
+    <md-card-content>
+      <p>{{opis03}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik03()"><md-card-title>{{tytul03}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta fiolet400  mat-card-flat">    
+    <md-card-content>
+      <p>{{opis04}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik04()"><md-card-title>{{tytul04}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta fiolet400  mat-card-flat">    
+    <md-card-content>
+      <p>{{opis05}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik05()"><md-card-title>{{tytul05}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta granat400 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis06}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik06()"><md-card-title>{{tytul06}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+ 
+  <md-card class="karta rozowy300 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis07}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik07()"><md-card-title>{{tytul07}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta bursztyn300 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis08}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik08()"><md-card-title>{{tytul08}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta jesien700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis09}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik09()"><md-card-title>{{tytul09}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta jesien700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis10}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik10()"><md-card-title>{{tytul10}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+<md-card class="karta jesien700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis11}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik11()"><md-card-title>{{tytul11}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+<md-card class="karta morze700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis12}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik12()"><md-card-title>{{tytul12}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta morze700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis13}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik13()"><md-card-title>{{tytul13}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta morze700 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis14}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik14()"><md-card-title>{{tytul14}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis15}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik15()"><md-card-title>{{tytul15}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis16}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik16()"><md-card-title>{{tytul16}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis17}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik17()"><md-card-title>{{tytul17}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis18}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik18()"><md-card-title>{{tytul18}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis19}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik19()"><md-card-title>{{tytul19}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+
+  <md-card class="karta null000 mat-card-flat">    
+    <md-card-content>
+      <p>{{opis20}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button (click)="klik20()"><md-card-title>{{tytul20}}</md-card-title></button>
+    </md-card-actions>
+  </md-card>
+  
+
+   
+
+</div>  
+<hr />
+<md-card>
+ <md-card-title> <h2>WSKAZOWKI DO ROZWOJU - SPOJNOSC PODZESPOLOW</h2></md-card-title>
+    <md-card-subtitle>Angular + Net.Core</md-card-subtitle>
+    <md-card-content>   
+      <ul>
+        <li>PS> choco install nuget.commandline -pre</li>
+        <li>PS> nuget install Microsoft.AspNetCore.Mvc.Core</li>
+        <li>PS> nuget install Microsoft.AspNetCore.SpaTemplates</li>
+        <li>PS> dotnet new --install Microsoft.AspNetCore.SpaTemplates::*</li>        
+        <li>instalacja NVS https://github.com/jasongin/nvs/releases</li>
+        <li>PS> nvs</li>
+        <li>PS> npm install -g @angular/cli</li>
+        <li>PS> ng new skany -lc -sd ClientApp --style scss --routing</li>
+        <li>PS> cd skany</li>
+        <li>PS> yarn</li>
+        <li>PS> ng s --open</li>
+        <li>PS> mkdir TMP</li>
+        <li>PS> cd TMP</li>
+        <li>PS> dotnet new web -n skany</li>
+        <li>PS> cd ..</li>
+        <li>PS> (niedziala) MOVE /-Y "TMP/" "/"</li>
+        <li>PS> dotnet add package Microsoft.AspNetCore.StaticFiles</li>
+        <li>po otwarciu VScode przywrocic i zatwierdzic pakiety</li>
+
+
+
+        <li></li>
+        <li></li>
+        
+        </ul>   
+      
+     
+    </md-card-content>
+  </md-card>
+  <hr />

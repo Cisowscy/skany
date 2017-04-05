@@ -1,0 +1,16 @@
+
+
+
+.skany-mapy {
+  border: 3px solid rgba(69,90,100 ,1);
+  margin-bottom: 40px;
+  flex-grow: 1;
+  .mat-tab-header {
+    background: rgba(69,90,100 ,1);
+    color: rgba(207,216,220 ,1);
+  }
+}
+
+.tab-content {
+  padding: 16px;
+}

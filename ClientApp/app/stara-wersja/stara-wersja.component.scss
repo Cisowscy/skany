@@ -1,0 +1,33 @@
+.example-full-width {
+  width: 100%;
+}
+.mat-input-placeholder{
+    color: #455A64;
+}
+
+.demo-dialog {
+  color: rebeccapurple;
+}
+
+.demo-dialog-card {
+  max-width: 350px;
+  margin: 20px 0;
+}
+
+//class="mat-dialog-container"
+
+md-dialog-container {
+    display: block;
+	height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    position: absolute;
+    left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin: auto;
+	background-color: rgba(38,50,56 ,1);
+	overflow: auto;
+	border-radius: 10px;
+
+}

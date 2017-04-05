@@ -1,0 +1,125 @@
+/* głwny pojemnik */
+article.accordion
+{
+	display: block;
+	height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    position: absolute;
+    left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin: auto;
+	background-color: rgba(38,50,56 ,1);
+	overflow: auto;
+	border-radius: 10px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+/* podzial na sekcje - wywolywacze - panele*/
+article.accordion section
+{
+	position: relative;
+	display: block;
+	float: left;
+	width: 3em;
+	height:calc(100% - 14px);
+    top:0px;
+	bottom:0px;
+	margin: 0.5em 0 0.5em 0.5em;
+	color: rgba(55,71,79 ,1);
+	background-color: rgba(55,71,79 ,1);
+	overflow: hidden;
+	border-radius: 5px 0px 0px 5px;
+}
+/* podzial na sekcje - wywolywacze - tytuly*/
+article.accordion section h2
+{
+	position: absolute;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 12em;
+	height: 2em;
+	top: 60%;
+	left: 0;
+	text-indent: 0em;
+	padding: 0;
+	margin: 0;
+	color: rgba(207,216,220 ,1);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+} 
+/* podzial na sekcje - wywolywacze - korekcja linkow*/
+article.accordion section h2 a
+{
+	display: block;
+	width: 100%;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
+	outline: 0 none;
+}
+/* podzial na sekcje - kontener sekcji*/
+article.accordion section:target
+{
+	width: calc(100% - 17em);
+	padding: 0 1em;
+	color: rgba(33, 33, 33, 1);
+	background-color: rgba(236,239,241 ,1);
+    border-radius: 5px 5px 5px 5px;
+}
+/* podzial na sekcje - kontener sekcji - umiejscowienie tytulu*/
+article.accordion section:target h2
+{
+	position: static;
+	font-size: 1.3em;
+	text-indent: 0;
+	color: rgba(38,50,56 ,1);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+    
+}
+/*article.accordion section:target h2
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: rgba(38,50,56 ,1);
+}*/
+/* animacja*/
+
+article.accordion section,
+article.accordion section h2
+{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+} 
+
+article.accordion section p {
+	visibility: hidden;
+}  
+article.accordion section:target p {
+	visibility: visible;
+    height: calc(100% - 10px);
+	width: calc(100%-5em);
+    position: absolute;
+    left:0em;
+	padding: 0.5em;
+	right:0;
+	top:5em;
+	bottom:0;
+	margin: auto;     
+    overflow-x: auto;         
+}  

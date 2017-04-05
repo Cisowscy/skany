@@ -1,0 +1,16 @@
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\bin\Debug\netcoreapp1.1\skany.deps.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.dev.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\bin\Debug\netcoreapp1.1\skany.dll
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\bin\Debug\netcoreapp1.1\skany.pdb
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\obj\Debug\netcoreapp1.1\skany.dll
+c:\Users\Cisowscy.com\Desktop\SAMPLE\Nowyfolder\skany\obj\Debug\netcoreapp1.1\skany.pdb
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\bin\Debug\netcoreapp1.1\skany.deps.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.dev.json
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\bin\Debug\netcoreapp1.1\skany.dll
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\bin\Debug\netcoreapp1.1\skany.pdb
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\obj\Debug\netcoreapp1.1\skany.dll
+c:\Users\Cisowscy.com\Desktop\SAMPLE\skany\obj\Debug\netcoreapp1.1\skany.pdb
