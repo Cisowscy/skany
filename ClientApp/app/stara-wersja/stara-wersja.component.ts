@@ -1,6 +1,7 @@
 import { Component, Inject, ViewChild, TemplateRef } from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
-import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/material';
+import { MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA } from '@angular/material';
+import { GoogleAnalyticsService } from 'angular-ga';
 
 
 
@@ -13,7 +14,7 @@ import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/ma
   templateUrl: './stara-wersja.component.html',
   styleUrls: ['./stara-wersja.component.scss']
 })
-export class StaraWersjaComponent {
+export class StaraWersjaComponent  {
 
  // dialogRef: MdDialogRef<DIALOG01>;
  /* lastCloseResult: string;

@@ -14,6 +14,7 @@ import 'hammerjs';
 //import { PrismDirective } from '@mseemann/prism';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 
 
 
@@ -28,6 +29,8 @@ import { MapyComponent } from './skany-filtrowanie/mapy/mapy.component';
 import { Angular2GoogleMapsComponent } from './skany-filtrowanie/mapy/angular2-google-maps/angular2-google-maps.component';
 import { StaraWersjaComponent} from './stara-wersja/stara-wersja.component';
 // import {DIALOG01, DIALOG02a, DIALOG02b} from './stara-wersja/stara-wersja.component'; 
+
+//
 @NgModule({
   imports: [
     BrowserModule,
@@ -41,6 +44,10 @@ import { StaraWersjaComponent} from './stara-wersja/stara-wersja.component';
     /*[MaterialModule],*/
     MaterialModule.forRoot(),
     FlexLayoutModule,
+    GoogleAnalyticsModule.forRoot({
+            provide: GA_TOKEN,
+            useValue: 'UA-93512619-1'
+        }),
    // MdlModule,
   //  MdlSelectModule,
    // MdlPopoverModule,

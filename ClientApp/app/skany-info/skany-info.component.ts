@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MdIconRegistry } from '@angular/material';
+import { GoogleAnalyticsService } from 'angular-ga';
 
 @Component({
   moduleId: module.id,
@@ -11,10 +12,16 @@ import { MdIconRegistry } from '@angular/material';
 export class SkanyInfoComponent implements OnInit {
   
 
-  constructor() { }
+  constructor(
+        private gaService: GoogleAnalyticsService
+    ) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.gaService.event.emit({
+            category: 'app',
+            action: 'bootstrap'
+        });
+    }
 
   public LICENCJA() {
     let url = '#';
