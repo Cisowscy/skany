@@ -1,1 +1,0 @@
-ng new $ --verbose --linkCli --skipInstall --skipGit --sourceDir ClientApp --style scss --routing
