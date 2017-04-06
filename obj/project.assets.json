@@ -8685,16 +8685,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cisowscy.com\\Desktop\\SAMPLE\\skany\\skany.csproj",
+      "projectUniqueName": "C:\\SSD\\2\\skany\\skany.csproj",
       "projectName": "skany",
-      "projectPath": "C:\\Users\\Cisowscy.com\\Desktop\\SAMPLE\\skany\\skany.csproj",
-      "outputPath": "C:\\Users\\Cisowscy.com\\Desktop\\SAMPLE\\skany\\obj\\",
+      "projectPath": "C:\\SSD\\2\\skany\\skany.csproj",
+      "outputPath": "C:\\SSD\\2\\skany\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/skany.dll": "C:\\Users\\Cisowscy.com\\Desktop\\SAMPLE\\skany\\bin\\placeholder\\netcoreapp1.1\\skany.dll"
+        "lib/netcoreapp1.1/skany.dll": "C:\\SSD\\2\\skany\\bin\\placeholder\\netcoreapp1.1\\skany.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
