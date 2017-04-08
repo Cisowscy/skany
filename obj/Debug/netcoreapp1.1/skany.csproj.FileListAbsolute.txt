@@ -22,3 +22,14 @@ c:\SSD\2\skany\bin\Debug\netcoreapp1.1\skany.pdb
 c:\SSD\2\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
 c:\SSD\2\skany\obj\Debug\netcoreapp1.1\skany.dll
 c:\SSD\2\skany\obj\Debug\netcoreapp1.1\skany.pdb
+c:\cis\skany\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.x86.dll
+c:\cis\skany\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.amd64.dll
+c:\cis\skany\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.arm.dll
+c:\cis\skany\bin\Debug\netcoreapp1.1\skany.deps.json
+c:\cis\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.json
+c:\cis\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.dev.json
+c:\cis\skany\bin\Debug\netcoreapp1.1\skany.dll
+c:\cis\skany\bin\Debug\netcoreapp1.1\skany.pdb
+c:\cis\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
+c:\cis\skany\obj\Debug\netcoreapp1.1\skany.dll
+c:\cis\skany\obj\Debug\netcoreapp1.1\skany.pdb
