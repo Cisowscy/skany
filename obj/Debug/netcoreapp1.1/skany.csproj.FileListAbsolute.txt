@@ -33,3 +33,4 @@ c:\cis\skany\bin\Debug\netcoreapp1.1\skany.pdb
 c:\cis\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
 c:\cis\skany\obj\Debug\netcoreapp1.1\skany.dll
 c:\cis\skany\obj\Debug\netcoreapp1.1\skany.pdb
+C:\cis\skany\obj\Debug\netcoreapp1.1\skany.csprojResolveAssemblyReference.cache
