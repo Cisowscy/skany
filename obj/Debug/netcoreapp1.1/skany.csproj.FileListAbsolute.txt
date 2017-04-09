@@ -34,3 +34,11 @@ c:\cis\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
 c:\cis\skany\obj\Debug\netcoreapp1.1\skany.dll
 c:\cis\skany\obj\Debug\netcoreapp1.1\skany.pdb
 C:\cis\skany\obj\Debug\netcoreapp1.1\skany.csprojResolveAssemblyReference.cache
+c:\SSD\skany\bin\Debug\netcoreapp1.1\skany.deps.json
+c:\SSD\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.json
+c:\SSD\skany\bin\Debug\netcoreapp1.1\skany.runtimeconfig.dev.json
+c:\SSD\skany\bin\Debug\netcoreapp1.1\skany.dll
+c:\SSD\skany\bin\Debug\netcoreapp1.1\skany.pdb
+c:\SSD\skany\obj\Debug\netcoreapp1.1\skany.AssemblyInfo.cs
+c:\SSD\skany\obj\Debug\netcoreapp1.1\skany.dll
+c:\SSD\skany\obj\Debug\netcoreapp1.1\skany.pdb
