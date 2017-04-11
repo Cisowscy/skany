@@ -81,7 +81,7 @@ article.accordion section h2 a
 /* podzial na sekcje - kontener sekcji*/
 article.accordion section:target
 {
-	height: calc(100% - 4em);	
+	height: calc(100% - 6em);	
 	color: rgba(33, 33, 33, 1);
 	background-color: rgba(236,239,241 ,1);
     border-radius: 1em;
@@ -161,8 +161,7 @@ margin-left:0.5em;
         background-color:rgba(55,71,79 ,1);
     }
 
-
-input[type=button]{
+#ZATWIERDZ_WYBOR{
 font-size: 1em;
 border: 0.1em solid rgba(38,50,56 ,1);
 padding: 0.5em;
@@ -184,29 +183,6 @@ fieldset{
     border-radius:1em; 
 }
 
-input[type="radio"] {
-    display:none;
-}
-
-input[type="radio"] + label {
-    color: rgba(38,50,56 ,1);
-    font-family:Arial, sans-serif;
-    font-size:14px;
-}
-
-input[type="radio"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background:url(http://webdesigntutsplus.s3.amazonaws.com/tuts/391_checkboxes/check_radio_sheet.png) -38px top no-repeat;
-    cursor:pointer;
-}
-
-input[type="radio"]:checked + label span {
-    background:url(http://webdesigntutsplus.s3.amazonaws.com/tuts/391_checkboxes/check_radio_sheet.png) -57px top no-repeat;
-}
 .SygZawTyp_1{
     background-color: rgba(165,214,167 ,0.2);
 	font-weight: bold;
@@ -222,8 +198,53 @@ input[type="radio"]:checked + label span {
 	
   flex-flow: row wrap;
 }
-#MINIATURY img{
-	width: 10%;
+#MINIATURY a img{
+	width: 7em;
 	margin: 1em;
 	flex-direction: column;
+}
+#Fi_myMap{
+	height: 70%;	
+	display: block;
+
+}
+#myMap {
+	height: calc(100% - 1em);
+    width: calc(100% - 1em);
+	display: block;
+    position: relative;
+    left:0em;
+	right:0em;
+	top:0em;
+	bottom:0em;
+	margin: auto;	
+	overflow: false;
+}
+#info {
+	position: fixed;
+	bottom:1em;
+	left:1em;
+	right:1em;
+}
+
+#INFO_BACK{
+	background-color: rgba(13,71,161 ,1);
+}
+
+#INFO_WWW, #INFO_NEXT, #INFO_GIT, #INFO_KONTAKT, #INFO_LICENCJA{
+background-color: rgba(62,39,35 ,1);
+}
+
+#info input[type=button]{
+	font-size: 1em;
+border: 0.1em solid rgba(130,119,23 ,0.3);
+padding: 0.1em;
+
+font-weight:bold;
+cursor: pointer;
+
+color:rgba(236,239,241 ,0.8);
+border-radius:0.5em;
+margin-left:0.5em;
+font-family: 'Droid Serif', serif;
 }
