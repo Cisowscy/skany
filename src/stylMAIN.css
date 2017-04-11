@@ -209,8 +209,8 @@ fieldset{
 
 }
 #myMap {
-	height: calc(100% - 1em);
-    width: calc(100% - 1em);
+	height: 50%;
+    width: 50%;
 	display: block;
     position: relative;
     left:0em;
