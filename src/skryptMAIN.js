@@ -1,89 +1,38 @@
 $(document).ready(function () {
-
-
+    $("#ZATWIERDZ_WYBOR").hide();
     var ElTab = "";
+    $('select#listaSYGNATUR').change(function () {
+        ElTab = $('select#listaSYGNATUR').val();
+        $('#MINIATURY').empty();
+        /*alert("wybrano zespol: : " + ElTab);*/
+        if (ElTab > 583) {
+            $("#ZATWIERDZ_WYBOR").show();
+        } else {
+            $("#ZATWIERDZ_WYBOR").hide();
+        }
+    });
 
-$("#ZATWIERDZ_WYBOR").click(function () {
-      /* var select = $('select#listaSYGNATUR');
-       var selectedItem= select.find(':selected');
-       var selectedVal = select.val();
-       var selectedText = selectedItem.text();
-       var optgroupLabel = selectedItem.parent().prop('label');
-    $('#result').empty();
-     $('#result').append("val =" + selectedVal + " text ="+ selectedText+" group =" + optgroupLabel );*/
- /*MINIATURY
-     $('#MINIATURYdiv').empty();*/
-    ElTab = $('select#listaSYGNATUR').val();
+    $("#ZATWIERDZ_WYBOR").click(function (event) {
+        $('a[href^="#GAELERIA"]');
+        ElTab = $('select#listaSYGNATUR').val();
+        $.getJSON('https://cisowscy.github.io/skany/src/bazaSygLink.json', function (SygLink) {
+            var LinkA = "http://" + SygLink[ElTab][3] + ".home.net.pl/metrykalia/" + SygLink[ElTab][2][0] + encodeURI("/sygn. " + SygLink[ElTab][2][1]) + "/";
+            var IDLPa = "Z_" + SygLink[ElTab][2][0] + "_S_" + SygLink[ElTab][2][1];
+            for (var i = 0; i < SygLink[ElTab][2][2].length; i++) {
+                var LinkC = encodeURI(SygLink[ElTab][2][2][i]) + ".jpg";
+                var IDLPb = "_X_" + SygLink[ElTab][2][2][i];
+                var IDLP = IDLPa + IDLPb;
+                $('#MINIATURY').append('<a name="' + IDLP + '" href="' + LinkA + 'images/' + LinkC + '" target="_blank"><img src="' + LinkA + 'thumbnails/' + LinkC + '" alt="' + IDLP + '"></a>');
+            }
+            $("#ZATWIERDZ_WYBOR").hide();
+           
+        });
+    });    
     
-    try {
-        
-    } catch (error) {
-        
+});
+var map;
+                function loadMapScenario() {
+                    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                        credentials: 'Ag_DhhI4OhAJ28lJwiqxdE65HfSBWC3PT3MY1fYYlLd3vJpYMifcNlFA1-ZrMi7P'
+                    });
     }
-     $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    $('#MINIATURY').append('<img src="http://agadd.home.net.pl/metrykalia/300/sygn.%203/thumbnails/PL_1_300_3_0000-metryczka.jpg">');
-    
-
-   });   
-
-/*MINIATURY*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-    //Klawisz zatwierdzania radio
-            $('#radio_value').click(function () {
-                $('#result').empty();
-                Wybrany_Zespol = $("form input[name='IDZ_Zespolu']:checked").val();
-                if ($("form input[name='IDZ_Zespolu']").is(':checked')) {
-                   /* $('#result').append("Wybrany zespol to: :<span> " + Wybrany_Zespol + " </span>");*/
-                    $("#Z_298").hide();
-    $("#Z_299").hide();
-    $("#Z_300").hide();
-    $("#Z_301").hide();
-    $("#Z_302").hide();
-    $("#Z_436").hide();
-    $("#Z_437").hide();
-    $("#Z_439").hide();
-    $("#Z_456").hide();
-                    $("#"+Wybrany_Zespol).show();
-
-
-
-                } else {
-                    alert(" Proszę wybrać ktoras z pozycji! ");
-                }
-            });
-    //zmiana radio
-   /* $("input[name='IDZ_Zespolu']").change(function(){
-Wybrany_Zespol = $("form input[name='IDZ_Zespolu']:checked").val();
-alert("wybrano zespol: : " +Wybrany_Zespol);
-});*/
-    //Klawisz zreset radio
- /*  $('#radio_reset').click(function() {
-$('#result').empty();
-$("input[name='IDZ_Zespolu']").attr("checked", false);
-});*/
-
-
-
-});   
-
