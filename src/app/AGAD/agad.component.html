@@ -1,0 +1,49 @@
+<div class="bodyAGAD">
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let tabLink of tabLinks; let i = index"
+     [routerLink]="tabLink.link"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{tabLink.label | uppercase}}
+</a>
+</nav>
+<main>
+<router-outlet></router-outlet>
+</main>
+</div>
+
+
+<!--<mat-tab-group class="AGAD-tab-group">
+  <mat-tab label>
+    <ng-template mat-tab-label>
+      <a routerLink="/lokalizacje">Lokalizacje</a>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label>
+    <ng-template mat-tab-label>
+      <a routerLink="/wykaz-ksiag">Wykaz</a>
+    </ng-template>
+  </mat-tab>
+  <ng-template container>
+    <app-lokalizacje></app-lokalizacje>
+
+    <router-outlet> </router-outlet>
+  </ng-template>
+
+</mat-tab-group>
+
+
+
+
+
+
+
+<mat-tab label="Lokalizacje">
+  <app-lokalizacje></app-lokalizacje>
+  <app-google-maps></app-google-maps>
+</mat-tab>
+<mat-tab label="Wykaz">
+  <app-wykaz></app-wykaz>
+</mat-tab>
+-->

@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "skany"
+    "name": "AGAD"
   },
   "apps": [
     {
-      "root": "ClientApp",
-      "outDir": "wwwroot",
+      "root": "src",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"
@@ -18,9 +18,12 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
+      "serviceWorker": true,
       "styles": [
-      "styles.scss",
-      "SKANY.scss"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "./app/materials/materials.icons.scss",
+        "../node_modules/snazzy-info-window/dist/snazzy-info-window.scss",
+        "./sass/styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -37,13 +40,16 @@
   },
   "lint": [
     {
-      "project": "ClientApp/tsconfig.app.json"
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "ClientApp/tsconfig.spec.json"
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {
@@ -53,6 +59,28 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "class": {
+      "spec": false
+    },
+    "component": {
+      "spec": false,
+      "inlineStyle": false,
+      "inlineTemplate": false
+    },
+    "directive": {
+      "spec": false
+    },
+    "guard": {
+      "spec": false
+    },
+    "module": {
+      "spec": false
+    },
+    "pipe": {
+      "spec": false
+    },
+    "service": {
+      "spec": false
+    }
   }
 }

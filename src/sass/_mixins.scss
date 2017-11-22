@@ -1,0 +1,79 @@
+@mixin HeightWidth($H, $W) {
+  height: $H;
+  width: $W;
+}
+
+@mixin ofsetTRBL($T, $R, $B, $L) {
+  top: $T;
+  right: $R;
+  bottom: $B;
+  left: $L;
+}
+
+@mixin backgroundWebKit() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@mixin backgroundFIX($kolor, $adres, $typ) {
+    background: $adres $typ center center fixed;
+    background-color: $kolor;
+   // filter: invert($INVER);
+   @include backgroundWebKit();
+}
+@mixin backgroundNOFIX($kolor, $adres, $typ) {
+    background: $adres $typ center center;
+    background-color: $kolor;
+    // filter: invert($INVER);
+   // @include backgroundWebKit();
+}
+@mixin cieniowanieEXT($rad) {
+    -moz-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    -webkit-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+   // filter: invert($INVER);
+
+  }
+@mixin cieniowanieINT($rad) {
+    -moz-box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+    -webkit-box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+    box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+   // filter: invert($INVER);
+  }
+
+
+@mixin FLEX_PARENT($Flex_Direction, $Flex_Wrap, $Content_justify, $Iitems_Align, $Content_Align) {
+    display: flex;
+    flex-direction: $Flex_Direction;
+    flex-wrap: $Flex_Wrap;
+    justify-content: $Content_justify;
+    align-items: $Iitems_Align;
+    align-content: $Content_Align;
+}
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin TMPKolorRamka($kolor) {
+  border: solid $kolor;
+}
+

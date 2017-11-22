@@ -1,0 +1,119 @@
+<agm-map [latitude]="GMapPosition[1]"
+         [longitude]="GMapPosition[2]"
+         [zoom]="GMapPosition[0]"
+         [mapTypeControl]="GMapType[0]"
+         [mapTypeId]="GMapType[1]"
+         [styles]="GMapStyle"
+         [streetViewControl]="GMapViewControl"
+         [scaleControl]="GMapScale"
+         >
+         <agm-marker *ngFor="let e of markers; let i = index"
+                      [markerClickable]="e.Clickable"
+                      [markerDraggable]="e.Draggable"
+                      [opacity]="e.alfa"
+                      [iconUrl]="e.iconURL"
+                      [label]="e.label"
+                      [title]="e.title"
+                      [visible]="e.visible"
+                      [zIndex]="e.zIndex"
+                      [latitude]="e.gps[1]"
+                      [longitude]="e.gps[0]"
+                      >
+                      <agm-snazzy-info-window
+                            [maxHeight]="500"
+                            [maxWidth]="700"
+                            [closeWhenOthersOpen]="true"
+                            [showCloseButton]="true"
+                            >
+                              <ng-template>
+                                <div class="MarkerPanelInfo">
+                                  <h1>{{e.label}}</h1>
+                                  <hr>
+                                  <table>
+                                    <tr>
+                                      <th>Zesp./Sygn.</th>
+                                      <th>rodzaj</th>
+                                      <th>zakres</th>
+                                      <th>lokalizacja</th>
+                                      <th>rewir</th>
+                                      <th>religia</th>
+                                    </tr>
+                                    <tr *ngFor="let p of e.pozycje; let j = index">
+                                      <td>Z{{p.zesp}}/S{{p.sygn}}</td>
+                                      <td>{{p.rodzaj}}</td>
+                                      <td>{{p.zakres}}</td>
+                                      <td>{{p.lokalizacja}}</td>
+                                      <td>{{p.rewir}}</td>
+                                      <td>{{p.religia}}</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </ng-template>
+                      </agm-snazzy-info-window>
+         </agm-marker>
+         <agm-circle *ngFor="let e of circles; let i = index"
+                      [clickable]="e.Clickable"
+                      [circleDraggable]="e.Draggable"
+                      [editable]="e.Editable"
+                      [fillOpacity]="e.fillAlfa"
+                      [fillColor]="e.fillColor"
+                      [strokeOpacity]="e.strokeAlfa"
+                      [strokeColor]="e.strokeColor"
+                      [strokePosition]="e.strokePosition"
+                      [strokeWeight]="e.strokeWeight"
+                      [visible]="e.visible"
+                      [zIndex]="e.zIndex"
+                      [latitude]="e.lat"
+                      [longitude]="e.lng"
+                      [radius]="e.radius"
+                      >
+         </agm-circle>
+         <agm-polygon *ngFor="let e of polygons; let i = index"
+                      [clickable]="e.Clickable"
+                      [polyDraggable]="e.Draggable"
+                      [editable]="e.Editable"
+                      [geodesic]="e.geodesic"
+                      [fillOpacity]="e.fillAlfa"
+                      [fillColor]="e.fillColor"
+                      [strokeOpacity]="e.strokeAlfa"
+                      [strokeColor]="e.strokeColor"
+                      [strokeWeight]="e.strokeWeight"
+                      [visible]="e.visible"
+                      [zIndex]="e.zIndex"
+                      [paths]="e.paths"
+                      >
+         </agm-polygon>
+         <agm-polyline *ngFor="let e of polylines; let i = index"
+                      [clickable]="e.Clickable"
+                      [polylineDraggable]="e.Draggable"
+                      [editable]="e.Editable"
+                      [geodesic]="e.geodesic"
+                      [strokeOpacity]="e.strokeAlfa"
+                      [strokeColor]="e.strokeColor"
+                      [strokeWeight]="e.strokeWeight"
+                      [visible]="e.visible"
+                      [zIndex]="e.zIndex"
+                      >
+                      <agm-polyline-point *ngFor="let p of e.points; let i = index"
+                                        [latitude]="p.lat"
+                                        [longitude]="p.lng"
+                                        >
+                      </agm-polyline-point>
+         </agm-polyline>
+         <agm-data-layer *ngFor="let e of dataLayers; let i = index"
+                      [geoJson]="e.geoJson"
+                      [style]="e.style"
+                      >
+         </agm-data-layer>
+         <agm-kml-layer *ngFor="let e of KmlLayers; let i = index"
+                      [clickable]="e.Clickable"
+                      [preserveViewport]="e.preserveViewport"
+                      [screenOverlays]="e.screenOverlays"
+                      [suppressInfoWindows]="e.suppressInfoWindows"
+                      [url]="e.url"
+                      [zIndex]="e.zIndex"
+                      >
+         </agm-kml-layer>
+ </agm-map>
+
+

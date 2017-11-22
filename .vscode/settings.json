@@ -1,5 +1,18 @@
 {
-    "angulardoc.repoId": "5cb41c92-4636-4aa1-af30-8535478391dc",
-    "angulardoc.lastSync": 1491663440207,
-    "vsicons.presets.angular": true
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Material Theme",
+    "vsicons.projectDetection.autoReload": true,
+    "files.autoSave": "onFocusChange",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "angular-schule.configUpdated": true,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "cSpell.words": [
+        "=",
+        "AGMmarkers:",
+        "MarkerInterface[]",
+        "this._ServiceAgad.MapaPunkty;"
+    ]
 }

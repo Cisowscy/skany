@@ -1,0 +1,31 @@
+agm-map {
+  height: 100%;
+  width: 100%;
+}
+
+.MarkerPanelInfo{
+  h1{
+    color: red;
+  }
+  table {
+    // font-family: arial, sans-serif;
+    border-collapse: collapse;
+    max-width: 650px;
+    color: black;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+    td {
+    border: 1px solid #ffffff;
+}
+
+
+}
+
+}

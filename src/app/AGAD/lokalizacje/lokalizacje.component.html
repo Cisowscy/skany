@@ -1,0 +1,116 @@
+<div class="bodyAGADtab">
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened="true">
+      <mat-card class="SideNavKarta">
+        <mat-card-header>
+          <mat-card-title>Księgi metrykalne i Akta</mat-card-title>
+        </mat-card-header>
+        <form class="PozycjaV1">
+          <mat-checkbox [disabled]="true">Mojżeszowe <span class="numerZbioru">(№300)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">rz.-kat. <span class="numerZbioru">(№301, №436, №437)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">gr.-kat. <span class="numerZbioru">(№298)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">ew.-augs.-hel. <span class="numerZbioru">(№299, №439)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">prawosławne <span class="numerZbioru">(№302)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">Ormianie <span class="numerZbioru">(№456)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">Aut.-c.-praw. <span class="numerZbioru">(№456)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">Baptyści <span class="numerZbioru">(№456)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">Mennonici <span class="numerZbioru">(№456)</span></mat-checkbox>
+          <mat-checkbox [disabled]="true">Ew.-Chrz. <span class="numerZbioru">(№456)</span></mat-checkbox>
+        </form>
+      </mat-card>
+      <br>
+      <mat-card class="SideNavKarta">
+        <mat-card-header>
+          <mat-card-title>Typ wpisów w księgach</mat-card-title>
+        </mat-card-header>
+        <form>
+          <mat-radio-group class="PozycjaV1">
+            <div class="PozycjaH1">
+            <mat-radio-button [disabled]="true" value="1">ur.+śl.+zg.</mat-radio-button>
+            <mat-radio-button [disabled]="true" value="2">ur.+śl.</mat-radio-button>
+            </div><div class="PozycjaH1">
+            <mat-radio-button [disabled]="true" value="3">ur.</mat-radio-button>
+            <mat-radio-button [disabled]="true" value="4">śl.</mat-radio-button>
+            <mat-radio-button [disabled]="true" value="5">zg.</mat-radio-button>
+            </div><div class="PozycjaH1">
+            <mat-radio-button [disabled]="true" value="6">inne</mat-radio-button>
+            <mat-radio-button [disabled]="true" value="7">wszystkie</mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </form>
+      </mat-card>
+      <br>
+      <mat-card class="SideNavKarta">
+        <mat-card-header>
+          <mat-card-title>Zakres czasu wpisów w księgach</mat-card-title>
+        </mat-card-header>
+        <form>
+          <mat-checkbox [disabled]="true">Ⅰ poł. ⅩⅩ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅱ poł. ⅩⅨ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅰ poł. ⅩⅨ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅱ poł. ⅩⅧ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅰ poł. ⅩⅧ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅱ poł. ⅩⅦ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅰ poł. ⅩⅦ w.</mat-checkbox>
+          <mat-checkbox [disabled]="true">Ⅱ poł. ⅩⅥ w.</mat-checkbox>
+        </form>
+      </mat-card>
+      <br>
+      <mat-card class="SideNavKarta">
+        <mat-card-header>
+          <mat-card-title>Cmentarze</mat-card-title>
+        </mat-card-header>
+        <form>
+          <mat-checkbox [disabled]="true">wszystkie groby</mat-checkbox>
+          <mat-checkbox [disabled]="true">wycinkowe groby</mat-checkbox>
+          <mat-checkbox [disabled]="true">wyrywkowe groby</mat-checkbox>
+        </form>
+      </mat-card>
+      <br><br><br>
+      <mat-card class="SideNavKarta">
+        <mat-card-header>
+          <mat-card-title>GEOGRAFIA</mat-card-title>
+        </mat-card-header>
+        <form class="PozycjaV1">
+          <mat-checkbox [disabled]="true">powiaty/cyrkuły</mat-checkbox>
+          <mat-checkbox [disabled]="true">krainy</mat-checkbox>
+          <mat-checkbox [disabled]="true">województwa</mat-checkbox>
+          <mat-checkbox [disabled]="true">prowincje</mat-checkbox>
+          <mat-checkbox [disabled]="true">lenna</mat-checkbox>
+          <mat-checkbox [disabled]="true">księstwa</mat-checkbox>
+          <mat-checkbox [disabled]="true">państwa</mat-checkbox>
+          <hr>
+          <mat-checkbox [disabled]="true">miejscowości ogromne</mat-checkbox>
+          <mat-checkbox [disabled]="true">miejscowości duże</mat-checkbox>
+          <mat-checkbox [disabled]="true">miejscowości średnie</mat-checkbox>
+          <mat-checkbox [disabled]="true">miejscowości małe</mat-checkbox>
+          <mat-checkbox [disabled]="true">miejscowości malutkie</mat-checkbox>
+        </form>
+      </mat-card>
+    </mat-sidenav>
+    <app-google-maps [markers]="AGMmarkers"></app-google-maps>
+  </mat-sidenav-container>
+
+
+</div>
+
+<!--<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>
+
+</mat-sidenav-container>
+
+
+
+<mat-card>
+  <app-google-maps></app-google-maps>
+</mat-card>
+-->
+<!--  -->

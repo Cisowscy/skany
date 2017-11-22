@@ -1,0 +1,16 @@
+@import '~sass/mixins';
+
+.bodyAGAD{
+  position: absolute;
+   @include HeightWidth(100%, 100%);
+   overflow: hidden;
+  // @include backgroundFIX(url(../../assets/images/BACKGROUND.png), no-repeat);
+  @include FLEX_PARENT(column, nowrap, flex-start, stretch, flex-start);
+  @include backgroundNOFIX(rgba(170, 104, 104, 0), url(../../assets/TexturesTransparent/Pattern/shley-tree-1.png), repeat);
+  //@include TMPKolorRamka(red);
+}
+main{
+  //border: solid red;
+  @include HeightWidth(100%, 100%);
+  padding: 0.5rem;
+}
