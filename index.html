@@ -108,8 +108,13 @@
                         var adres_katalogu = adresJPG_metryczki.slice(0, adresJPG_metryczki.indexOf(
                             '0000'));
                     }
+                    if (adresJPG_metryczki.indexOf('0001') >= 0) {
+                        var adres_katalogu = adresJPG_metryczki.slice(0, adresJPG_metryczki.indexOf(
+                            '0001'));
+                    }
                 }
                 if(adres_katalogu == undefined){
+                    alert('Problem z wprowadzonym adresem, brak zdjecia 0000 lub 0001 w pierwszym polu');
                   return false;
                 }
                 var szukaj = adres_katalogu.slice(adres_katalogu.indexOf('images') + 7, adres_katalogu.length);
