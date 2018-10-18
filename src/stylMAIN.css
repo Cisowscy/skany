@@ -1,114 +1,111 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
-/* głwny pojemnik */
 
-article.accordion {
-  display: block;
-  height: calc(100% - 1em);
-  width: calc(100% - 1em);
-  position: absolute;
-  left: 0em;
-  right: 0em;
-  top: 0em;
-  bottom: 0em;
-  margin: auto;
-  background-color: rgba(38, 50, 56, 1);
-  overflow: auto;
-  border-radius: 1em;
-  box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.3);
+/* głwny pojemnik */
+article.accordion
+{
+	display: block;
+	height: calc(100% - 1em);
+    width: calc(100% - 1em);
+    position: absolute;
+    left:0em;
+	right:0em;
+	top:0em;
+	bottom:0em;
+	margin: auto;
+	background-color: rgba(38,50,56 ,1);
+	overflow: auto;
+	border-radius: 1em;
+	box-shadow: 0 0.5em 0.5em rgba(0,0,0,0.3);
 }
 
 
 /* podzial na sekcje - wywolywacze - panele*/
-
-article.accordion section {
-  position: relative;
-  display: block;
-  float: top;
-  height: 2.5em;
-  width: calc(100% - 1em);
-  left: 0.5em;
-  right: 0.5em;
-  margin: 0.5em 0em 0em 0em;
-  color: rgba(55, 71, 79, 1);
-  background-color: rgba(55, 71, 79, 1);
-  overflow: hidden;
-  border-radius: 1em;
+article.accordion section
+{
+	position: relative;
+	display: block;
+	float: top;
+	height: 2.5em;
+	width:calc(100% - 1em);
+    left:0.5em;
+	right:0.5em;
+	margin: 0.5em 0em 0em 0em;
+	color: rgba(55,71,79 ,1);
+	background-color: rgba(55,71,79 ,1);
+	overflow: hidden;
+	border-radius: 1em;
 }
 
-
 /* podzial na sekcje - wywolywacze - tytuly*/
-
-article.accordion section h2 {
-  position: absolute;
-  font-size: 1.5em;
-  font-weight: bold;
-  width: 100%;
-  height: 2em;
-  top: 0;
-  left: 10%;
-  text-indent: 0em;
-  padding: 0;
-  margin: 0;
-  color: rgba(207, 216, 220, 1);
-  /* -webkit-transform-origin: 0 0;
+article.accordion section h2
+{
+	position: absolute;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 100%;
+	height: 2em;
+	top: 0;
+	left: 10%;
+	text-indent: 0em;
+	padding: 0;
+	margin: 0;
+	color: rgba(207,216,220 ,1);
+   /* -webkit-transform-origin: 0 0;
 	-moz-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
 	-o-transform-origin: 0 0;
 	transform-origin: 0 0;
-
+    
     -webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
     */
-}
+} 
+
+
 
 
 /* podzial na sekcje - wywolywacze - korekcja linkow*/
-
-article.accordion section h2 a {
-  display: block;
-  height: 100%;
-  line-height: 2em;
-  text-decoration: none;
-  color: inherit;
-  outline: 0 none;
+article.accordion section h2 a
+{
+	display: block;
+	height: 100%;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
+	outline: 0 none;
 }
-
-
 /* podzial na sekcje - kontener sekcji*/
-
-article.accordion section:target {
-  height: calc(100% - 7em);
-  color: rgba(33, 33, 33, 1);
-  background-color: rgba(236, 239, 241, 1);
-  border-radius: 1em;
+article.accordion section:target
+{
+	height: calc(100% - 7em);	
+	color: rgba(33, 33, 33, 1);
+	background-color: rgba(236,239,241 ,1);
+    border-radius: 1em;
 }
-
 
 /* podzial na sekcje - kontener sekcji - umiejscowienie tytulu*/
-
-article.accordion section:target h2 {
-  position: static;
-  margin-top: 0em;
-  margin-left: 10%;
-  font-size: 1.3em;
-  text-indent: 0;
-  color: rgba(38, 50, 56, 1);
-  /*
+article.accordion section:target h2
+{
+	position: static;
+    margin-top: 0em;
+    margin-left: 10%;
+	font-size: 1.3em;
+	text-indent: 0;
+	color: rgba(38,50,56 ,1);
+    /*
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
 	transform: rotate(0deg);*/
+    
 }
 
-
 /* animacja*/
-
-
 /*
 article.accordion section,
 article.accordion section h2
@@ -121,139 +118,133 @@ article.accordion section h2
 } */
 
 article.accordion section div {
-  visibility: hidden;
-}
-
+	visibility: hidden;
+}  
 article.accordion section:target div {
-  visibility: visible;
-  height: calc(100% - 1em);
-  width: calc(100%-5em);
-  position: absolute;
-  left: 0em;
-  padding: 0.5em;
-  right: 0;
-  top: 5em;
-  bottom: 0;
-  margin: auto;
-  overflow-x: auto;
-}
-
-
+	visibility: visible;
+    height: calc(100% - 1em);
+	width: calc(100%-5em);
+    position: absolute;
+    left:0em;
+	padding: 0.5em;
+	right:0;
+	top:5em;
+	bottom:0;
+	margin: auto;     
+    overflow-x: auto;         
+}  
 /* --------------------------------------*/
-
 select {
-  border: 0.3em solid rgba(38, 50, 56, 1);
-  padding: 0.5em;
-  background-color: rgba(55, 71, 79, 1);
-  font-weight: bold;
-  cursor: pointer;
-  width: 48%;
-  color: rgba(236, 239, 241, 0.8);
-  border-radius: 0.5em;
-  margin-left: 0.5em;
-}
 
-select optgroup {
-  background-color: rgba(38, 50, 56, 1);
-  font-size: 1.2em;
-  /* display: inline-flex;
+   border: 0.3em solid rgba(38,50,56 ,1);
+padding: 0.5em;
+background-color: rgba(55,71,79 ,1);
+font-weight:bold;
+cursor: pointer;
+width:48%;
+color:rgba(236,239,241 ,0.8);
+border-radius:0.5em;
+margin-left:0.5em;
+
+    
+    }
+    select optgroup{
+      background-color:rgba(38,50,56 ,1);
+      font-size: 1.2em;  
+     /* display: inline-flex;
       flex-flow: row wrap;*/
+          
+
+    }
+
+    select optgroup option{
+        background-color:rgba(55,71,79 ,1);
+    }
+
+#ZATWIERDZ_WYBOR{
+font-size: 1em;
+border: 0.1em solid rgba(38,50,56 ,1);
+padding: 0.5em;
+background-color: rgba(55,71,79 ,1);
+font-weight:bold;
+cursor: pointer;
+width:48%;
+color:rgba(236,239,241 ,0.8);
+border-radius:0.5em;
+margin-left:0.5em;
+font-family: 'Droid Serif', serif;
 }
 
-select optgroup option {
-  background-color: rgba(55, 71, 79, 1);
+fieldset{
+    
+    margin: 0.5em;
+    padding:  0.5em;
+    border: 0.4em groove rgba(38,50,56 ,0.5);   
+    border-radius:1em; 
 }
 
-#ZATWIERDZ_WYBOR {
-  font-size: 1em;
-  border: 0.1em solid rgba(38, 50, 56, 1);
-  padding: 0.5em;
-  background-color: rgba(55, 71, 79, 1);
-  font-weight: bold;
-  cursor: pointer;
-  width: 48%;
-  color: rgba(236, 239, 241, 0.8);
-  border-radius: 0.5em;
-  margin-left: 0.5em;
-  font-family: 'Droid Serif', serif;
+.SygZawTyp_1{
+    background-color: rgba(165,214,167 ,0.2);
+	font-weight: bold;
 }
-
-fieldset {
-  margin: 0.5em;
-  padding: 0.5em;
-  border: 0.4em groove rgba(38, 50, 56, 0.5);
-  border-radius: 1em;
+.SygZawTyp_0{
+    background-color: rgba(250,250,250 ,0.2);
 }
-
-.SygZawTyp_1 {
-  background-color: rgba(165, 214, 167, 0.2);
-  font-weight: bold;
+.SygZawTyp_2{
+    background-color: rgba(255,171,145 ,0.2);
 }
-
-.SygZawTyp_0 {
-  background-color: rgba(250, 250, 250, 0.2);
-}
-
-.SygZawTyp_2 {
-  background-color: rgba(255, 171, 145, 0.2);
-}
-
-#MINIATURY {
-  display: inline-flex;
+#MINIATURY{
+	display: inline-flex;
+	
   flex-flow: row wrap;
 }
-
-#MINIATURY a img {
-  width: 7em;
-  margin: 1em;
-  flex-direction: column;
+#MINIATURY a img{
+	width: 7em;
+	margin: 1em;
+	flex-direction: column;
 }
+#Fi_myMap{
+	height: 70%;	
+	display: block;
 
-#Fi_myMap {
-  height: 70%;
-  display: block;
 }
-
 #myMap {
-  height: 50%;
-  width: 50%;
-  display: block;
-  position: relative;
-  left: 0em;
-  right: 0em;
-  top: 0em;
-  bottom: 0em;
-  margin: auto;
-  overflow: false;
+	height: 50%;
+    width: 50%;
+	display: block;
+    position: relative;
+    left:0em;
+	right:0em;
+	top:0em;
+	bottom:0em;
+	margin: auto;	
+	overflow: false;
 }
-
 #info {
-  position: fixed;
-  bottom: 1em;
-  left: 1em;
-  right: 1em;
+	position: fixed;
+	bottom:1em;
+	left:1em;
+	right:1em;
 }
 
-#INFO_BACK {
-  background-color: rgba(13, 71, 161, 1);
+#INFO_BACK{
+	background-color: rgba(13,71,161 ,1);
 }
 
-#INFO_WWW,
-#INFO_NEXT,
-#INFO_GIT,
-#INFO_KONTAKT,
-#INFO_LICENCJA {
-  background-color: rgba(62, 39, 35, 1);
+#INFO_WWW, #INFO_NEXT, #INFO_GIT, #INFO_KONTAKT, #INFO_LICENCJA{
+background-color: rgba(62,39,35 ,1);
 }
 
-#info input[type=button] {
-  font-size: 1em;
-  border: 0.1em solid rgba(130, 119, 23, 0.3);
-  padding: 0.1em;
-  font-weight: bold;
-  cursor: pointer;
-  color: rgba(236, 239, 241, 0.8);
-  border-radius: 0.5em;
-  margin-left: 0.5em;
-  font-family: 'Droid Serif', serif;
+#info input[type=button]{
+	font-size: 1em;
+border: 0.1em solid rgba(130,119,23 ,0.3);
+padding: 0.1em;
+
+font-weight:bold;
+cursor: pointer;
+
+color:rgba(236,239,241 ,0.8);
+border-radius:0.5em;
+margin-left:0.5em;
+font-family: 'Droid Serif', serif;
 }
