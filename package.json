@@ -44,7 +44,7 @@
     "@mseemann/prism": "0.0.1",
     "angular-ga": "^0.2.0",
     "angular2-google-maps": "^0.17.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
